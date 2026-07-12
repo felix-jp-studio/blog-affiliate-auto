@@ -1,0 +1,24 @@
+name: Auto-merge weekly PR only
+
+# 週次ルール PR（rules/weekly-*）のみ auto-merge を有効化する。
+# feature/* や chore/* など通常 PR には適用しない。
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
+    branches: [main]
+
+jobs:
+  enable-auto-merge:
+    if: startsWith(github.head_ref, 'rules/weekly-')
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Enable auto-merge for weekly rule PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr merge "${{ github.event.pull_request.number }}" --auto --merge
+          echo "Auto-merge enabled for weekly PR #${{ github.event.pull_request.number }} (${{ github.head_ref }})"
