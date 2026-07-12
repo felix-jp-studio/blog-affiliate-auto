@@ -1,0 +1,115 @@
+name: Cursor PR Review
+
+# PR 作成・更新時に Cursor CLI で diff をレビューし、コメントを投稿する。
+# マージはブロックしない（コメントのみ）。CURSOR_API_KEY 未設定時はスキップ。
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: cursor-pr-review-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    if: >
+      github.event.pull_request.draft == false &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install Cursor CLI
+        run: |
+          curl https://cursor.com/install -fsS | bash
+          echo "$HOME/.cursor/bin" >> "$GITHUB_PATH"
+
+      - name: Run code review
+        id: run-review
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          if [ -z "$CURSOR_API_KEY" ]; then
+            echo "skipped=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::CURSOR_API_KEY が未設定のため Cursor レビューをスキップします"
+            exit 0
+          fi
+
+          DIFF_FILE="${RUNNER_TEMP}/pr.diff"
+          git diff "${BASE_SHA}...${HEAD_SHA}" > "$DIFF_FILE"
+          if [ ! -s "$DIFF_FILE" ]; then
+            echo "skipped=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::diff が空のためスキップします"
+            exit 0
+          fi
+
+          # 巨大 diff は先頭のみ（コンテキスト上限対策）
+          DIFF_LINES=$(wc -l < "$DIFF_FILE" | tr -d ' ')
+          DIFF_FOR_REVIEW="$DIFF_FILE"
+          DIFF_NOTE=""
+          if [ "$DIFF_LINES" -gt 800 ]; then
+            DIFF_FOR_REVIEW="${RUNNER_TEMP}/pr.truncated.diff"
+            head -n 800 "$DIFF_FILE" > "$DIFF_FOR_REVIEW"
+            DIFF_NOTE="（diff は先頭 800 行のみレビュー）"
+          fi
+
+          agent --force --output-format=text --print "$(cat <<PROMPT
+          You are a senior code reviewer for pull request #${PR_NUMBER} in ${REPOSITORY}.
+
+          Review the following git diff between ${BASE_SHA} and ${HEAD_SHA}.
+          ${DIFF_NOTE}
+
+          --- DIFF START ---
+          $(cat "$DIFF_FOR_REVIEW")
+          --- DIFF END ---
+
+          Rules:
+          - Review ONLY added or changed lines
+          - Focus on bugs, security vulnerabilities, and maintainability issues with real merge risk
+          - Minimize style nitpicks; include concrete fix suggestions when possible
+          - Repository: TypeScript/Node.js, docs and CI centered; prefer minimal diffs
+          - For GitHub Actions changes, check secret exposure and excessive permissions
+
+          Output:
+          - Japanese Markdown
+          - Sections: Critical / Warning / Suggestion (omit empty sections)
+          - If no issues, write a brief positive summary
+          - Findings only; do NOT approve or request changes
+          - Output review text to stdout only; do not run shell commands
+          PROMPT
+          )" > review.md
+
+          if [ ! -s review.md ]; then
+            echo "skipped=true" >> "$GITHUB_OUTPUT"
+            echo "::warning::レビュー出力が空のためスキップします"
+            exit 0
+          fi
+
+          echo "skipped=false" >> "$GITHUB_OUTPUT"
+
+      - name: Post review comment
+        if: steps.run-review.outputs.skipped != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          {
+            echo "## Cursor PR Review"
+            echo ""
+            echo "_Automated review via GitHub Actions (\`cursor-pr-review.yml\`)_"
+            echo ""
+            cat review.md
+          } > comment.md
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file comment.md
