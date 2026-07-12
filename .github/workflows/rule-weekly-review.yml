@@ -61,8 +61,8 @@ jobs:
           PR_URL=$(gh pr create \
             --title "chore(rules): 週次ルールレビュー ${WEEK}" \
             --body "週次ルールレビューの自動実行結果。ログ: docs/rule-review/log.md / 状態: config/rule-review-state.json")
-          gh pr merge "$PR_URL" --auto --merge
           echo "pr_url=${PR_URL}" >> "$GITHUB_OUTPUT"
+          echo "Auto-merge は auto-merge-weekly-pr workflow が rules/weekly-* のみに適用します"
 
       - name: Write job summary
         if: always()
