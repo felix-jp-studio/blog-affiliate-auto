@@ -1,0 +1,20 @@
+{
+  "name": "blog-affiliate-auto",
+  "version": "0.1.0",
+  "description": "ブログアフィリエイト全自動化の計画・手順書・Cursorルール管理",
+  "type": "module",
+  "scripts": {
+    "rules:rotate": "tsx scripts/rotate-rule-archives.ts",
+    "rules:weekly-review": "tsx scripts/rule-weekly-review.ts",
+    "rules:weekly-review:dry-run": "tsx scripts/rule-weekly-review.ts --dry-run",
+    "test": "vitest run",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  }
+}

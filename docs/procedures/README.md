@@ -4,11 +4,12 @@
 
 ## 一覧
 
-| # | ファイル | 種別 | 説明 |
-|---|----------|------|------|
-| 01 | [01-roadmap-prompt-template.md](./01-roadmap-prompt-template.md) | プロンプト手順書 | ロードマップ生成用テンプレート（前提条件を編集して使う） |
-| 02 | [02-roadmap-prompt-customized.md](./02-roadmap-prompt-customized.md) | プロンプト手順書 | 確定済み前提条件を埋め込んだロードマップ生成プロンプト |
-| 03 | [03-niche-research-procedure.md](./03-niche-research-procedure.md) | 作業手順書 | ニッチ選定リサーチの実施方法 |
+| #   | ファイル                                                             | 種別             | 説明                                                     |
+| --- | -------------------------------------------------------------------- | ---------------- | -------------------------------------------------------- |
+| 01  | [01-roadmap-prompt-template.md](./01-roadmap-prompt-template.md)     | プロンプト手順書 | ロードマップ生成用テンプレート（前提条件を編集して使う） |
+| 02  | [02-roadmap-prompt-customized.md](./02-roadmap-prompt-customized.md) | プロンプト手順書 | 確定済み前提条件を埋め込んだロードマップ生成プロンプト   |
+| 03  | [03-niche-research-procedure.md](./03-niche-research-procedure.md)   | 作業手順書       | ニッチ選定リサーチの実施方法                             |
+| 04  | [04-rule-weekly-review.md](./04-rule-weekly-review.md)               | 作業手順書       | Cursor ルール週次レビュー（自動更新・巻き戻し）          |
 
 ## リサーチ成果物
 

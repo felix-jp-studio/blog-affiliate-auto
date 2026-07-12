@@ -1,0 +1,7 @@
+{
+  "taskCompletionRate": 0.25,
+  "docQualityScore": 0.2,
+  "manualInterventionCount": 0.15,
+  "pipelineProgress": 0.2,
+  "agentFollowedRulesRate": 0.2
+}
