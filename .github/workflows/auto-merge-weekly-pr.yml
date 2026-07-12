@@ -18,6 +18,9 @@ jobs:
       startsWith(github.event.workflow_run.head_branch, 'rules/weekly-')
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
       - name: Merge weekly PR after CI
         env:
           GH_TOKEN: ${{ secrets.WEEKLY_MERGE_PAT }}
@@ -32,4 +35,4 @@ jobs:
             exit 1
           fi
           echo "Merging weekly PR #${PR_NUMBER} (${{ github.event.workflow_run.head_branch }})"
-          gh pr merge "$PR_NUMBER" --merge --admin --delete-branch
+          gh pr merge "$PR_NUMBER" --repo "${{ github.repository }}" --merge --admin --delete-branch
