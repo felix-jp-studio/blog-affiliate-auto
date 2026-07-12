@@ -87,6 +87,8 @@ Settings → Secrets and variables → Actions → New repository secret
 ./scripts/apply-branch-protection.sh
 ```
 
+初回は `validate` が GitHub に登録された後（main で CI が 1 回成功後）に実行してください。
+
 ## 変更履歴
 
 | 日付       | 内容                                                 |

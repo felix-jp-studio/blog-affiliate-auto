@@ -2,7 +2,7 @@ name: Auto-merge weekly PR only
 
 # 週次ルール PR（rules/weekly-*）のみ: CI 通過後に承認なしでマージ。
 # WEEKLY_MERGE_PAT（リポジトリオーナーの PAT）で --admin マージする。
-# 通常 PR は引き続き承認 1 件が必須。
+# 通常 PR はセルフレビュー後に手動マージ。
 
 on:
   workflow_run:
