@@ -1,0 +1,38 @@
+---
+description: ブログアフィリエイト全自動化プロジェクトの目標・制約・ドキュメント地図
+alwaysApply: true
+---
+
+# blog-affiliate-auto プロジェクトコンテキスト
+
+## 目的
+
+日本国内向けブログアフィリエイトを **AI 全自動（キーワード→生成→投稿）** で運用し、**12 ヶ月で月 5 万円（最低）・10 万円（理想）** を達成する。
+
+## 確定条件（変更時は docs と本ルールを同期）
+
+| 項目 | 値 |
+|------|-----|
+| 作業時間 | 平日 1h/日（週 5〜9h） |
+| 技術 | TypeScript / Python（API・cron・CMS 連携可） |
+| 記事 | 全自動。品質・SEO・ASP リスクは承知 |
+| 人間の残作業 | 監視・例外対応・月次改善のみ |
+| 推奨ニッチ | 格安 SIM × 光回線 × お困り系（`docs/research/niche-pre-research.md`） |
+
+## ドキュメント地図
+
+- 手順書索引: `docs/procedures/README.md`
+- ロードマップ生成: `docs/procedures/02-roadmap-prompt-customized.md`
+- ニッチリサーチ手順: `docs/procedures/03-niche-research-procedure.md`
+- ニッチ調査結果: `docs/research/niche-pre-research.md`
+- 計画の保存先（今後）: `docs/plans/`
+
+## 除外・注意
+
+- YMYL 本丸（医療・投資・保険の専門判断）は避ける
+- 虚偽の体験談・規約違反リンクは生成しない
+- 関連実装リポ: `../article-auto-post/`（note/Qiita 自動投稿）
+
+## 応答言語
+
+ユーザー向けの説明は **日本語**。

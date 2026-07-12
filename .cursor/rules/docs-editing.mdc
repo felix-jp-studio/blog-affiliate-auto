@@ -1,0 +1,32 @@
+---
+description: docs/ 配下の手順書・リサーチ文書の編集規約
+globs: docs/**
+alwaysApply: false
+---
+
+# ドキュメント編集規約
+
+## 手順書（`docs/procedures/`）
+
+- ファイル名: `NN-kebab-case.md`（NN は 2 桁連番）
+- 構成: 目的 → 前提 → 実行手順 → プロンプト本文（該当時）→ 完了条件
+- プロンプトは fenced code block（`markdown`）内に全文を保持
+- 確定条件を変えたら `02-roadmap-prompt-customized.md` と `.cursor/rules/project-context.mdc` を同期
+
+## リサーチ（`docs/research/`）
+
+- ファイル名: `topic-pre-research.md` または `topic-pre-research-YYYYMMDD.md`
+- 必須: 調査条件・3 案比較表・推奨 1 位・収益逆算・参照 URL・変更履歴
+
+## 計画（`docs/plans/`）
+
+- AI 生成ロードマップの保存先。`roadmap-YYYYMMDD.md` 形式
+
+## ルールとの役割分担
+
+| 置き場所 | 役割 |
+|----------|------|
+| `.cursor/rules/*.mdc` | 毎回読む要約・制約・発火条件（50 行以内目安） |
+| `docs/procedures/*.md` | プロンプト全文・詳細手順（バージョン管理・共有用） |
+
+ルールにプロンプト全文を複製しない。要約とパス参照に留める。
