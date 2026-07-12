@@ -73,7 +73,7 @@ npm run rules:weekly-review           # 実行
 
 リポジトリの `allow_auto_merge` は有効だが、**自動で `--auto` を付けるのは週次 PR だけ**。通常 PR は GitHub UI でも auto-merge を使わない運用とする。
 
-**ブランチ保護あり**: 週次 PR も `CI / validate` 通過と **承認 1 件** の後に auto-merge が実行される。詳細は [branch-protection.md](../branch-protection.md)。
+**ブランチ保護あり**: 週次 PR も `validate` 通過と **承認 1 件** の後に auto-merge が実行される。詳細は [branch-protection.md](../branch-protection.md)。
 
 ## 判定一覧
 
