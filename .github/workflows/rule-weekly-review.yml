@@ -1,0 +1,73 @@
+name: Rule weekly review
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 毎週日曜 09:00 JST = UTC 日曜 00:00
+    - cron: "0 0 * * 0"
+
+jobs:
+  weekly-rule-review:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: rule-weekly-review
+      cancel-in-progress: false
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run weekly review (dry-run first)
+        id: dryrun
+        run: npm run rules:weekly-review:dry-run
+
+      - name: Run weekly review
+        run: npm run rules:weekly-review
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          WEEK=$(node -p "require('./config/rule-review-input.json').weekId")
+          BRANCH="rules/weekly-${WEEK}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add .cursor/rules config docs/rule-review
+          git commit -m "chore(rules): weekly review ${WEEK}"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "chore(rules): 週次ルールレビュー ${WEEK}" \
+            --body "週次ルールレビューの自動実行結果。ログ: docs/rule-review/log.md / 状態: config/rule-review-state.json"
+
+      - name: Write job summary
+        if: always()
+        run: |
+          {
+            echo "## ルール週次レビュー"
+            echo ""
+            echo "- weekId: $(node -p "require('./config/rule-review-input.json').weekId")"
+            echo "- 変更: ${{ steps.changes.outputs.changed }}"
+            echo "- 手順: [04-rule-weekly-review.md](docs/procedures/04-rule-weekly-review.md)"
+          } >> "$GITHUB_STEP_SUMMARY"

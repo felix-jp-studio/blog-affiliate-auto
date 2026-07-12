@@ -1,0 +1,12 @@
+{
+  "weekId": "2026-W28",
+  "ruleSet": "current",
+  "metrics": {
+    "taskCompletionRate": 0.8,
+    "docQualityScore": 4,
+    "manualInterventionCount": 1,
+    "pipelineProgress": 2,
+    "agentFollowedRulesRate": 0.85
+  },
+  "notes": "週次レビュー前に直近1週間の実績で更新する。weekId は ISO 週（YYYY-Www）。"
+}
