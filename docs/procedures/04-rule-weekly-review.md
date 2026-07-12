@@ -62,7 +62,7 @@ npm run rules:weekly-review           # 実行
 - ワークフlow: `.github/workflows/rule-weekly-review.yml`
 - スケジュール: 毎週日曜 09:00 JST（UTC 日曜 00:00）
 - `rule-review-input.json` の `weekId` が未更新の場合は **リマインドのみ**（fail しない）
-- 変更がある場合は PR を自動作成
+- 変更がある場合は PR を自動作成し、**auto-merge を有効化**（リポジトリ設定 `allow_auto_merge: true` 必須）
 
 ## 判定一覧
 

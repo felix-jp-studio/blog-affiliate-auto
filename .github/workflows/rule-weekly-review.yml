@@ -45,6 +45,7 @@ jobs:
           fi
 
       - name: Create pull request
+        id: create_pr
         if: steps.changes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -57,9 +58,11 @@ jobs:
           git add .cursor/rules config docs/rule-review
           git commit -m "chore(rules): weekly review ${WEEK}"
           git push -u origin "$BRANCH"
-          gh pr create \
+          PR_URL=$(gh pr create \
             --title "chore(rules): 週次ルールレビュー ${WEEK}" \
-            --body "週次ルールレビューの自動実行結果。ログ: docs/rule-review/log.md / 状態: config/rule-review-state.json"
+            --body "週次ルールレビューの自動実行結果。ログ: docs/rule-review/log.md / 状態: config/rule-review-state.json")
+          gh pr merge "$PR_URL" --auto --merge
+          echo "pr_url=${PR_URL}" >> "$GITHUB_OUTPUT"
 
       - name: Write job summary
         if: always()
