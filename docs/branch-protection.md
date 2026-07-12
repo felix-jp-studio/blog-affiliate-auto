@@ -4,15 +4,15 @@
 
 ## 必須条件
 
-| 項目                    | 設定                                          |
-| ----------------------- | --------------------------------------------- |
-| 必須 CI                 | `CI / validate`（`.github/workflows/ci.yml`） |
-| 必須レビュー            | 承認 1 件以上                                 |
-| stale review            | 新規 push で既存承認を無効化                  |
-| Conversation resolution | 必須                                          |
-| force push              | 禁止                                          |
-| branch 削除             | 禁止                                          |
-| up-to-date              | 必須（`strict: true`）                        |
+| 項目                    | 設定                                     |
+| ----------------------- | ---------------------------------------- |
+| 必須 CI                 | `validate`（`.github/workflows/ci.yml`） |
+| 必須レビュー            | 承認 1 件以上                            |
+| stale review            | 新規 push で既存承認を無効化             |
+| Conversation resolution | 必須                                     |
+| force push              | 禁止                                     |
+| branch 削除             | 禁止                                     |
+| up-to-date              | 必須（`strict: true`）                   |
 
 ## auto-merge との関係
 
@@ -31,7 +31,7 @@
 ./scripts/apply-branch-protection.sh
 ```
 
-初回は `CI / validate` が GitHub に登録された後（main で CI が 1 回成功後）に実行してください。
+初回は `validate` が GitHub に登録された後（main で CI が 1 回成功後）に実行してください。
 
 ## 変更履歴
 

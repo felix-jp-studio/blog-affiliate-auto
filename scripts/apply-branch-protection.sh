@@ -4,7 +4,7 @@ set -euo pipefail
 
 REPO="${1:-felix-jp-studio/blog-affiliate-auto}"
 BRANCH="${2:-main}"
-CHECK_CONTEXT="CI / validate"
+CHECK_CONTEXT="validate"
 
 echo "Applying branch protection to ${REPO}@${BRANCH}"
 echo "Required check: ${CHECK_CONTEXT}"
