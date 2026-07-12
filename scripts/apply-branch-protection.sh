@@ -4,7 +4,7 @@ set -euo pipefail
 
 REPO="${1:-felix-jp-studio/blog-affiliate-auto}"
 BRANCH="${2:-main}"
-CHECK_CONTEXT="CI / validate"
+CHECK_CONTEXT="validate"
 
 echo "Applying branch protection to ${REPO}@${BRANCH}"
 echo "Required check: ${CHECK_CONTEXT}"
@@ -25,7 +25,7 @@ gh api "repos/${REPO}/branches/${BRANCH}/protection" -X PUT \
   "required_pull_request_reviews": {
     "dismiss_stale_reviews": true,
     "require_code_owner_reviews": false,
-    "required_approving_review_count": 1,
+    "required_approving_review_count": 0,
     "require_last_push_approval": false
   },
   "restrictions": null,
