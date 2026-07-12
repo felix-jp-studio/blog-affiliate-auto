@@ -66,10 +66,10 @@ npm run rules:weekly-review           # 実行
 
 ### auto-merge（週次 PR のみ）
 
-| 対象                           | CI   | レビュー     | マージ                            |
-| ------------------------------ | ---- | ------------ | --------------------------------- |
-| `rules/weekly-*` ブランチの PR | 必須 | **スキップ** | CI 後に自動（`WEEKLY_MERGE_PAT`） |
-| 通常 PR                        | 必須 | 1 件必要     | 手動                              |
+| 対象                           | CI   | レビュー       | マージ                            |
+| ------------------------------ | ---- | -------------- | --------------------------------- |
+| `rules/weekly-*` ブランチの PR | 必須 | 不要（自動）   | CI 後に自動（`WEEKLY_MERGE_PAT`） |
+| 通常 PR                        | 必須 | セルフレビュー | `./scripts/merge-pr.sh` または UI |
 
 セットアップ: [branch-protection.md](../branch-protection.md) の `WEEKLY_MERGE_PAT` 登録手順。
 
