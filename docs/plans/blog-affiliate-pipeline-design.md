@@ -2,13 +2,14 @@
 
 格安 SIM × 光回線 × お困り系アフィリエイトの自動化パイプライン実装用リポジトリの構成設計。
 
-| 項目     | 値                                            |
-| -------- | --------------------------------------------- |
-| 作成日   | 2026-07-12                                    |
-| 状態     | 承認済み（Phase 0 実装の前提）                |
-| 実装リポ | `felix-jp-studio/blog-affiliate-pipeline`     |
-| 計画リポ | `felix-jp-studio/blog-affiliate-auto`（本書） |
-| 参照実装 | `article-auto-post`（Groq・状態管理・CI）     |
+| 項目     | 値                                               |
+| -------- | ------------------------------------------------ |
+| 作成日   | 2026-07-12                                       |
+| 状態     | 承認済み（Phase 0 実装の前提）                   |
+| インフラ | **2026-07-12 確定** — 下記「インフラ方針」を参照 |
+| 実装リポ | `felix-jp-studio/blog-affiliate-pipeline`        |
+| 計画リポ | `felix-jp-studio/blog-affiliate-auto`（本書）    |
+| 参照実装 | `article-auto-post`（Groq・状態管理・CI）        |
 
 ---
 
@@ -34,9 +35,19 @@
 
 ### Week 1 で別途決める事項
 
-- ドメイン名・サーバー（Day 1）
+- ~~ドメイン名・サーバー（Day 1）~~ → **確定**: `sim-hikari-guide.com` / GCP Cloud Domains / Vercel（[roadmap](../plans/roadmap-20260712.md) 参照）
 - Groq のみ / Claude 併用（Day 5）
-- 低予算 / 標準プラン
+- サイトフレームワーク（Astro / Next.js）
+
+### インフラ方針（2026-07-12 確定）
+
+| 項目     | 初期                                        | 移行後（任意）                           |
+| -------- | ------------------------------------------- | ---------------------------------------- |
+| ドメイン | `sim-hikari-guide.com`（GCP Cloud Domains） | `.jp` 防御取得など                       |
+| ホスト   | Vercel Hobby                                | レンタルサーバー + WordPress             |
+| 投稿     | Markdown → Git → Vercel デプロイ            | WP REST（既存 `publisher` 設計を流用可） |
+
+**設計書上の WP REST / `wp:ping` / `wp:post` は、初期フェーズでは `site:ping` / `site:publish`（Markdown 公開）に読み替える。** 有料サーバー移行時に WP パスへ戻せるよう `publisher` の責務分離を維持する。
 
 ---
 
