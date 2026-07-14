@@ -4,23 +4,23 @@
 
 ## 登録前チェックリスト
 
-| 項目 | URL | 状態 |
-|------|-----|------|
-| トップ | https://sim-hikari-guide.com | 公開済み |
-| 運営者情報 | https://sim-hikari-guide.com/about | 公開済み |
-| プライバシーポリシー | https://sim-hikari-guide.com/privacy | 公開済み |
-| お問い合わせ | https://sim-hikari-guide.com/contact | フォーム実装済み |
-| アフィリエイト表記 | フッター | 実装済み |
+| 項目                 | URL                                  | 状態             |
+| -------------------- | ------------------------------------ | ---------------- |
+| トップ               | https://sim-hikari-guide.com         | 公開済み         |
+| 運営者情報           | https://sim-hikari-guide.com/about   | 公開済み         |
+| プライバシーポリシー | https://sim-hikari-guide.com/privacy | 公開済み         |
+| お問い合わせ         | https://sim-hikari-guide.com/contact | フォーム実装済み |
+| アフィリエイト表記   | フッター                             | 実装済み         |
 
 ## 登録時に入力するサイト情報
 
-| 項目 | 値 |
-|------|-----|
-| サイト名 | SIM・光回線ガイド |
-| URL | https://sim-hikari-guide.com |
+| 項目       | 値                              |
+| ---------- | ------------------------------- |
+| サイト名   | SIM・光回線ガイド               |
+| URL        | https://sim-hikari-guide.com    |
 | サイト種別 | 情報メディア / 比較・手順ガイド |
-| ジャンル | 通信・格安SIM・光回線 |
-| 運営形態 | 個人 |
+| ジャンル   | 通信・格安SIM・光回線           |
+| 運営形態   | 個人                            |
 
 ## 登録先（優先順）
 
