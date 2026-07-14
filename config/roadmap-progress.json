@@ -56,43 +56,62 @@
       "id": "site-day2",
       "label": "お問い合わせフォーム・OGP・フッター強化",
       "date": "2026-07-14"
+    },
+    {
+      "id": "a8-register",
+      "label": "A8.net 会員登録 + SIM/光案件の一括提携申請",
+      "date": "2026-07-14",
+      "note": "NURO光・auひかり・ソフトバンク光・WiMAX・楽天モバイル"
+    },
+    {
+      "id": "prompts-v1",
+      "label": "プロンプト v1 + テスト記事5本公開",
+      "date": "2026-07-14",
+      "note": "blog-affiliate-pipeline PR #8 マージ・本番デプロイ済み"
     }
   ],
   "next": [
     {
-      "id": "asp-register",
+      "id": "a8-approval",
       "priority": 1,
-      "label": "ASP 3社登録（A8 / もしも / Link-AG）",
-      "estimate": "1h",
-      "instructions": "docs/operations/asp-registration.md の手順に従い登録。人間作業（ログイン・審査申請）が必要。"
+      "label": "A8 提携審査結果の確認",
+      "estimate": "10m",
+      "instructions": "マイページ → 提携管理で各案件の承認/否認を確認。否認はサイト内容整備後に再申請。"
+    },
+    {
+      "id": "moshimo-register",
+      "priority": 2,
+      "label": "もしもアフィリエイト登録 + メディア審査",
+      "estimate": "30m",
+      "instructions": "記事5本公開済み。docs/operations/asp-registration.md §もしも参照。楽天モバイル等はもしもが強い。"
+    },
+    {
+      "id": "link-ag-check",
+      "priority": 3,
+      "label": "Link-AG 新規受付状況の確認",
+      "estimate": "10m",
+      "instructions": "link-ag.net でパートナー登録の受付有無を確認。休止中なら A8/もしもで代替。"
     },
     {
       "id": "ga4-gsc-env",
-      "priority": 2,
+      "priority": 4,
       "label": "GA4 + GSC 環境変数設定と再デプロイ",
       "estimate": "45m",
       "instructions": "blog-affiliate-pipeline/docs/analytics-setup.md に従い Vercel に PUBLIC_GA_MEASUREMENT_ID / PUBLIC_GSC_VERIFICATION を設定して deploy。"
     },
     {
       "id": "contact-form-env",
-      "priority": 3,
+      "priority": 5,
       "label": "お問い合わせフォーム送信先の設定",
       "estimate": "15m",
       "instructions": "Formspree 等でエンドポイント取得 → Vercel に PUBLIC_CONTACT_FORM_ACTION を設定。"
     },
     {
       "id": "keywords-100",
-      "priority": 4,
+      "priority": 6,
       "label": "KW 100件リスト（data/keywords.seed.csv）",
       "estimate": "2h",
       "instructions": "ロードマップ §4 の KW 例 30 + ラッコキーワード等で 100 件。blog-affiliate-pipeline/data/keywords.seed.csv に投入。"
-    },
-    {
-      "id": "prompts-v1",
-      "priority": 5,
-      "label": "プロンプト v1 確定 + テスト記事 1本",
-      "estimate": "2h",
-      "instructions": "blog-affiliate-pipeline/config/prompts/ を SIM 比較記事向けに調整。手動生成 → site/content/articles/ に Markdown 公開。"
     }
   ]
 }
