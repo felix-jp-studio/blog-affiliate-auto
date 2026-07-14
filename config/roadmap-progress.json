@@ -41,6 +41,21 @@
       "id": "pr-review-rule",
       "label": "PR 作成前 Bugbot レビュールール",
       "date": "2026-07-14"
+    },
+    {
+      "id": "asp-prep",
+      "label": "ASP 審査用サイト整備 + 登録手順書",
+      "date": "2026-07-14"
+    },
+    {
+      "id": "analytics-code",
+      "label": "GA4/GSC/フォーム用タグ・環境変数のコード実装",
+      "date": "2026-07-14"
+    },
+    {
+      "id": "site-day2",
+      "label": "お問い合わせフォーム・OGP・フッター強化",
+      "date": "2026-07-14"
     }
   ],
   "next": [
@@ -49,21 +64,21 @@
       "priority": 1,
       "label": "ASP 3社登録（A8 / もしも / Link-AG）",
       "estimate": "1h",
-      "instructions": "サイト URL に https://sim-hikari-guide.com を登録。審査用に about / privacy が公開済みであることを確認。"
+      "instructions": "docs/operations/asp-registration.md の手順に従い登録。人間作業（ログイン・審査申請）が必要。"
     },
     {
-      "id": "ga4-gsc",
+      "id": "ga4-gsc-env",
       "priority": 2,
-      "label": "GA4 + Search Console 設置",
+      "label": "GA4 + GSC 環境変数設定と再デプロイ",
       "estimate": "45m",
-      "instructions": "GA4 プロパティ作成 → blog-affiliate-pipeline/site に計測タグ追加 → GSC にドメイン登録・所有権確認（DNS または HTML）。"
+      "instructions": "blog-affiliate-pipeline/docs/analytics-setup.md に従い Vercel に PUBLIC_GA_MEASUREMENT_ID / PUBLIC_GSC_VERIFICATION を設定して deploy。"
     },
     {
-      "id": "site-day2",
+      "id": "contact-form-env",
       "priority": 3,
-      "label": "Day2: サイト骨格の充実",
-      "estimate": "2h",
-      "instructions": "blog-affiliate-pipeline/site でお問い合わせフォーム、フッター整備、OGP/メタ強化。WordPress は見送り、Markdown 公開前提を維持。"
+      "label": "お問い合わせフォーム送信先の設定",
+      "estimate": "15m",
+      "instructions": "Formspree 等でエンドポイント取得 → Vercel に PUBLIC_CONTACT_FORM_ACTION を設定。"
     },
     {
       "id": "keywords-100",
@@ -77,7 +92,7 @@
       "priority": 5,
       "label": "プロンプト v1 確定 + テスト記事 1本",
       "estimate": "2h",
-      "instructions": "blog-affiliate-pipeline/config/prompts/ を SIM 比較記事向けに調整。手動生成 → blog-affiliate-pipeline/site/content/articles/ に Markdown 公開。"
+      "instructions": "blog-affiliate-pipeline/config/prompts/ を SIM 比較記事向けに調整。手動生成 → site/content/articles/ に Markdown 公開。"
     }
   ]
 }
