@@ -52,3 +52,14 @@ alwaysApply: true
 - 既存の `article-auto-post` のパターン（Groq、Playwright、GitHub Actions）を再利用検討
 - 最小スコープの diff。過剰な抽象化・不要なテストは避ける
 - 作業後: ESLint / Prettier / テストがあれば実行
+
+## PR 作成前の実装レビュー
+
+`gh pr create` の**前**に Bugbot でブランチ差分をレビューする。
+
+1. format / test / build を実行
+2. Bugbot（`Diff: branch changes`）でレビュー
+3. Critical / High → 修正後に PR 作成
+4. PR 本文に `## Implementation review (Bugbot)` を含めてから `gh pr create --body` で公開
+
+詳細手順: 実装リポ `blog-affiliate-pipeline` の `.cursor/rules/pr-review.mdc`（同一ワークスペース内の兄弟リポ）
