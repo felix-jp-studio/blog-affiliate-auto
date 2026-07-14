@@ -14,8 +14,12 @@ alwaysApply: true
 | ロードマップ・12ヶ月計画 | `docs/procedures/02-roadmap-prompt-customized.md` | `docs/plans/roadmap-YYYYMMDD.md` |
 | ニッチ調査・ジャンル選定 | `docs/procedures/03-niche-research-procedure.md` + `docs/research/niche-pre-research.md` | `docs/research/niche-pre-research-YYYYMMDD.md` |
 | 手順書・プロンプト編集 | `docs/procedures/README.md` | 同ディレクトリ |
-| 自動化パイプライン実装 | 上記 + 確定ロードマップ | リポジトリ直下にコード |
+| 自動化パイプライン実装 | 上記 + 確定ロードマップ + `config/roadmap-progress.json` | リポジトリ直下にコード |
 | ルール週次見直し | `docs/procedures/04-rule-weekly-review.md` | `config/rule-drafts/` → `.cursor/rules/` |
+
+## 次のロードマップ指示（毎回）
+
+作業完了時は `config/roadmap-progress.json` を参照し、応答末尾に **次の 1〜3 タスク** を提示する。詳細: `.cursor/rules/roadmap-next-steps.mdc`
 
 ## ルール週次レビュー（04 の要約）
 
