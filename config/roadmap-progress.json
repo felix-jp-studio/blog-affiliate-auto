@@ -1,0 +1,83 @@
+{
+  "roadmapFile": "docs/plans/roadmap-20260712.md",
+  "updatedAt": "2026-07-14",
+  "phase": "P0",
+  "month": 1,
+  "week": 1,
+  "infra": {
+    "domain": "sim-hikari-guide.com",
+    "hosting": "vercel-hobby",
+    "dns": "gcp-cloud-dns",
+    "siteRepo": "felix-jp-studio/blog-affiliate-pipeline",
+    "publishMode": "markdown-git-vercel"
+  },
+  "completed": [
+    {
+      "id": "domain",
+      "label": "ドメイン取得（sim-hikari-guide.com）",
+      "date": "2026-07-13"
+    },
+    {
+      "id": "dns",
+      "label": "Cloud DNS ゾーン + Vercel A レコード",
+      "date": "2026-07-14"
+    },
+    {
+      "id": "vercel-deploy",
+      "label": "Vercel 本番デプロイ + カスタムドメイン + www リダイレクト",
+      "date": "2026-07-14"
+    },
+    {
+      "id": "site-scaffold",
+      "label": "Astro サイト骨格（7ページ）",
+      "date": "2026-07-14"
+    },
+    {
+      "id": "pipeline-repo",
+      "label": "blog-affiliate-pipeline リポ作成・Phase0 スケルトン",
+      "date": "2026-07-14"
+    },
+    {
+      "id": "pr-review-rule",
+      "label": "PR 作成前 Bugbot レビュールール",
+      "date": "2026-07-14"
+    }
+  ],
+  "next": [
+    {
+      "id": "asp-register",
+      "priority": 1,
+      "label": "ASP 3社登録（A8 / もしも / Link-AG）",
+      "estimate": "1h",
+      "instructions": "サイト URL に https://sim-hikari-guide.com を登録。審査用に about / privacy が公開済みであることを確認。"
+    },
+    {
+      "id": "ga4-gsc",
+      "priority": 2,
+      "label": "GA4 + Search Console 設置",
+      "estimate": "45m",
+      "instructions": "GA4 プロパティ作成 → blog-affiliate-pipeline/site に計測タグ追加 → GSC にドメイン登録・所有権確認（DNS または HTML）。"
+    },
+    {
+      "id": "site-day2",
+      "priority": 3,
+      "label": "Day2: サイト骨格の充実",
+      "estimate": "2h",
+      "instructions": "blog-affiliate-pipeline/site でお問い合わせフォーム、フッター整備、OGP/メタ強化。WordPress は見送り、Markdown 公開前提を維持。"
+    },
+    {
+      "id": "keywords-100",
+      "priority": 4,
+      "label": "KW 100件リスト（data/keywords.seed.csv）",
+      "estimate": "2h",
+      "instructions": "ロードマップ §4 の KW 例 30 + ラッコキーワード等で 100 件。blog-affiliate-pipeline/data/keywords.seed.csv に投入。"
+    },
+    {
+      "id": "prompts-v1",
+      "priority": 5,
+      "label": "プロンプト v1 確定 + テスト記事 1本",
+      "estimate": "2h",
+      "instructions": "blog-affiliate-pipeline/config/prompts/ を SIM 比較記事向けに調整。手動生成 → blog-affiliate-pipeline/site/content/articles/ に Markdown 公開。"
+    }
+  ]
+}
