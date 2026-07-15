@@ -1,6 +1,6 @@
 {
   "roadmapFile": "docs/plans/roadmap-20260712.md",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-15",
   "phase": "P0",
   "month": 1,
   "week": 1,
@@ -68,6 +68,12 @@
       "label": "プロンプト v1 + テスト記事5本公開",
       "date": "2026-07-14",
       "note": "blog-affiliate-pipeline PR #8 マージ・本番デプロイ済み"
+    },
+    {
+      "id": "moshimo-register",
+      "label": "もしもアフィリエイト会員登録 + メディア登録申請",
+      "date": "2026-07-15",
+      "note": "sim-hikari-guide.com 登録済み・審査待ち"
     }
   ],
   "next": [
@@ -79,11 +85,11 @@
       "instructions": "マイページ → 提携管理で各案件の承認/否認を確認。否認はサイト内容整備後に再申請。"
     },
     {
-      "id": "moshimo-register",
+      "id": "moshimo-approval",
       "priority": 2,
-      "label": "もしもアフィリエイト登録 + メディア審査",
-      "estimate": "30m",
-      "instructions": "記事5本公開済み。docs/operations/asp-registration.md §もしも参照。楽天モバイル等はもしもが強い。"
+      "label": "もしも メディア審査結果の確認 + 案件提携申請",
+      "estimate": "20m",
+      "instructions": "メディア管理で審査通過を確認後、プロモーション検索から楽天モバイル・LINEMO を提携申請。"
     },
     {
       "id": "link-ag-check",
