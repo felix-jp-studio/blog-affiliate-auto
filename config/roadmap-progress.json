@@ -80,54 +80,53 @@
       "label": "A8 提携審査通過",
       "date": "2026-07-15",
       "note": "申請案件すべて承認"
+    },
+    {
+      "id": "a8-links",
+      "label": "A8 広告リンク取得 + 記事への本番URL反映",
+      "date": "2026-07-15",
+      "note": "楽天モバイル(A8)・光3案件をaffiliate-rules.json反映。LINEMO/ahamo/povoは公式URL暫定"
     }
   ],
   "next": [
     {
-      "id": "a8-links",
-      "priority": 1,
-      "label": "A8 広告リンク取得 + 記事への本番URL反映",
-      "estimate": "30m",
-      "instructions": "A8 管理画面で楽天モバイル・光案件のリンク/バナーを取得 → affiliate-rules.json 更新 → PR デプロイ。"
-    },
-    {
       "id": "valuecommerce-register",
-      "priority": 2,
+      "priority": 1,
       "label": "バリューコマース登録 + LINEMO 提携",
       "estimate": "45m",
       "instructions": "LINEMO はもしも非取扱。バリューコマース（またはアクセストレード）でメディア登録 → LINEMO 提携申請。"
     },
     {
       "id": "moshimo-campaigns",
-      "priority": 3,
+      "priority": 2,
       "label": "もしも 提携中プロモーションの確認",
       "estimate": "15m",
       "instructions": "プロモーション検索 → 提携中。楽天市場W報酬等の自動提携案件を確認。通信系はカテゴリ横断で探索。"
     },
     {
       "id": "link-ag-check",
-      "priority": 4,
+      "priority": 3,
       "label": "Link-AG 新規受付状況の確認",
       "estimate": "10m",
       "instructions": "link-ag.net でパートナー登録の受付有無を確認。休止中なら A8/バリューコマースで代替。"
     },
     {
       "id": "ga4-gsc-env",
-      "priority": 5,
+      "priority": 4,
       "label": "GA4 + GSC 環境変数設定と再デプロイ",
       "estimate": "45m",
       "instructions": "blog-affiliate-pipeline/docs/analytics-setup.md に従い Vercel に PUBLIC_GA_MEASUREMENT_ID / PUBLIC_GSC_VERIFICATION を設定して deploy。"
     },
     {
       "id": "contact-form-env",
-      "priority": 6,
+      "priority": 5,
       "label": "お問い合わせフォーム送信先の設定",
       "estimate": "15m",
       "instructions": "Formspree 等でエンドポイント取得 → Vercel に PUBLIC_CONTACT_FORM_ACTION を設定。"
     },
     {
       "id": "keywords-100",
-      "priority": 7,
+      "priority": 6,
       "label": "KW 100件リスト（data/keywords.seed.csv）",
       "estimate": "2h",
       "instructions": "ロードマップ §4 の KW 例 30 + ラッコキーワード等で 100 件。blog-affiliate-pipeline/data/keywords.seed.csv に投入。"
