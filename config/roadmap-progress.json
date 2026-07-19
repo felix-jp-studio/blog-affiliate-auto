@@ -104,26 +104,25 @@
       "label": "GA4 + GSC 設定と本番デプロイ",
       "date": "2026-07-19",
       "note": "G-DVF88R849B on sim-hikari-guide-site。GSC所有権GA連携・sitemap-index.xml送信済み"
+    },
+    {
+      "id": "contact-form-env",
+      "label": "お問い合わせフォーム送信先の設定",
+      "date": "2026-07-19",
+      "note": "Formspree sim-hikari-guide-contact (mlqqboey)。PUBLIC_CONTACT_FORM_ACTION 設定・本番デプロイ済み"
     }
   ],
   "next": [
     {
-      "id": "contact-form-env",
-      "priority": 1,
-      "label": "お問い合わせフォーム送信先の設定",
-      "estimate": "15m",
-      "instructions": "Formspree で sim-hikari-guide-contact 作成 → PUBLIC_CONTACT_FORM_ACTION を sim-hikari-guide-site に設定 → deploy。PUBLIC_CONTACT_EMAIL 設定済み"
-    },
-    {
       "id": "link-ag-check",
-      "priority": 2,
+      "priority": 1,
       "label": "Link-AG 新規受付状況の確認",
       "estimate": "10m",
       "instructions": "link-ag.net でパートナー登録の受付有無を確認。休止中なら A8/バリューコマースで代替。"
     },
     {
       "id": "keywords-100",
-      "priority": 3,
+      "priority": 2,
       "label": "KW 100件リスト（data/keywords.seed.csv）",
       "estimate": "2h",
       "instructions": "ロードマップ §4 の KW 例 30 + ラッコキーワード等で 100 件。blog-affiliate-pipeline/data/keywords.seed.csv に投入。"
