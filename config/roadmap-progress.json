@@ -1,7 +1,7 @@
 {
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "updatedAt": "2026-07-19",
-  "phase": "P0",
+  "phase": "P0.5",
   "month": 1,
   "week": 2,
   "infra": {
@@ -116,6 +116,18 @@
       "label": "KW 100件リスト（data/keywords.seed.csv）",
       "date": "2026-07-19",
       "note": "blog-affiliate-pipeline PR #11 マージ済み。SIM/光/お困り系100件"
+    },
+    {
+      "id": "article-batch-1",
+      "label": "記事量産バッチ1（priority 6-15、10本）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #12 マージ・本番デプロイ済み（auto モード、10本追加）。本番計15記事"
+    },
+    {
+      "id": "article-publish-schedule",
+      "label": "記事公開スケジュール調査 + 自動キュー実装",
+      "date": "2026-07-19",
+      "note": "週2（月・木 JST）採用。blog-affiliate-pipeline PR #14"
     }
   ],
   "next": [
@@ -127,11 +139,11 @@
       "instructions": "link-ag.net でパートナー登録の受付有無を確認。休止中なら A8/バリューコマースで代替。"
     },
     {
-      "id": "generate-cli",
+      "id": "article-batch-2",
       "priority": 2,
-      "label": "構成・本文生成 CLI（W3）",
-      "estimate": "3h",
-      "instructions": "blog-affiliate-pipeline/packages/generator で keywords.seed.csv から1本 draft.md を出力。Groq + prompts/ を使用。"
+      "label": "記事量産バッチ2（priority 16-25）",
+      "estimate": "2h",
+      "instructions": "publish-schedule マージ後は `npm run publish:scheduled -- --force --dry-run` で次 KW を確認。手動バッチは `config/batch-priority-16-25.json` + `npm run generate:batch`。"
     },
     {
       "id": "publisher-e2e",
