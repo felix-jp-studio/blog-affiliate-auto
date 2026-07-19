@@ -128,26 +128,61 @@
       "label": "記事公開スケジュール調査 + 自動キュー実装",
       "date": "2026-07-19",
       "note": "週2（月・木 JST）採用。blog-affiliate-pipeline PR #14"
+    },
+    {
+      "id": "design-docs-auto-merge",
+      "label": "設計書 PR 自動マージ（docs/ + design-doc ラベル）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #15（Article UI v2 設計書）・PR #16（auto-merge ワークフロー）マージ済み"
+    },
+    {
+      "id": "article-ui-v2-p0",
+      "label": "Article UI v2 P0（記事テンプレ基盤）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #17 マージ済み"
+    },
+    {
+      "id": "cursor-github-integration-docs",
+      "label": "Cursor × GitHub 連携ドキュメント",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #18 マージ済み"
+    },
+    {
+      "id": "article-ui-v2-p1",
+      "label": "Article UI v2 P1（TOC・運営者ボックス・SEO）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #19 マージ済み"
+    },
+    {
+      "id": "article-ui-v2-p2",
+      "label": "Article UI v2 P2（CTAカード・OG PNG・カテゴリ拡張）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #20 マージ済み"
+    },
+    {
+      "id": "cursor-bot-gh-setup",
+      "label": "Cursor bot 用 gh CLI デュアルアカウント設定",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #21 マージ済み（gh-bot.sh / gh-user.sh）"
+    },
+    {
+      "id": "link-ag-check",
+      "label": "Link-AG 新規受付状況の確認",
+      "date": "2026-07-19",
+      "note": "要手動確認。公開ページ: トップはパートナーログインのみで新規登録リンクなし。/partner/sign_up は404。広告主向け問い合わせ(/client/inquiry)のみ。パートナー新規受付は休止または非公開の可能性大 → A8/バリューコマースで代替継続"
     }
   ],
   "next": [
     {
-      "id": "link-ag-check",
-      "priority": 1,
-      "label": "Link-AG 新規受付状況の確認",
-      "estimate": "10m",
-      "instructions": "link-ag.net でパートナー登録の受付有無を確認。休止中なら A8/バリューコマースで代替。"
-    },
-    {
       "id": "article-batch-2",
-      "priority": 2,
+      "priority": 1,
       "label": "記事量産バッチ2（priority 16-25）",
       "estimate": "2h",
-      "instructions": "publish-schedule マージ後は `npm run publish:scheduled -- --force --dry-run` で次 KW を確認。手動バッチは `config/batch-priority-16-25.json` + `npm run generate:batch`。"
+      "instructions": "publish-schedule テストで priority 16（article-p16）生成済み。残り priority 17-25 は `config/batch-priority-16-25.json` + `npm run generate:batch`、または `npm run publish:scheduled -- --force` で順次公開。"
     },
     {
       "id": "publisher-e2e",
-      "priority": 3,
+      "priority": 2,
       "label": "Markdown Git 公開 E2E（W4）",
       "estimate": "2h",
       "instructions": "packages/publisher で draft.md → site/src/content/articles/*.md に書き出し、PR 作成→マージ→Vercel 本番反映まで1本通す。"
