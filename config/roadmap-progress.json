@@ -3,7 +3,7 @@
   "updatedAt": "2026-07-19",
   "phase": "P0",
   "month": 1,
-  "week": 1,
+  "week": 2,
   "infra": {
     "domain": "sim-hikari-guide.com",
     "hosting": "vercel-hobby",
@@ -110,6 +110,12 @@
       "label": "お問い合わせフォーム送信先の設定",
       "date": "2026-07-19",
       "note": "Formspree sim-hikari-guide-contact (mlqqboey)。PUBLIC_CONTACT_FORM_ACTION 設定・本番デプロイ済み"
+    },
+    {
+      "id": "keywords-100",
+      "label": "KW 100件リスト（data/keywords.seed.csv）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #11 マージ済み。SIM/光/お困り系100件"
     }
   ],
   "next": [
@@ -121,11 +127,18 @@
       "instructions": "link-ag.net でパートナー登録の受付有無を確認。休止中なら A8/バリューコマースで代替。"
     },
     {
-      "id": "keywords-100",
+      "id": "generate-cli",
       "priority": 2,
-      "label": "KW 100件リスト（data/keywords.seed.csv）",
+      "label": "構成・本文生成 CLI（W3）",
+      "estimate": "3h",
+      "instructions": "blog-affiliate-pipeline/packages/generator で keywords.seed.csv から1本 draft.md を出力。Groq + prompts/ を使用。"
+    },
+    {
+      "id": "publisher-e2e",
+      "priority": 3,
+      "label": "Markdown Git 公開 E2E（W4）",
       "estimate": "2h",
-      "instructions": "ロードマップ §4 の KW 例 30 + ラッコキーワード等で 100 件。blog-affiliate-pipeline/data/keywords.seed.csv に投入。"
+      "instructions": "packages/publisher で draft.md → site/src/content/articles/*.md に書き出し、PR 作成→マージ→Vercel 本番反映まで1本通す。"
     }
   ]
 }
