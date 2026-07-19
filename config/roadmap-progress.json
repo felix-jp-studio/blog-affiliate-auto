@@ -109,7 +109,7 @@
       "id": "contact-form-env",
       "label": "お問い合わせフォーム送信先の設定",
       "date": "2026-07-19",
-      "note": "Formspree sim-hikari-guide-contact (mlqqboey)。PUBLIC_CONTACT_FORM_ACTION 設定・本番デプロイ済み"
+      "note": "Formspree sim-hikari-guide-contact (mlgqboey)。PUBLIC_CONTACT_FORM_ACTION 設定・本番デプロイ済み（mlqq→mlgq タイポ修正済み）"
     },
     {
       "id": "keywords-100",
