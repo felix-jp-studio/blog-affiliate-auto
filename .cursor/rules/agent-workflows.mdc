@@ -72,5 +72,6 @@ alwaysApply: true
 
 ## PR マージ
 
-- ユーザーが明示的に止めない限り、CI 通過後は **自動マージしてよい**
+- **記事公開 PR**（`article-publish` ラベル、`site/src/content/articles/` のみ変更）: CI 通過後 `articles-auto-merge.yml` が自動 squash merge。手動マージ不要
+- **その他 PR**: ユーザーが明示的に止めない限り、CI 通過後は自動マージしてよい
 - 以下のときだけユーザーへ報告: CI 失敗、コンフリクト、secrets 混入、破壊的変更
