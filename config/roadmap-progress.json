@@ -1,6 +1,6 @@
 {
   "roadmapFile": "docs/plans/roadmap-20260712.md",
-  "updatedAt": "2026-07-19",
+  "updatedAt": "2026-07-20",
   "phase": "P0.5",
   "month": 1,
   "week": 2,
@@ -170,22 +170,136 @@
       "label": "Link-AG 新規受付状況の確認",
       "date": "2026-07-19",
       "note": "要手動確認。公開ページ: トップはパートナーログインのみで新規登録リンクなし。/partner/sign_up は404。広告主向け問い合わせ(/client/inquiry)のみ。パートナー新規受付は休止または非公開の可能性大 → A8/バリューコマースで代替継続"
+    },
+    {
+      "id": "article-batch-2",
+      "label": "記事量産バッチ2（priority 17-25、9本）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #26。priority 16 は hikari-mansion-osusume として既公開。template モードで9本追加"
+    },
+    {
+      "id": "e2e-publish-check-p0",
+      "label": "Markdown Git 公開 E2E P0（記事/dist 検証・CI）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #28 マージ済み。validate-articles/dist、scheduled dry-run、test_e2e_publish.py"
+    },
+    {
+      "id": "e2e-publish-check-p1",
+      "label": "Markdown Git 公開 E2E P1（本番 smoke）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #29 マージ済み。smoke-production.mjs、config/e2e-smoke.json、post-deploy-smoke.yml、`npm run test:e2e:smoke`"
+    },
+    {
+      "id": "visual-regression-design",
+      "label": "Visual regression 設計（React/Next.js 比較）",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #30 マージ済み。docs/visual-regression-design.md（Astro vs React SPA vs Next.js、方法×スタック比較）"
+    },
+    {
+      "id": "e2e-publish-check-p2",
+      "label": "E2E P2 affiliate/changed-slugs 検証",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #31 マージ済み。changed-slugs.mjs、A8/VC アフィリエイトリンク検証、CI 連携"
+    },
+    {
+      "id": "playwright-visual-design",
+      "label": "Playwright hybrid visual 実装設計",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #32 マージ済み。docs/playwright-visual-implementation-design.md"
+    },
+    {
+      "id": "playwright-visual-p0",
+      "label": "Playwright hybrid visual regression P0",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #33 マージ済み。/contact・/sim・/articles/sim-20gb-osusume の PNG+text snapshot、pull-request.yml"
+    },
+    {
+      "id": "playwright-visual-pr-comment",
+      "label": "Playwright visual diff PR コメント",
+      "date": "2026-07-19",
+      "note": "blog-affiliate-pipeline PR #34 マージ済み。CI で visual diff テーブルを PR コメント投稿"
+    },
+    {
+      "id": "publish-schedule-6-per-week",
+      "label": "記事公開スケジュール週6本（3タイプ×2）",
+      "date": "2026-07-20",
+      "note": "blog-affiliate-pipeline PR #35 マージ済み。月〜土 各1本・タイプ均等配分（comparison/howto/troubleshoot 各2本/週）"
+    },
+    {
+      "id": "asp-urls-registry",
+      "label": "ASP URL 中央集約（config/asp-urls.json）",
+      "date": "2026-07-20",
+      "note": "blog-affiliate-pipeline PR #36 マージ済み。affiliate-rules.json の program 参照化、generator/publisher/site/E2E 連携"
+    },
+    {
+      "id": "sunday-crosssell-infra",
+      "label": "日曜 crosssell 記事公開インフラ",
+      "date": "2026-07-20",
+      "note": "blog-affiliate-pipeline PR #37 マージ済み。keywords.sunday.csv、article-crosssell プロンプト、Hub /cost。週7本（月〜土6+日1）"
+    },
+    {
+      "id": "github-human-gh-default",
+      "label": "エージェント PR は human gh デフォルト（bot PAT 任意）",
+      "date": "2026-07-20",
+      "note": "blog-affiliate-pipeline PR #38 マージ済み。gh-user.sh デフォルト、cursor-agent ラベル、gh-bot.sh フォールバック限定"
     }
   ],
   "next": [
     {
-      "id": "article-batch-2",
+      "id": "sunday-crosssell-first-dry-run",
       "priority": 1,
-      "label": "記事量産バッチ2（priority 16-25）",
-      "estimate": "2h",
-      "instructions": "publish-schedule テストで priority 16（article-p16）生成済み。残り priority 17-25 は `config/batch-priority-16-25.json` + `npm run generate:batch`、または `npm run publish:scheduled -- --force` で順次公開。"
+      "label": "日曜 crosssell 初回 dry-run → 生成 PR",
+      "estimate": "1h",
+      "instructions": "blog-affiliate-pipeline で `npm run publish:scheduled -- --dry-run` を日曜設定で実行し、`auでんき セット割` が選ばれることを確認。初回 crosssell 記事を生成して PR 作成。"
     },
     {
-      "id": "publisher-e2e",
+      "id": "manual-article-workflow-dispatch",
       "priority": 2,
-      "label": "Markdown Git 公開 E2E（W4）",
+      "label": "手動記事生成 workflow_dispatch 運用確立",
+      "estimate": "1h",
+      "instructions": "GitHub Actions の workflow_dispatch で手動記事生成フローを整備。docs に運用手順を追記し、1本テスト生成→PR→マージまで確認。"
+    },
+    {
+      "id": "article-batch-3",
+      "priority": 3,
+      "label": "記事量産バッチ3（priority 26-35）",
       "estimate": "2h",
-      "instructions": "packages/publisher で draft.md → site/src/content/articles/*.md に書き出し、PR 作成→マージ→Vercel 本番反映まで1本通す。"
+      "instructions": "blog-affiliate-pipeline で `config/batch-priority-26-35.json` を作成し `npm run generate:batch` で10本生成。PR 作成→マージ。"
+    },
+    {
+      "id": "affiliate-url-migration-legacy",
+      "priority": 4,
+      "label": "既存記事アフィリエイト URL 移行（legacy 4本）",
+      "estimate": "1h",
+      "instructions": "PR #36 以前のハードコード URL 4本を `config/asp-urls.json` 参照に移行。docs/asp-urls.md の手順に従う。"
+    },
+    {
+      "id": "affiliate-url-migration-rest",
+      "priority": 5,
+      "label": "既存記事アフィリエイト URL 移行（残り21本）",
+      "estimate": "2h",
+      "instructions": "残り21記事のアフィリエイト URL を asp-urls.json ベースに一括移行。validate-articles と E2E affiliate 検証を通す。"
+    },
+    {
+      "id": "visual-regression-page-expand",
+      "priority": 6,
+      "label": "Visual regression ページ拡張",
+      "estimate": "2h",
+      "instructions": "PR #33 の P0 3ページから、トップ・光回線ハブ・追加記事ページ等へ Playwright visual regression を拡張。baseline PNG をコミット。"
+    },
+    {
+      "id": "contact-form-ux",
+      "priority": 7,
+      "label": "お問い合わせフォーム UX 改善",
+      "estimate": "1h",
+      "instructions": "site の /contact フォーム UX 改善（バリデーション、送信フィードバック、モバイル対応）。Formspree 連携は維持。"
+    },
+    {
+      "id": "roadmap-progress-update",
+      "priority": 8,
+      "label": "roadmap-progress.json 更新",
+      "estimate": "30m",
+      "instructions": "blog-affiliate-auto で pipeline PR #29-38 マージ後に config/roadmap-progress.json を更新（本 PR で対応）。"
     }
   ]
 }
