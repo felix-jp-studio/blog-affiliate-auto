@@ -1,0 +1,70 @@
+---
+description: 「次の作業を提示して」等の依頼時、roadmap-progress.json を読み表形式で次タスクを提示する
+alwaysApply: true
+---
+
+# ロードマップ次タスク提示（表形式）
+
+**適用範囲**: `blog-affiliate-auto` および `blog-affiliate-pipeline` に関する作業。
+
+## トリガー
+
+ユーザーが次のような**明示的な依頼**をしたときに本ルールを適用する:
+
+- 「次の作業を提示して」
+- 「ロードマップから次の作業」
+- 「roadmap next tasks」
+- 上記と同等の意味（次に何をすべきか、優先タスクの一覧など）
+
+※ 通常の作業完了時の末尾指示は `roadmap-next-steps.mdc` を参照。
+
+## 手順
+
+1. **`config/roadmap-progress.json` を必ず読む**（進捗・次タスクの正本）
+2. 必要なら `docs/plans/roadmap-20260712.md` の該当 Phase/Month/Week を参照
+3. 応答は **Markdown 表** を中心に構成（冒頭に 1〜2 文の導入段落は可）
+4. 優先度上位 **1〜5 件** を提示（`next` が少ない場合は全件）
+
+## 出力フォーマット（必須）
+
+```markdown
+## 次のロードマップ指示
+
+{任意: 1〜2 文の状況説明}
+
+### 現在のステータス
+
+| 項目 | 値 |
+|------|-----|
+| Phase | {phase} |
+| Month / Week | {month} / {week} |
+| インフラ | {infra.hosting} / {infra.publishMode} |
+| ドメイン | {infra.domain} |
+| 完了タスク数 | {completed.length} |
+| 残タスク数 | {next.length} |
+| 最終更新 | {updatedAt} |
+
+### 次にやること（優先順）
+
+| 優先度 | タスク | 担当 | 目安 | コマンド / 成果物 |
+|--------|--------|------|------|-------------------|
+| {priority} | {label} | {User or Agent} | {estimate} | {instructions の要約: コマンド・ファイル・PR 等} |
+
+### ユーザー vs エージェント分担
+
+| タスク | ユーザー | エージェント |
+|--------|----------|--------------|
+| {label} | {手動ログイン・審査・判断が必要な作業} | {実装・PR・デプロイ・テスト等} |
+
+**進捗**: {completed.length} 件完了 / 残り {next.length} 件
+```
+
+## ルール
+
+- 番号付きリストだけで終わらない。**必ず上記 3 つの表**を含める
+- 抽象的な「続きをやりましょう」禁止。具体的なコマンド・ファイル・成果物を「コマンド / 成果物」列に書く
+- インフラ方針は progress.json の `infra` を正とする（Vercel + Markdown Git 公開。初期 WP は見送り）
+- パイプラインのファイルパスは `blog-affiliate-pipeline/` 配下を明示する
+- **担当**列: 実装・PR・テストは Agent、ASP ログイン・審査・秘密情報入力は User
+- **ユーザー vs エージェント分担**表: 各タスク行で、誰が何をするかを 1 行ずつ明記（空欄にしない）
+- 実装リポで作業する場合も、進捗の正本は `blog-affiliate-auto/config/roadmap-progress.json`

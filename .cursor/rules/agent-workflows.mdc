@@ -21,6 +21,8 @@ alwaysApply: true
 
 作業完了時は `config/roadmap-progress.json` を参照し、応答末尾に **次の 1〜3 タスク** を提示する。詳細: `.cursor/rules/roadmap-next-steps.mdc`
 
+ユーザーが「次の作業を提示して」等と依頼した場合は **表形式** で提示。詳細: `.cursor/rules/roadmap-next-tasks.mdc`
+
 ## ルール週次レビュー（04 の要約）
 
 毎週日曜: `config/rule-review-input.json` のスコアで評価。
