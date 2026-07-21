@@ -1,6 +1,6 @@
 {
   "roadmapFile": "docs/plans/roadmap-20260712.md",
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-07-21",
   "phase": "P0.5",
   "month": 1,
   "week": 2,
@@ -242,43 +242,91 @@
       "label": "エージェント PR は human gh デフォルト（bot PAT 任意）",
       "date": "2026-07-20",
       "note": "blog-affiliate-pipeline PR #38 マージ済み。gh-user.sh デフォルト、cursor-agent ラベル、gh-bot.sh フォールバック限定"
+    },
+    {
+      "id": "sunday-crosssell-first-dry-run",
+      "label": "日曜 crosssell 初回 dry-run → 生成 PR",
+      "date": "2026-07-20",
+      "note": "blog-affiliate-pipeline PR #39 マージ済み。au-denki-setwari（category: cost / crosssell）。日曜シミュレーションで priority 1 KW 確認"
+    },
+    {
+      "id": "article-pr-auto-merge",
+      "label": "記事公開 PR 自動 squash merge",
+      "date": "2026-07-20",
+      "note": "blog-affiliate-pipeline PR #40 マージ済み。articles-auto-merge.yml、article-publish ラベル、scheduled-articles 連携"
+    },
+    {
+      "id": "scheduled-prettier-format",
+      "label": "scheduled workflow Prettier site 整形",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #41 マージ済み。scheduled-articles 実行時に site 記事を Prettier 整形"
+    },
+    {
+      "id": "scheduled-pr-backtick-label-fix",
+      "label": "scheduled PR backtick + article-publish ラベル修正",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #42 マージ済み。PR 作成時の backtick エスケープと article-publish ラベル付与を修正"
+    },
+    {
+      "id": "mineo-article-recovery",
+      "label": "mineo 記事復旧（定期生成）",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #43 マージ済み。mineo 評判 デメリット（comparison）。scheduled-articles PR 作成失敗から手動復旧・本番公開"
+    },
+    {
+      "id": "sim-hub-snapshot-empty-pr-guard",
+      "label": "sim-hub snapshot 更新 + 空 PR ガード",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #44 マージ済み。sim ハブ visual snapshot 更新、変更なし PR 作成を防止"
+    },
+    {
+      "id": "scheduled-playwright-snapshot-auto-update",
+      "label": "定期記事 PR で Playwright スナップショット自動更新",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #45 マージ済み。scheduled-articles PR に visual snapshot 差分を自動コミット"
+    },
+    {
+      "id": "scheduled-pipeline-hardening",
+      "label": "scheduled パイプライン hardening",
+      "date": "2026-07-21",
+      "note": "PR #40-42, #44-45 により auto-merge・Prettier・ラベル修正・空 PR ガード・visual snapshot 自動更新を整備"
     }
   ],
   "next": [
     {
-      "id": "sunday-crosssell-first-dry-run",
-      "priority": 1,
-      "label": "日曜 crosssell 初回 dry-run → 生成 PR",
-      "estimate": "1h",
-      "instructions": "blog-affiliate-pipeline で `npm run publish:scheduled -- --dry-run` を日曜設定で実行し、`auでんき セット割` が選ばれることを確認。初回 crosssell 記事を生成して PR 作成。"
-    },
-    {
-      "id": "manual-article-workflow-dispatch",
-      "priority": 2,
-      "label": "手動記事生成 workflow_dispatch 運用確立",
-      "estimate": "1h",
-      "instructions": "GitHub Actions の workflow_dispatch で手動記事生成フローを整備。docs に運用手順を追記し、1本テスト生成→PR→マージまで確認。"
-    },
-    {
-      "id": "article-batch-3",
-      "priority": 3,
-      "label": "記事量産バッチ3（priority 26-35）",
-      "estimate": "2h",
-      "instructions": "blog-affiliate-pipeline で `config/batch-priority-26-35.json` を作成し `npm run generate:batch` で10本生成。PR 作成→マージ。"
-    },
-    {
       "id": "affiliate-url-migration-legacy",
-      "priority": 4,
+      "priority": 1,
       "label": "既存記事アフィリエイト URL 移行（legacy 4本）",
       "estimate": "1h",
       "instructions": "PR #36 以前のハードコード URL 4本を `config/asp-urls.json` 参照に移行。docs/asp-urls.md の手順に従う。"
     },
     {
       "id": "affiliate-url-migration-rest",
-      "priority": 5,
+      "priority": 2,
       "label": "既存記事アフィリエイト URL 移行（残り21本）",
       "estimate": "2h",
       "instructions": "残り21記事のアフィリエイト URL を asp-urls.json ベースに一括移行。validate-articles と E2E affiliate 検証を通す。"
+    },
+    {
+      "id": "asp-links-missing-articles",
+      "priority": 3,
+      "label": "ASP リンク未設定 4記事へのリンク追加",
+      "estimate": "1h",
+      "instructions": "アフィリエイトリンク未設定の4記事を特定し、asp-urls.json から適切な ASP リンクを反映。validate-articles と E2E affiliate 検証を通す。"
+    },
+    {
+      "id": "manual-article-workflow-dispatch",
+      "priority": 4,
+      "label": "手動記事生成 workflow_dispatch 運用確立",
+      "estimate": "1h",
+      "instructions": "GitHub Actions の workflow_dispatch で手動記事生成フローを整備。docs に運用手順を追記し、1本テスト生成→PR→マージまで確認。"
+    },
+    {
+      "id": "article-batch-3",
+      "priority": 5,
+      "label": "記事量産バッチ3（priority 27-35）",
+      "estimate": "2h",
+      "instructions": "blog-affiliate-pipeline で `config/batch-priority-27-35.json` を作成し `npm run generate:batch` で9本生成（priority 26 mineo は 2026-07-21 公開済み）。PR 作成→マージ。"
     },
     {
       "id": "visual-regression-page-expand",
@@ -293,13 +341,6 @@
       "label": "お問い合わせフォーム UX 改善",
       "estimate": "1h",
       "instructions": "site の /contact フォーム UX 改善（バリデーション、送信フィードバック、モバイル対応）。Formspree 連携は維持。"
-    },
-    {
-      "id": "roadmap-progress-update",
-      "priority": 8,
-      "label": "roadmap-progress.json 更新",
-      "estimate": "30m",
-      "instructions": "blog-affiliate-auto で pipeline PR #29-38 マージ後に config/roadmap-progress.json を更新（本 PR で対応）。"
     }
   ]
 }
