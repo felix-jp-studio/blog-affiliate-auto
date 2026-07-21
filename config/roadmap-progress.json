@@ -1,9 +1,10 @@
 {
   "roadmapFile": "docs/plans/roadmap-20260712.md",
+  "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "updatedAt": "2026-07-21",
   "phase": "P0.5",
   "month": 1,
-  "week": 2,
+  "week": 3,
   "infra": {
     "domain": "sim-hikari-guide.com",
     "hosting": "vercel-hobby",
@@ -290,57 +291,156 @@
       "label": "scheduled パイプライン hardening",
       "date": "2026-07-21",
       "note": "PR #40-42, #44-45 により auto-merge・Prettier・ラベル修正・空 PR ガード・visual snapshot 自動更新を整備"
+    },
+    {
+      "id": "article-batch-3",
+      "label": "記事量産バッチ3（priority 27-35）",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #47。priority 27-35 の比較記事9本生成（priority 26 mineo は公開済みのため除外）。config/batch-priority-27-35.json 追加"
+    },
+    {
+      "id": "manual-article-workflow-dispatch",
+      "label": "手動記事生成 workflow_dispatch 運用確立",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #46 マージ済み。docs/article-publish-schedule.md に workflow_dispatch 手順・force 入力・日曜 crosssell dry-run を追記"
+    },
+    {
+      "id": "affiliate-url-migration-legacy",
+      "label": "既存記事アフィリエイト URL 移行（legacy 4本）",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #48。初回 seed 4本を {AFFILIATE:...} プレースホルダへ移行"
+    },
+    {
+      "id": "affiliate-url-migration-rest",
+      "label": "既存記事アフィリエイト URL 移行（残り21本）",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #48。全22記事のハードコード ASP URL を asp-urls.json 参照プレースホルダへ一括移行"
+    },
+    {
+      "id": "asp-links-missing-articles",
+      "label": "ASP リンク未設定 4記事へのリンク追加",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #48。hikari-provider-chigai / iijmio-hyoban-fee / sim-houjin-osusume / mnp-reservation-number に ASP リンク追加"
+    },
+    {
+      "id": "visual-regression-page-expand",
+      "label": "Visual regression ページ拡張",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #49 マージ済み。/・/hikari・/cost・/articles/au-denki-setwari の PNG+text snapshot 追加（7ページ計）。Ubuntu CI baseline 更新"
+    },
+    {
+      "id": "contact-form-ux",
+      "label": "お問い合わせフォーム UX 改善",
+      "date": "2026-07-21",
+      "note": "blog-affiliate-pipeline PR #50 マージ済み。/contact フォームにバリデーション・送信中状態・成功/失敗フィードバック・モバイル対応。Formspree 連携維持"
+    },
+    {
+      "id": "revenue-roadmap",
+      "label": "収益特化ロードマップ策定",
+      "date": "2026-07-21",
+      "note": "docs/revenue-roadmap.md 作成。Week 3–4 即時施策・Month 2–3+ 収益 KPI・ASP/記事タイプギャップ分析"
     }
   ],
   "next": [
     {
-      "id": "affiliate-url-migration-legacy",
+      "id": "nuro-hikari-asp-link",
       "priority": 1,
-      "label": "既存記事アフィリエイト URL 移行（legacy 4本）",
-      "estimate": "1h",
-      "instructions": "PR #36 以前のハードコード URL 4本を `config/asp-urls.json` 参照に移行。docs/asp-urls.md の手順に従う。"
+      "label": "NURO 光 ASP リンク登録 + 既存記事反映",
+      "estimate": "2h",
+      "impact": "high",
+      "owner": "Agent+User",
+      "timeline": "Week 3",
+      "instructions": "A8 マイページ（https://pub.a8.net/）で NURO 光の広告リンク ID を取得（User ログイン）。`blog-affiliate-pipeline/config/asp-urls.json` に nuro-hikari プログラム追加。nuro-hikari-campaign / nuro-hikari-au-hikari-hikaku 等の {AFFILIATE:nuro-hikari} 反映。validate-articles + E2E affiliate 通過。"
     },
     {
-      "id": "affiliate-url-migration-rest",
+      "id": "gsc-indexing-baseline",
       "priority": 2,
-      "label": "既存記事アフィリエイト URL 移行（残り21本）",
-      "estimate": "2h",
-      "instructions": "残り21記事のアフィリエイト URL を asp-urls.json ベースに一括移行。validate-articles と E2E affiliate 検証を通す。"
+      "label": "GSC インデックス・表示ベースライン取得",
+      "estimate": "1h",
+      "impact": "medium",
+      "owner": "User",
+      "timeline": "Week 3",
+      "instructions": "Search Console（https://search.google.com/search-console）で sim-hikari-guide.com のインデックス登録数・表示回数・CTR を記録。`docs/revenue-roadmap.md` KPI 表に実数を追記。未インデックス記事は URL 検査でリクエスト。"
     },
     {
-      "id": "asp-links-missing-articles",
+      "id": "weekly-asp-revenue-report",
       "priority": 3,
-      "label": "ASP リンク未設定 4記事へのリンク追加",
+      "label": "週次 ASP 収益レポート手順の確立",
       "estimate": "1h",
-      "instructions": "アフィリエイトリンク未設定の4記事を特定し、asp-urls.json から適切な ASP リンクを反映。validate-articles と E2E affiliate 検証を通す。"
+      "impact": "medium",
+      "owner": "User+Agent",
+      "timeline": "Week 3",
+      "instructions": "A8（pub.a8.net）・VC（aff.valuecommerce.ne.jp）の週次クリック/成果を Markdown テンプレ（`docs/operations/revenue-weekly-template.md`）で記録。毎週日曜 15 分。"
     },
     {
-      "id": "manual-article-workflow-dispatch",
+      "id": "internal-linking-v1",
       "priority": 4,
-      "label": "手動記事生成 workflow_dispatch 運用確立",
-      "estimate": "1h",
-      "instructions": "GitHub Actions の workflow_dispatch で手動記事生成フローを整備。docs に運用手順を追記し、1本テスト生成→PR→マージまで確認。"
+      "label": "内部リンク v1（同一カテゴリ 2 本自動挿入）",
+      "estimate": "4h",
+      "impact": "medium",
+      "owner": "Agent",
+      "timeline": "Week 4",
+      "instructions": "blog-affiliate-pipeline/packages/generator で記事生成時に同一 category の既公開記事から 2 本を選び「関連記事」セクションを自動挿入。Article UI v2 の関連記事コンポーネントと連携。"
     },
     {
-      "id": "article-batch-3",
+      "id": "ahamo-povo-asp-search",
       "priority": 5,
-      "label": "記事量産バッチ3（priority 27-35）",
+      "label": "ahamo / povo ASP 案件調査",
       "estimate": "2h",
-      "instructions": "blog-affiliate-pipeline で `config/batch-priority-27-35.json` を作成し `npm run generate:batch` で9本生成（priority 26 mineo は 2026-07-21 公開済み）。PR 作成→マージ。"
+      "impact": "medium",
+      "owner": "User",
+      "timeline": "Week 4",
+      "instructions": "A8・VC・各キャリア公式アフィリエイトで ahamo/povo/UQ の成果案件を調査。見つかれば asp-urls.json に追加し比較記事（ahamo-povo-hikaku 等）の CTA を ASP 化。"
     },
     {
-      "id": "visual-regression-page-expand",
+      "id": "keywords-comparison-refill",
       "priority": 6,
-      "label": "Visual regression ページ拡張",
-      "estimate": "2h",
-      "instructions": "PR #33 の P0 3ページから、トップ・光回線ハブ・追加記事ページ等へ Playwright visual regression を拡張。baseline PNG をコミット。"
+      "label": "comparison KW 50 件追加（枯渇防止）",
+      "estimate": "3h",
+      "impact": "medium",
+      "owner": "Agent",
+      "timeline": "Week 4",
+      "instructions": "data/keywords.seed.csv に comparison タイプを priority 101+ で 50 件追加（5G/シニア/子供/副回線/乗り換え/セット割/解約金/WiMAX 等）。8 月中旬の comparison 枯渇（残 8 件・約 4 週）前に実施。"
     },
     {
-      "id": "contact-form-ux",
+      "id": "gsc-rewrite-queue-v1",
       "priority": 7,
-      "label": "お問い合わせフォーム UX 改善",
-      "estimate": "1h",
-      "instructions": "site の /contact フォーム UX 改善（バリデーション、送信フィードバック、モバイル対応）。Formspree 連携は維持。"
+      "label": "GSC 11–30 位 KW リライトキュー v1",
+      "estimate": "6h",
+      "impact": "high",
+      "owner": "Agent",
+      "timeline": "Month 2",
+      "instructions": "GSC パフォーマンス CSV から 11–30 位のクエリを抽出し data/rewrite-queue.csv を作成。週 1 本リライト PR を scheduled と別 workflow で実行。"
+    },
+    {
+      "id": "crosssell-asp-expansion",
+      "priority": 8,
+      "label": "crosssell ASP 化調査（電気・クレカ）",
+      "estimate": "2h",
+      "impact": "medium",
+      "owner": "User",
+      "timeline": "Month 2",
+      "instructions": "日曜 crosssell 17 KW（楽天でんき・auでんき 等）向けに A8/VC/もしもで電気・クレカ案件を調査。ASP 化可能なものを asp-urls.json + article-crosssell プロンプトに反映。"
+    },
+    {
+      "id": "hub-cta-enhancement",
+      "priority": 9,
+      "label": "Hub ページ CTA 強化（/sim /hikari /cost）",
+      "estimate": "4h",
+      "impact": "medium",
+      "owner": "Agent",
+      "timeline": "Month 2",
+      "instructions": "site/src/pages/sim.astro / hikari.astro / cost.astro に比較表 + 主力 ASP CTA カードを追加。visual regression baseline 更新。"
+    },
+    {
+      "id": "seasonal-moving-keywords",
+      "priority": 10,
+      "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
+      "estimate": "6h",
+      "impact": "high",
+      "owner": "Agent",
+      "timeline": "Month 3",
+      "instructions": "10 月着手。引っ越し 光回線 電気 セット・新生活 通信 等の crosssell/comparison KW を 20 件追加し 11–12 月から先行公開。"
     }
   ]
 }
