@@ -345,6 +345,12 @@
       "label": "NURO 光 asp-urls 登録（pending・A8 提携申請中）",
       "date": "2026-07-21",
       "note": "blog-affiliate-pipeline: nuro-hikari を status pending + fallbackUrl 公式で登録。トラッキング URL は A8 承認待ち。既存記事 11 本は公式 URL のまま（変更なし）"
+    },
+    {
+      "id": "weekly-asp-revenue-report",
+      "label": "週次 ASP 収益レポート手順の確立",
+      "date": "2026-07-21",
+      "note": "docs/operations/revenue-weekly-template.md 作成。A8/VC ダッシュボード URL・週次チェックリスト・W29 集計表テンプレ。毎週日曜 15 分で実施"
     }
   ],
   "next": [
@@ -370,18 +376,8 @@
       "instructions": "Search Console（https://search.google.com/search-console）で sim-hikari-guide.com のインデックス登録数・表示回数・CTR を記録。`docs/revenue-roadmap.md` KPI 表に実数を追記。未インデックス記事は URL 検査でリクエスト。"
     },
     {
-      "id": "weekly-asp-revenue-report",
-      "priority": 3,
-      "label": "週次 ASP 収益レポート手順の確立",
-      "estimate": "1h",
-      "impact": "medium",
-      "owner": "User+Agent",
-      "timeline": "Week 3",
-      "instructions": "A8（pub.a8.net）・VC（aff.valuecommerce.ne.jp）の週次クリック/成果を Markdown テンプレ（`docs/operations/revenue-weekly-template.md`）で記録。毎週日曜 15 分。"
-    },
-    {
       "id": "internal-linking-v1",
-      "priority": 4,
+      "priority": 3,
       "label": "内部リンク v1（同一カテゴリ 2 本自動挿入）",
       "estimate": "4h",
       "impact": "medium",
@@ -391,7 +387,7 @@
     },
     {
       "id": "ahamo-povo-asp-search",
-      "priority": 5,
+      "priority": 4,
       "label": "ahamo / povo ASP 案件調査",
       "estimate": "2h",
       "impact": "medium",
@@ -401,7 +397,7 @@
     },
     {
       "id": "keywords-comparison-refill",
-      "priority": 6,
+      "priority": 5,
       "label": "comparison KW 50 件追加（枯渇防止）",
       "estimate": "3h",
       "impact": "medium",
@@ -411,7 +407,7 @@
     },
     {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 7,
+      "priority": 6,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -421,7 +417,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 8,
+      "priority": 7,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -431,7 +427,7 @@
     },
     {
       "id": "hub-cta-enhancement",
-      "priority": 9,
+      "priority": 8,
       "label": "Hub ページ CTA 強化（/sim /hikari /cost）",
       "estimate": "4h",
       "impact": "medium",
@@ -441,7 +437,7 @@
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 10,
+      "priority": 9,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
