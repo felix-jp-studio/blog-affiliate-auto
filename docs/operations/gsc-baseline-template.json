@@ -1,0 +1,114 @@
+{
+  "property": "https://sim-hikari-guide.com",
+  "sitemap": "https://sim-hikari-guide.com/sitemap-index.xml",
+  "publishedArticles": 36,
+  "baselineDate": "2026-07-21",
+  "instructions": "docs/operations/gsc-baseline.md",
+  "snapshots": [
+    {
+      "date": "2026-07-21",
+      "periodDays": 28,
+      "indexedPages": null,
+      "notIndexedPages": null,
+      "indexRatePercent": null,
+      "impressions": null,
+      "clicks": null,
+      "ctrPercent": null,
+      "avgPosition": null,
+      "topQueries": [
+        {
+          "rank": 1,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 2,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 3,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 4,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 5,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 6,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 7,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 8,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 9,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        },
+        {
+          "rank": 10,
+          "query": null,
+          "clicks": null,
+          "impressions": null,
+          "ctrPercent": null,
+          "avgPosition": null
+        }
+      ],
+      "urlInspectionRequested": [],
+      "notes": "初回ベースライン。User が GSC ログイン後に null を実数で埋める。"
+    }
+  ],
+  "weeklyTargets": {
+    "week3to4": {
+      "indexedPagesMin": 15,
+      "monthlyPvRange": "100-300"
+    },
+    "month2": {
+      "indexedPagesMin": 40,
+      "monthlyPvRange": "800-1500"
+    }
+  }
+}
