@@ -367,7 +367,9 @@
       "impact": "medium",
       "owner": "User",
       "timeline": "Week 3",
-      "instructions": "Search Console（https://search.google.com/search-console）で sim-hikari-guide.com のインデックス登録数・表示回数・CTR を記録。`docs/revenue-roadmap.md` KPI 表に実数を追記。未インデックス記事は URL 検査でリクエスト。"
+      "status": "in_progress",
+      "docReady": true,
+      "instructions": "手順書 `docs/operations/gsc-baseline.md` に従い GSC（https://search.google.com/search-console）へ手動ログイン。sim-hikari-guide.com のインデックス数・表示・CTR・TOP10 クエリを記入。週次は `docs/operations/gsc-baseline-template.json`。未インデックス記事は URL 検査でリクエスト。数値記入完了後 Agent に連絡。"
     },
     {
       "id": "weekly-asp-revenue-report",
