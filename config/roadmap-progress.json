@@ -388,6 +388,12 @@
       "label": "Hub ページ CTA 強化（/sim /hikari /cost）",
       "date": "2026-07-22",
       "note": "blog-affiliate-pipeline PR #54 マージ済み。比較表 + HubAspCtaSection、visual regression baseline 更新"
+    },
+    {
+      "id": "post-publish-index-queue",
+      "label": "新規記事インデックスリクエスト手順 / 自動化",
+      "date": "2026-07-22",
+      "note": "blog-affiliate-pipeline: append-index-queue.mjs + post-publish-index-queue.yml + data/gsc-index-queue.json。blog-affiliate-auto: docs/operations/gsc-index-queue.md"
     }
   ],
   "next": [
@@ -402,18 +408,8 @@
       "instructions": "site/public/robots.txt を追加。Sitemap: https://sim-hikari-guide.com/sitemap-index.xml、User-agent: * Allow: /。E2E smoke に /robots.txt 200 追加。"
     },
     {
-      "id": "post-publish-index-queue",
-      "priority": 2,
-      "label": "新規記事インデックスリクエスト手順 / 自動化",
-      "estimate": "3h",
-      "impact": "high",
-      "owner": "Agent+User",
-      "timeline": "Week 4",
-      "instructions": "記事 PR マージ後 slug を docs/operations/gsc-index-queue.md に追記。User は GSC URL 検査で 1 日 5–10 本リクエスト。将来 workflow_dispatch で slug リスト出力。"
-    },
-    {
       "id": "indexnow-ping",
-      "priority": 3,
+      "priority": 2,
       "label": "IndexNow 公開後 ping",
       "estimate": "2h",
       "impact": "medium",
@@ -423,7 +419,7 @@
     },
     {
       "id": "nuro-hikari-asp-link",
-      "priority": 4,
+      "priority": 3,
       "label": "NURO 光 ASP リンク有効化 + 既存記事反映",
       "estimate": "2h",
       "impact": "high",
@@ -434,7 +430,7 @@
     },
     {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 5,
+      "priority": 4,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -444,7 +440,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 6,
+      "priority": 5,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -454,7 +450,7 @@
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 7,
+      "priority": 6,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
