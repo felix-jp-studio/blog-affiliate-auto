@@ -2,19 +2,19 @@
   "property": "https://sim-hikari-guide.com",
   "sitemap": "https://sim-hikari-guide.com/sitemap-index.xml",
   "publishedArticles": 36,
-  "baselineDate": "2026-07-21",
+  "baselineDate": "2026-07-22",
   "instructions": "docs/operations/gsc-baseline.md",
   "snapshots": [
     {
-      "date": "2026-07-21",
+      "date": "2026-07-22",
       "periodDays": 28,
       "indexedPages": null,
       "notIndexedPages": null,
       "indexRatePercent": null,
-      "impressions": null,
-      "clicks": null,
-      "ctrPercent": null,
-      "avgPosition": null,
+      "impressions": 1,
+      "clicks": 0,
+      "ctrPercent": 0,
+      "avgPosition": 19,
       "topQueries": [
         {
           "rank": 1,
@@ -97,8 +97,14 @@
           "avgPosition": null
         }
       ],
-      "urlInspectionRequested": [],
-      "notes": "初回ベースライン。User が GSC ログイン後に null を実数で埋める。"
+      "urlInspectionRequested": [
+        "https://sim-hikari-guide.com/sim",
+        "https://sim-hikari-guide.com/hikari",
+        "https://sim-hikari-guide.com/articles/sim-osusume-hikaku-2026",
+        "https://sim-hikari-guide.com/articles/au-denki-setwari"
+      ],
+      "urlInspectionIndexed": ["https://sim-hikari-guide.com/"],
+      "notes": "初回ベースライン。Pages レポートは「データを処理中」のため URL 検査で代替。トップ登録済み、4 URL リクエスト済み（2026-07-22）。"
     }
   ],
   "weeklyTargets": {
