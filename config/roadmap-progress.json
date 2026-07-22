@@ -369,6 +369,24 @@
       "label": "ahamo / povo ASP 案件調査",
       "date": "2026-07-22",
       "note": "ahamo・ahamo光・UQ mobile を A8 申請済み。povo は A8 案件なし（公式維持）。asp-urls.json 反映"
+    },
+    {
+      "id": "keywords-comparison-refill",
+      "label": "comparison KW 50 件追加（枯渇防止）",
+      "date": "2026-07-22",
+      "note": "blog-affiliate-pipeline PR #56 マージ済み。data/keywords.seed.csv に comparison 50 件追加"
+    },
+    {
+      "id": "internal-links-backfill",
+      "label": "既存記事への同一カテゴリ内部リンク backfill",
+      "date": "2026-07-22",
+      "note": "blog-affiliate-pipeline PR #55 マージ済み。scripts/backfill-internal-links.py で公開済み記事を一括更新"
+    },
+    {
+      "id": "hub-cta-enhancement",
+      "label": "Hub ページ CTA 強化（/sim /hikari /cost）",
+      "date": "2026-07-22",
+      "note": "blog-affiliate-pipeline PR #54 マージ済み。比較表 + HubAspCtaSection、visual regression baseline 更新"
     }
   ],
   "next": [
@@ -384,18 +402,8 @@
       "instructions": "【ブロック中: A8 提携申請中】承認後、User が A8 マイページ（https://pub.a8.net/）で NURO 光の trackingUrl を取得して Agent に共有。Agent が `blog-affiliate-pipeline/config/asp-urls.json` の status→active、programId/trackingUrl 設定、nuro-hikari 関連記事の {AFFILIATE:nuro-hikari} 反映 PR を作成。validate-articles + E2E affiliate 通過。"
     },
     {
-      "id": "keywords-comparison-refill",
-      "priority": 2,
-      "label": "comparison KW 50 件追加（枯渇防止）",
-      "estimate": "3h",
-      "impact": "medium",
-      "owner": "Agent",
-      "timeline": "Week 4",
-      "instructions": "data/keywords.seed.csv に comparison タイプを priority 101+ で 50 件追加（5G/シニア/子供/副回線/乗り換え/セット割/解約金/WiMAX 等）。8 月中旬の comparison 枯渇（残 8 件・約 4 週）前に実施。"
-    },
-    {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 3,
+      "priority": 2,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -405,7 +413,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 4,
+      "priority": 3,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -414,18 +422,8 @@
       "instructions": "日曜 crosssell 17 KW（楽天でんき・auでんき 等）向けに A8/VC/もしもで電気・クレカ案件を調査。ASP 化可能なものを asp-urls.json + article-crosssell プロンプトに反映。"
     },
     {
-      "id": "hub-cta-enhancement",
-      "priority": 5,
-      "label": "Hub ページ CTA 強化（/sim /hikari /cost）",
-      "estimate": "4h",
-      "impact": "medium",
-      "owner": "Agent",
-      "timeline": "Month 2",
-      "instructions": "site/src/pages/sim.astro / hikari.astro / cost.astro に比較表 + 主力 ASP CTA カードを追加。visual regression baseline 更新。"
-    },
-    {
       "id": "seasonal-moving-keywords",
-      "priority": 6,
+      "priority": 4,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
