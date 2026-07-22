@@ -3,13 +3,13 @@
 記事 PR が main にマージされたあと、パイプライン CI が **未インデックス URL のキュー** を自動更新します。  
 ユーザーは Search Console の **URL 検査** で、1 日 **5〜10 本** をインデックス登録リクエストします。
 
-| 項目           | 値                                                                                               |
-| -------------- | ------------------------------------------------------------------------------------------------ |
-| プロパティ     | `https://sim-hikari-guide.com`（URL プレフィックス）                                             |
-| Search Console | [https://search.google.com/search-console](https://search.google.com/search-console)             |
-| キュー正本     | `blog-affiliate-pipeline/data/gsc-index-queue.json`                                              |
-| 自動更新 WF    | `blog-affiliate-pipeline/.github/workflows/post-publish-index-queue.yml`                         |
-| ベースライン   | [gsc-baseline.md](./gsc-baseline.md)                                                             |
+| 項目           | 値                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------ |
+| プロパティ     | `https://sim-hikari-guide.com`（URL プレフィックス）                                 |
+| Search Console | [https://search.google.com/search-console](https://search.google.com/search-console) |
+| キュー正本     | `blog-affiliate-pipeline/data/gsc-index-queue.json`                                  |
+| 自動更新 WF    | `blog-affiliate-pipeline/.github/workflows/post-publish-index-queue.yml`             |
+| ベースライン   | [gsc-baseline.md](./gsc-baseline.md)                                                 |
 
 ---
 
@@ -32,15 +32,15 @@
 }
 ```
 
-| フィールド   | 型      | 説明                                           |
-| ------------ | ------- | ---------------------------------------------- |
-| `siteUrl`    | string  | 本番サイト URL（`config/e2e-smoke.json` 由来） |
-| `updatedAt`  | string  | キュー最終更新（ISO 8601）                     |
-| `entries`    | array   | 検査対象 URL 一覧                              |
-| `slug`       | string  | 記事 slug（ファイル名から `.md` 除去）         |
-| `url`        | string  | 記事の完全 URL                                 |
-| `mergedAt`   | string  | main マージ検知時刻（ISO 8601）                |
-| `indexed`    | boolean | ユーザーが GSC でインデックス確認済みか        |
+| フィールド  | 型      | 説明                                           |
+| ----------- | ------- | ---------------------------------------------- |
+| `siteUrl`   | string  | 本番サイト URL（`config/e2e-smoke.json` 由来） |
+| `updatedAt` | string  | キュー最終更新（ISO 8601）                     |
+| `entries`   | array   | 検査対象 URL 一覧                              |
+| `slug`      | string  | 記事 slug（ファイル名から `.md` 除去）         |
+| `url`       | string  | 記事の完全 URL                                 |
+| `mergedAt`  | string  | main マージ検知時刻（ISO 8601）                |
+| `indexed`   | boolean | ユーザーが GSC でインデックス確認済みか        |
 
 **追記タイミング**: `articles-auto-merge.yml` による記事 PR マージ → main への push → `post-publish-index-queue.yml` が diff から slug を解決し追記。
 
@@ -96,15 +96,15 @@ GSC には **Google アカウントでの手動ログイン** が必要です。
 
 `data/gsc-index-queue.json` の `entries` と同期して記入。古いエントリは JSON 側の `indexed: true` 更新を正とする。
 
-| slug | URL | mergedAt | indexed | GSC 実施日 | メモ |
-| ---- | --- | -------- | ------- | ---------- | ---- |
-| _（JSON から転記）_ | | | ☐ | | |
+| slug                | URL | mergedAt | indexed | GSC 実施日 | メモ |
+| ------------------- | --- | -------- | ------- | ---------- | ---- |
+| _（JSON から転記）_ |     |          | ☐       |            |      |
 
 **記入例**:
 
-| slug | URL | mergedAt | indexed | GSC 実施日 | メモ |
-| ---- | --- | -------- | ------- | ---------- | ---- |
-| `sim-new-example` | https://sim-hikari-guide.com/articles/sim-new-example | 2026-07-22 | ☐ → ✅ | 2026-07-23 | リクエスト済 |
+| slug              | URL                                                   | mergedAt   | indexed | GSC 実施日 | メモ         |
+| ----------------- | ----------------------------------------------------- | ---------- | ------- | ---------- | ------------ |
+| `sim-new-example` | https://sim-hikari-guide.com/articles/sim-new-example | 2026-07-22 | ☐ → ✅  | 2026-07-23 | リクエスト済 |
 
 ---
 
