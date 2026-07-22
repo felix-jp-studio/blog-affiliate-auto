@@ -363,6 +363,12 @@
       "label": "内部リンク v1（同一カテゴリ 2 本自動挿入）",
       "date": "2026-07-22",
       "note": "blog-affiliate-pipeline PR #52。generator が「あわせて読みたい」に同一 category 2 本を自動挿入"
+    },
+    {
+      "id": "ahamo-povo-asp-search",
+      "label": "ahamo / povo ASP 案件調査",
+      "date": "2026-07-22",
+      "note": "ahamo・ahamo光・UQ mobile を A8 申請済み。povo は A8 案件なし（公式維持）。asp-urls.json 反映"
     }
   ],
   "next": [
@@ -378,18 +384,8 @@
       "instructions": "【ブロック中: A8 提携申請中】承認後、User が A8 マイページ（https://pub.a8.net/）で NURO 光の trackingUrl を取得して Agent に共有。Agent が `blog-affiliate-pipeline/config/asp-urls.json` の status→active、programId/trackingUrl 設定、nuro-hikari 関連記事の {AFFILIATE:nuro-hikari} 反映 PR を作成。validate-articles + E2E affiliate 通過。"
     },
     {
-      "id": "ahamo-povo-asp-search",
-      "priority": 2,
-      "label": "ahamo / povo ASP 案件調査",
-      "estimate": "2h",
-      "impact": "medium",
-      "owner": "User",
-      "timeline": "Week 4",
-      "instructions": "A8・VC・各キャリア公式アフィリエイトで ahamo/povo/UQ の成果案件を調査。見つかれば asp-urls.json に追加し比較記事（ahamo-povo-hikaku 等）の CTA を ASP 化。"
-    },
-    {
       "id": "keywords-comparison-refill",
-      "priority": 3,
+      "priority": 2,
       "label": "comparison KW 50 件追加（枯渇防止）",
       "estimate": "3h",
       "impact": "medium",
@@ -399,7 +395,7 @@
     },
     {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 4,
+      "priority": 3,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -409,7 +405,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 5,
+      "priority": 4,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -419,7 +415,7 @@
     },
     {
       "id": "hub-cta-enhancement",
-      "priority": 6,
+      "priority": 5,
       "label": "Hub ページ CTA 強化（/sim /hikari /cost）",
       "estimate": "4h",
       "impact": "medium",
@@ -429,7 +425,7 @@
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 7,
+      "priority": 6,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
