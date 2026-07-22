@@ -357,6 +357,12 @@
       "label": "GSC インデックス・表示ベースライン取得",
       "date": "2026-07-22",
       "note": "Pages レポート処理中のため URL 検査で代替。トップ登録済み、4 URL インデックスリクエスト。表示1/クリック0/掲載順位19。docs/operations/gsc-baseline.md"
+    },
+    {
+      "id": "internal-linking-v1",
+      "label": "内部リンク v1（同一カテゴリ 2 本自動挿入）",
+      "date": "2026-07-22",
+      "note": "blog-affiliate-pipeline PR #52。generator が「あわせて読みたい」に同一 category 2 本を自動挿入"
     }
   ],
   "next": [
@@ -372,18 +378,8 @@
       "instructions": "【ブロック中: A8 提携申請中】承認後、User が A8 マイページ（https://pub.a8.net/）で NURO 光の trackingUrl を取得して Agent に共有。Agent が `blog-affiliate-pipeline/config/asp-urls.json` の status→active、programId/trackingUrl 設定、nuro-hikari 関連記事の {AFFILIATE:nuro-hikari} 反映 PR を作成。validate-articles + E2E affiliate 通過。"
     },
     {
-      "id": "internal-linking-v1",
-      "priority": 2,
-      "label": "内部リンク v1（同一カテゴリ 2 本自動挿入）",
-      "estimate": "4h",
-      "impact": "medium",
-      "owner": "Agent",
-      "timeline": "Week 4",
-      "instructions": "blog-affiliate-pipeline/packages/generator で記事生成時に同一 category の既公開記事から 2 本を選び「関連記事」セクションを自動挿入。Article UI v2 の関連記事コンポーネントと連携。"
-    },
-    {
       "id": "ahamo-povo-asp-search",
-      "priority": 3,
+      "priority": 2,
       "label": "ahamo / povo ASP 案件調査",
       "estimate": "2h",
       "impact": "medium",
@@ -393,7 +389,7 @@
     },
     {
       "id": "keywords-comparison-refill",
-      "priority": 4,
+      "priority": 3,
       "label": "comparison KW 50 件追加（枯渇防止）",
       "estimate": "3h",
       "impact": "medium",
@@ -403,7 +399,7 @@
     },
     {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 5,
+      "priority": 4,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -413,7 +409,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 6,
+      "priority": 5,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -423,7 +419,7 @@
     },
     {
       "id": "hub-cta-enhancement",
-      "priority": 7,
+      "priority": 6,
       "label": "Hub ページ CTA 強化（/sim /hikari /cost）",
       "estimate": "4h",
       "impact": "medium",
@@ -433,7 +429,7 @@
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 8,
+      "priority": 7,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
