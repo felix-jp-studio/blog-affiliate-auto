@@ -1,6 +1,7 @@
 {
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
+  "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
   "updatedAt": "2026-07-22",
   "phase": "P0.5",
   "month": 1,
@@ -391,8 +392,38 @@
   ],
   "next": [
     {
-      "id": "nuro-hikari-asp-link",
+      "id": "robots-txt-sitemap",
       "priority": 1,
+      "label": "robots.txt + Sitemap 明示",
+      "estimate": "1h",
+      "impact": "high",
+      "owner": "Agent",
+      "timeline": "Week 4",
+      "instructions": "site/public/robots.txt を追加。Sitemap: https://sim-hikari-guide.com/sitemap-index.xml、User-agent: * Allow: /。E2E smoke に /robots.txt 200 追加。"
+    },
+    {
+      "id": "post-publish-index-queue",
+      "priority": 2,
+      "label": "新規記事インデックスリクエスト手順 / 自動化",
+      "estimate": "3h",
+      "impact": "high",
+      "owner": "Agent+User",
+      "timeline": "Week 4",
+      "instructions": "記事 PR マージ後 slug を docs/operations/gsc-index-queue.md に追記。User は GSC URL 検査で 1 日 5–10 本リクエスト。将来 workflow_dispatch で slug リスト出力。"
+    },
+    {
+      "id": "indexnow-ping",
+      "priority": 3,
+      "label": "IndexNow 公開後 ping",
+      "estimate": "2h",
+      "impact": "medium",
+      "owner": "Agent",
+      "timeline": "Week 4",
+      "instructions": "articles-auto-merge 後または scheduled マージ後に changed slugs を IndexNow API へ POST。キーは Vercel env。"
+    },
+    {
+      "id": "nuro-hikari-asp-link",
+      "priority": 4,
       "label": "NURO 光 ASP リンク有効化 + 既存記事反映",
       "estimate": "2h",
       "impact": "high",
@@ -403,7 +434,7 @@
     },
     {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 2,
+      "priority": 5,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -413,7 +444,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 3,
+      "priority": 6,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -423,7 +454,7 @@
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 4,
+      "priority": 7,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
