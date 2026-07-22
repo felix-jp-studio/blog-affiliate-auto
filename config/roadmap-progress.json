@@ -1,7 +1,7 @@
 {
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
-  "updatedAt": "2026-07-21",
+  "updatedAt": "2026-07-22",
   "phase": "P0.5",
   "month": 1,
   "week": 3,
@@ -351,6 +351,12 @@
       "label": "週次 ASP 収益レポート手順の確立",
       "date": "2026-07-21",
       "note": "docs/operations/revenue-weekly-template.md 作成。A8/VC ダッシュボード URL・週次チェックリスト・W29 集計表テンプレ。毎週日曜 15 分で実施"
+    },
+    {
+      "id": "gsc-indexing-baseline",
+      "label": "GSC インデックス・表示ベースライン取得",
+      "date": "2026-07-22",
+      "note": "Pages レポート処理中のため URL 検査で代替。トップ登録済み、4 URL インデックスリクエスト。表示1/クリック0/掲載順位19。docs/operations/gsc-baseline.md"
     }
   ],
   "next": [
@@ -366,20 +372,8 @@
       "instructions": "【ブロック中: A8 提携申請中】承認後、User が A8 マイページ（https://pub.a8.net/）で NURO 光の trackingUrl を取得して Agent に共有。Agent が `blog-affiliate-pipeline/config/asp-urls.json` の status→active、programId/trackingUrl 設定、nuro-hikari 関連記事の {AFFILIATE:nuro-hikari} 反映 PR を作成。validate-articles + E2E affiliate 通過。"
     },
     {
-      "id": "gsc-indexing-baseline",
-      "priority": 2,
-      "label": "GSC インデックス・表示ベースライン取得",
-      "estimate": "1h",
-      "impact": "medium",
-      "owner": "User",
-      "timeline": "Week 3",
-      "status": "in_progress",
-      "docReady": true,
-      "instructions": "手順書 `docs/operations/gsc-baseline.md` に従い GSC（https://search.google.com/search-console）へ手動ログイン。sim-hikari-guide.com のインデックス数・表示・CTR・TOP10 クエリを記入。週次は `docs/operations/gsc-baseline-template.json`。未インデックス記事は URL 検査でリクエスト。数値記入完了後 Agent に連絡。"
-    },
-    {
       "id": "internal-linking-v1",
-      "priority": 3,
+      "priority": 2,
       "label": "内部リンク v1（同一カテゴリ 2 本自動挿入）",
       "estimate": "4h",
       "impact": "medium",
@@ -389,7 +383,7 @@
     },
     {
       "id": "ahamo-povo-asp-search",
-      "priority": 4,
+      "priority": 3,
       "label": "ahamo / povo ASP 案件調査",
       "estimate": "2h",
       "impact": "medium",
@@ -399,7 +393,7 @@
     },
     {
       "id": "keywords-comparison-refill",
-      "priority": 5,
+      "priority": 4,
       "label": "comparison KW 50 件追加（枯渇防止）",
       "estimate": "3h",
       "impact": "medium",
@@ -409,7 +403,7 @@
     },
     {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 6,
+      "priority": 5,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -419,7 +413,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 7,
+      "priority": 6,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -429,7 +423,7 @@
     },
     {
       "id": "hub-cta-enhancement",
-      "priority": 8,
+      "priority": 7,
       "label": "Hub ページ CTA 強化（/sim /hikari /cost）",
       "estimate": "4h",
       "impact": "medium",
@@ -439,7 +433,7 @@
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 9,
+      "priority": 8,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
