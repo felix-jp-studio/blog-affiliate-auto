@@ -66,7 +66,7 @@ Settings → Secrets and variables → Actions → New repository secret
 
 ## 週次 PR の承認スキップ
 
-個人リポジトリでは GitHub Actions をレビュー bypass に登録できないため、**オーナー PAT** で週次 workflow のみ `--admin` マージします。
+個人リポジトリでは GitHub Actions の `GITHUB_TOKEN` で PR を作成・承認できない設定のため、**オーナー PAT**（`WEEKLY_MERGE_PAT`）で週次 PR の作成（`rule-weekly-review`）と `--admin` マージ（`auto-merge-weekly-pr`）を行います。
 
 ### WEEKLY_MERGE_PAT の登録
 
