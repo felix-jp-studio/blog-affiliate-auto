@@ -48,8 +48,12 @@ jobs:
         id: create_pr
         if: steps.changes.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.WEEKLY_MERGE_PAT }}
         run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::WEEKLY_MERGE_PAT secret が未設定です。docs/branch-protection.md を参照してください。"
+            exit 1
+          fi
           WEEK=$(node -p "require('./config/rule-review-input.json').weekId")
           BRANCH="rules/weekly-${WEEK}"
           git config user.name "github-actions[bot]"
