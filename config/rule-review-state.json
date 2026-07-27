@@ -1,9 +1,20 @@
 {
-  "lastReviewWeek": null,
-  "lastDecision": null,
-  "activeRuleVersionSha": null,
+  "lastReviewWeek": "2026-W28",
+  "lastDecision": "update",
+  "activeRuleVersionSha": "c628972",
   "periods": {
-    "current": null,
-    "previous": null
+    "previous": null,
+    "current": {
+      "weekId": "2026-W28",
+      "ruleSet": "current",
+      "metrics": {
+        "taskCompletionRate": 0.8,
+        "docQualityScore": 4,
+        "manualInterventionCount": 1,
+        "pipelineProgress": 2,
+        "agentFollowedRulesRate": 0.85
+      },
+      "compositeScore": 71
+    }
   }
 }

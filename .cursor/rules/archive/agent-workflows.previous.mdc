@@ -14,8 +14,14 @@ alwaysApply: true
 | ロードマップ・12ヶ月計画 | `docs/procedures/02-roadmap-prompt-customized.md` | `docs/plans/roadmap-YYYYMMDD.md` |
 | ニッチ調査・ジャンル選定 | `docs/procedures/03-niche-research-procedure.md` + `docs/research/niche-pre-research.md` | `docs/research/niche-pre-research-YYYYMMDD.md` |
 | 手順書・プロンプト編集 | `docs/procedures/README.md` | 同ディレクトリ |
-| 自動化パイプライン実装 | 上記 + 確定ロードマップ | リポジトリ直下にコード |
+| 自動化パイプライン実装 | 上記 + 確定ロードマップ + `config/roadmap-progress.json` | リポジトリ直下にコード |
 | ルール週次見直し | `docs/procedures/04-rule-weekly-review.md` | `config/rule-drafts/` → `.cursor/rules/` |
+
+## 次のロードマップ指示（毎回）
+
+作業完了時は `config/roadmap-progress.json` を参照し、応答末尾に **次の 1〜3 タスク** を提示する。詳細: `.cursor/rules/roadmap-next-steps.mdc`
+
+ユーザーが「次の作業を提示して」等と依頼した場合は **表形式** で提示。詳細: `.cursor/rules/roadmap-next-tasks.mdc`
 
 ## ルール週次レビュー（04 の要約）
 
@@ -52,3 +58,20 @@ alwaysApply: true
 - 既存の `article-auto-post` のパターン（Groq、Playwright、GitHub Actions）を再利用検討
 - 最小スコープの diff。過剰な抽象化・不要なテストは避ける
 - 作業後: ESLint / Prettier / テストがあれば実行
+
+## PR 作成前の実装レビュー
+
+`gh pr create` の**前**に Bugbot でブランチ差分をレビューする。
+
+1. format / test / build を実行
+2. Bugbot（`Diff: branch changes`）でレビュー
+3. Critical / High → 修正後に PR 作成
+4. PR 本文に `## Implementation review (Bugbot)` を含めてから `gh pr create --body` で公開
+
+詳細手順: 実装リポ `blog-affiliate-pipeline` の `.cursor/rules/pr-review.mdc`（同一ワークスペース内の兄弟リポ）
+
+## PR マージ
+
+- **記事公開 PR**（`article-publish` ラベル、`site/src/content/articles/` のみ変更）: CI 通過後 `articles-auto-merge.yml` が自動 squash merge。手動マージ不要
+- **その他 PR**: ユーザーが明示的に止めない限り、CI 通過後は自動マージしてよい
+- 以下のときだけユーザーへ報告: CI 失敗、コンフリクト、secrets 混入、破壊的変更

@@ -26,6 +26,7 @@ alwaysApply: true
 - ニッチリサーチ手順: `docs/procedures/03-niche-research-procedure.md`
 - ニッチ調査結果: `docs/research/niche-pre-research.md`
 - 計画の保存先（今後）: `docs/plans/`
+- **進捗・次タスク**: `config/roadmap-progress.json`
 
 ## 除外・注意
 
