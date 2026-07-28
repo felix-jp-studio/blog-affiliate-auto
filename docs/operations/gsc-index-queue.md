@@ -98,15 +98,15 @@ GSC には **Google アカウントでの手動ログイン** が必要です。
 
 | slug                           | URL                                                                | mergedAt   | indexed | GSC 実施日 | メモ |
 | ------------------------------ | ------------------------------------------------------------------ | ---------- | ------- | ---------- | ---- |
-| `esim-norikae-sokujitsu`       | https://sim-hikari-guide.com/articles/esim-norikae-sokujitsu       | 2026-07-22 | ☐       |            |      |
-| `hikari-kaituu-itsu`           | https://sim-hikari-guide.com/articles/hikari-kaituu-itsu           | 2026-07-23 | ☐       |            |      |
-| `sim-5g-taiou-hikaku`          | https://sim-hikari-guide.com/articles/sim-5g-taiou-hikaku          | 2026-07-24 | ☐       |            |      |
-| `iphone-sono-mama-sim`         | https://sim-hikari-guide.com/articles/iphone-sono-mama-sim         | 2026-07-25 | ☐       |            |      |
-| `rakuten-denki-rakuten-mobile` | https://sim-hikari-guide.com/articles/rakuten-denki-rakuten-mobile | 2026-07-26 | ☐       |            |      |
-| `sim-senior-osusume`           | https://sim-hikari-guide.com/articles/sim-senior-osusume           | 2026-07-27 | ☐       |            |      |
-| `au-hikari-kaiyaku-houhou`     | https://sim-hikari-guide.com/articles/au-hikari-kaiyaku-houhou     | 2026-07-28 | ☐       |            |      |
+| `esim-norikae-sokujitsu`       | https://sim-hikari-guide.com/articles/esim-norikae-sokujitsu       | 2026-07-22 | ✅      | 2026-07-28 |      |
+| `hikari-kaituu-itsu`           | https://sim-hikari-guide.com/articles/hikari-kaituu-itsu           | 2026-07-23 | ✅      | 2026-07-28 |      |
+| `sim-5g-taiou-hikaku`          | https://sim-hikari-guide.com/articles/sim-5g-taiou-hikaku          | 2026-07-24 | ✅      | 2026-07-28 |      |
+| `iphone-sono-mama-sim`         | https://sim-hikari-guide.com/articles/iphone-sono-mama-sim         | 2026-07-25 | ✅      | 2026-07-28 |      |
+| `rakuten-denki-rakuten-mobile` | https://sim-hikari-guide.com/articles/rakuten-denki-rakuten-mobile | 2026-07-26 | ✅      | 2026-07-28 |      |
+| `sim-senior-osusume`           | https://sim-hikari-guide.com/articles/sim-senior-osusume           | 2026-07-27 | ✅      | 2026-07-28 |      |
+| `au-hikari-kaiyaku-houhou`     | https://sim-hikari-guide.com/articles/au-hikari-kaiyaku-houhou     | 2026-07-28 | ✅      | 2026-07-28 |      |
 
-**今週のバッチ（2026-07-28 時点）**: 上記 7 件すべて `indexed: false`。1 セッションで 7 本実施可。
+**今週のバッチ（2026-07-28 時点）**: 上記 7 件すべて GSC URL 検査完了（JSON `indexed: true` / `indexedAt: 2026-07-28`）。
 
 ```bash
 cd blog-affiliate-pipeline && npm run gsc:inspection-batch
