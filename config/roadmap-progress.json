@@ -2,10 +2,10 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-07-22",
-  "phase": "P0.5",
+  "updatedAt": "2026-07-28",
+  "phase": "Visitability Phase 1",
   "month": 1,
-  "week": 3,
+  "week": 4,
   "infra": {
     "domain": "sim-hikari-guide.com",
     "hosting": "vercel-hobby",
@@ -394,32 +394,72 @@
       "label": "新規記事インデックスリクエスト手順 / 自動化",
       "date": "2026-07-22",
       "note": "blog-affiliate-pipeline: append-index-queue.mjs + post-publish-index-queue.yml + data/gsc-index-queue.json。blog-affiliate-auto: docs/operations/gsc-index-queue.md"
+    },
+    {
+      "id": "robots-txt-sitemap",
+      "label": "robots.txt + Sitemap 明示",
+      "date": "2026-07-22",
+      "note": "blog-affiliate-pipeline PR #58。site/public/robots.txt、E2E smoke /robots.txt 200"
+    },
+    {
+      "id": "indexnow-ping",
+      "label": "IndexNow 公開後 ping",
+      "date": "2026-07-22",
+      "note": "blog-affiliate-pipeline PR #59。indexnow-ping.mjs + indexnow-ping.yml"
+    },
+    {
+      "id": "cost-category-icon",
+      "label": "固定費・ライフイベントカテゴリのアイコン表示",
+      "date": "2026-07-26",
+      "note": "blog-affiliate-pipeline PR #70"
+    },
+    {
+      "id": "article-comments",
+      "label": "記事コメント機能（承認制・Vercel KV）",
+      "date": "2026-07-26",
+      "note": "blog-affiliate-pipeline PR #69。ArticleComments.astro + /api/comments"
+    },
+    {
+      "id": "article-ui-theme",
+      "label": "温かみのあるテーマ配色 + OS ライト/ダーク自動切替",
+      "date": "2026-07-27",
+      "note": "blog-affiliate-pipeline PR #72"
+    },
+    {
+      "id": "sticky-toc",
+      "label": "記事目次 sticky 表示",
+      "date": "2026-07-27",
+      "note": "blog-affiliate-pipeline PR #73"
+    },
+    {
+      "id": "dark-mode-readability",
+      "label": "ダークモード可読性改善",
+      "date": "2026-07-27",
+      "note": "blog-affiliate-pipeline PR #74"
+    },
+    {
+      "id": "scheduled-indexnow-followup",
+      "label": "scheduled 記事 push 後の IndexNow + GSC キュー",
+      "date": "2026-07-28",
+      "note": "blog-affiliate-pipeline PR #75。scheduled-articles.yml 内で post-publish スクリプト実行"
+    },
+    {
+      "id": "comment-moderation-ops",
+      "label": "コメント運用チェックリスト（承認・モデレーション）",
+      "date": "2026-07-28",
+      "note": "blog-affiliate-pipeline PR #76。docs/article-comments.md 運用手順"
+    },
+    {
+      "id": "indexnow-verify-production",
+      "label": "IndexNow キーファイル本番検証 + CI",
+      "date": "2026-07-28",
+      "note": "blog-affiliate-pipeline PR #77。verify-indexnow-key.mjs、post-deploy-smoke 連携"
     }
   ],
   "next": [
     {
-      "id": "robots-txt-sitemap",
-      "priority": 1,
-      "label": "robots.txt + Sitemap 明示",
-      "estimate": "1h",
-      "impact": "high",
-      "owner": "Agent",
-      "timeline": "Week 4",
-      "instructions": "site/public/robots.txt を追加。Sitemap: https://sim-hikari-guide.com/sitemap-index.xml、User-agent: * Allow: /。E2E smoke に /robots.txt 200 追加。"
-    },
-    {
-      "id": "indexnow-ping",
-      "priority": 2,
-      "label": "IndexNow 公開後 ping",
-      "estimate": "2h",
-      "impact": "medium",
-      "owner": "Agent",
-      "timeline": "Week 4",
-      "instructions": "articles-auto-merge 後または scheduled マージ後に changed slugs を IndexNow API へ POST。キーは Vercel env。"
-    },
-    {
       "id": "nuro-hikari-asp-link",
-      "priority": 3,
+      "priority": 1,
       "label": "NURO 光 ASP リンク有効化 + 既存記事反映",
       "estimate": "2h",
       "impact": "high",
@@ -430,7 +470,7 @@
     },
     {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 4,
+      "priority": 2,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -440,7 +480,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 5,
+      "priority": 3,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -450,7 +490,7 @@
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 6,
+      "priority": 4,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
