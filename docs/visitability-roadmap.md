@@ -1,12 +1,12 @@
-# 訪問性向上ロードマップ（2026-07-22）
+# 訪問性向上ロードマップ（2026-07-28）
 
 sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦点を当てた実行計画。  
 収益施策（ASP・CVR）は [`revenue-roadmap.md`](./revenue-roadmap.md)、インフラ進捗は [`config/roadmap-progress.json`](../config/roadmap-progress.json) を正とする。
 
 | 項目     | 値                                                                   |
 | -------- | -------------------------------------------------------------------- |
-| 更新日   | 2026-07-22                                                           |
-| フェーズ | P0.5 → **Visitability Phase 1**                                      |
+| 更新日   | 2026-07-28                                                           |
+| フェーズ | **Visitability Phase 1**（Week 4）                                   |
 | 実装リポ | `blog-affiliate-pipeline`                                            |
 | 計測正本 | GSC / GA4（手順: [`gsc-baseline.md`](./operations/gsc-baseline.md)） |
 
@@ -20,9 +20,9 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 クロール可能 → インデックス登録 → 検索表示（imp） → クリック（visit）
 ```
 
-| 段階           | 現状（2026-07-22）   | Week 4 目標       | Month 2 目標      | Month 4 目標  |
+| 段階           | 現状（2026-07-28）   | Week 4 目標       | Month 2 目標      | Month 4 目標  |
 | -------------- | -------------------- | ----------------- | ----------------- | ------------- |
-| 公開 URL 数    | 36 記事 + 7 Hub      | 50                | 80                | 150           |
+| 公開 URL 数    | **43 記事** + 7 Hub  | 50                | 80                | 150           |
 | インデックス数 | ≥1（トップ確認済）   | **15+**           | **40+**           | **90+**       |
 | 月間表示回数   | 1（28 日）           | 100–500           | 3,000–8,000       | 15,000+       |
 | 月間クリック   | 0                    | 5–30              | 80–200            | 400+          |
@@ -37,37 +37,41 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 
 ### 完了済み（訪問性に効く施策）
 
-| ID                          | 施策                              | 効果                      |
-| --------------------------- | --------------------------------- | ------------------------- |
-| ga4-gsc-env                 | GA4 + GSC + sitemap 送信          | 計測・クロール起点        |
-| gsc-indexing-baseline       | ベースライン + URL 検査 4 本      | PDCA 起点                 |
-| internal-linking-v1         | 新規記事の同一カテゴリ 2 本リンク | 回遊・PageRank 分散       |
-| internal-links-backfill     | 既存 34 記事バックフィル          | 既存資産の SEO 底上げ     |
-| hub-cta-enhancement         | /sim /hikari /cost 比較表・CTA    | ハブから記事への導線      |
-| keywords-comparison-refill  | comparison KW +50                 | 供給枯渇防止（約 +25 週） |
-| publish-schedule-6-per-week | 週 7 本自動公開                   | ロングテール供給エンジン  |
+| ID                          | 施策                              | 効果                       |
+| --------------------------- | --------------------------------- | -------------------------- |
+| ga4-gsc-env                 | GA4 + GSC + sitemap 送信          | 計測・クロール起点         |
+| gsc-indexing-baseline       | ベースライン + URL 検査 4 本      | PDCA 起点                  |
+| internal-linking-v1         | 新規記事の同一カテゴリ 2 本リンク | 回遊・PageRank 分散        |
+| internal-links-backfill     | 既存 34 記事バックフィル          | 既存資産の SEO 底上げ      |
+| hub-cta-enhancement         | /sim /hikari /cost 比較表・CTA    | ハブから記事への導線       |
+| keywords-comparison-refill  | comparison KW +50                 | 供給枯渇防止（約 +25 週）  |
+| publish-schedule-6-per-week | 週 7 本自動公開                   | ロングテール供給エンジン   |
+| robots-txt-sitemap          | robots.txt + Sitemap 明示         | クローラー信号の整備       |
+| indexnow-ping               | IndexNow 公開後 ping              | 新規記事のインデックス加速 |
+| post-publish-index-queue    | GSC インデックスキュー自動追記    | 公開後 URL 検査の起点      |
+| indexnow-verify-production  | IndexNow キー本番検証 + CI        | ping 前のキーファイル保証  |
 
 ### 技術 SEO の現状
 
-| 項目                         | 状態                      | 訪問性への影響                    |
-| ---------------------------- | ------------------------- | --------------------------------- |
-| `@astrojs/sitemap`           | ✅ 稼働                   | クロール支援                      |
-| Article + Breadcrumb JSON-LD | ✅ 記事ページ             | リッチ結果の一部                  |
-| FAQ / HowTo JSON-LD          | ❌ 未実装                 | FAQ 記事の CTR 機会損失           |
-| `robots.txt`                 | ❌ **未配置（404 想定）** | クローラー信号の欠落              |
-| RSS / Atom feed              | ❌ 未実装                 | 更新通知・再クロール弱い          |
-| IndexNow                     | ❌ 未実装                 | 新規記事のインデックス遅延        |
-| 公開後 GSC URL 検査          | ❌ 手動のみ               | インデックス速度ボトルネック      |
-| Core Web Vitals 監視         | ❌ 未実装                 | 順位要因（現状 Astro 静的で有利） |
-| OGP / canonical              | ✅ 記事・Hub              | SNS・重複 URL 対策済              |
+| 項目                         | 状態                        | 訪問性への影響                    |
+| ---------------------------- | --------------------------- | --------------------------------- |
+| `@astrojs/sitemap`           | ✅ 稼働                     | クロール支援                      |
+| Article + Breadcrumb JSON-LD | ✅ 記事ページ               | リッチ結果の一部                  |
+| FAQ / HowTo JSON-LD          | ❌ 未実装                   | FAQ 記事の CTR 機会損失           |
+| `robots.txt`                 | ✅ 稼働（PR #58）           | クローラー信号・Sitemap 明示      |
+| RSS / Atom feed              | ❌ 未実装                   | 更新通知・再クロール弱い          |
+| IndexNow                     | ✅ 稼働（PR #59, #75, #77） | 新規記事のインデックス加速        |
+| 公開後 GSC URL 検査          | ✅ キュー自動追記（PR #57） | 手動 URL 検査は User 週次         |
+| Core Web Vitals 監視         | ❌ 未実装                   | 順位要因（現状 Astro 静的で有利） |
+| OGP / canonical              | ✅ 記事・Hub                | SNS・重複 URL 対策済              |
 
 ### コンテンツ構造
 
-| 指標             | 値                                              | 訪問性上の課題                                                    |
-| ---------------- | ----------------------------------------------- | ----------------------------------------------------------------- |
-| 記事タイプ       | comparison 89% / howto 6% / troubleshoot 3%     | **情報意図 KW の取りこぼし**（手順・トラブルは imp 獲得しやすい） |
-| 週次スケジュール | comp 2 + howto 2 + troubleshoot 2 + crosssell 1 | スケジュールは均衡。**既公開の偏り**は時間で解消                  |
-| 内部リンク       | 新規 + 34 本 backfill                           | cost/trouble カテゴリはリンク先不足（各 1 本）                    |
+| 指標             | 値                                                          | 訪問性上の課題                                       |
+| ---------------- | ----------------------------------------------------------- | ---------------------------------------------------- |
+| 記事タイプ       | comparison 79% / howto 12% / troubleshoot 5% / crosssell 5% | howto/troubleshoot 比率は改善中。目標 40/25/25/10 へ |
+| 週次スケジュール | comp 2 + howto 2 + troubleshoot 2 + crosssell 1             | スケジュールは均衡。**既公開の偏り**は時間で解消     |
+| 内部リンク       | 新規 + 43 本 backfill 済                                    | cost/trouble カテゴリは各 2 本に増加                 |
 
 ### 計測（GSC ベースライン 2026-07-22）
 
@@ -79,8 +83,8 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 
 ## 3. 核心課題（訪問性ボトルネック）
 
-1. **インデックス遅延**: 公開 2 週目・36 本中ほとんど未登録。表示が出る前に順位改善は不可能。
-2. **供給はあるが「見つかる」仕組みが弱い**: 週 7 本生成は回っているが、robots.txt・IndexNow・公開後 ping がない。
+1. **インデックス遅延**: 公開 3 週目・43 本中ほとんど未登録。表示が出る前に順位改善は不可能。
+2. **インデックス加速の運用**: robots.txt・IndexNow・GSC キューは整備済。**User 週次の URL 検査**と GSC フォローがボトルネック。
 3. **CTR 最適化未着手**: タイトル / description / 構造化データが Article のみ。FAQ 記事が多いのに FAQPage なし。
 4. **リライトループ未稼働**: GSC CSV が必要。11–30 位 KW の伸ばし方が未定義。
 5. **カテゴリ偏り**: sim/hikari は厚いが trouble/cost が薄く、ロングテールの幅が狭い。
@@ -122,14 +126,14 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 
 **ゴール**: クロール基盤を整え、インデックス 15 本以上。
 
-| 優先   | ID                         | タスク                                                                                | 工数   | 担当       | 訪問性インパクト |
-| ------ | -------------------------- | ------------------------------------------------------------------------------------- | ------ | ---------- | ---------------- |
-| **P0** | `robots-txt-sitemap`       | **robots.txt 追加**（Sitemap URL、Allow all、AI クローラー方針）                      | 1h     | Agent      | 高               |
-| **P0** | `gsc-index-weekly-ops`     | **GSC 週次オペ確立**（インデックス数・4 URL follow-up・CSV エクスポート）             | 30m/週 | User       | 高               |
-| **P0** | `post-publish-index-queue` | **新規記事 URL 検査キュー**（マージ後 slug リスト → 週次手順書 or workflow_dispatch） | 3h     | Agent      | 高               |
-| **P1** | `indexnow-ping`            | **IndexNow 連携**（記事 PR マージ後に Bing/Yandex へ ping）                           | 2h     | Agent      | 中〜高           |
-| **P1** | `gsc-rewrite-queue-v1`     | GSC CSV → `rewrite-queue.csv`（11–30 位）※データ少なければ空キューで OK               | 6h     | Agent+User | 中（将来）       |
-| **P2** | `trouble-cost-kw-20`       | trouble / cost カテゴリ KW 各 10 件追加                                               | 2h     | Agent      | 中               |
+| 優先   | ID                             | タスク                                                                    | 工数   | 担当       | 訪問性インパクト |
+| ------ | ------------------------------ | ------------------------------------------------------------------------- | ------ | ---------- | ---------------- |
+| ~~P0~~ | ~~`robots-txt-sitemap`~~       | ~~robots.txt 追加~~ → **✅ PR #58 完了**                                  | —      | —          | —                |
+| **P0** | `gsc-index-weekly-ops`         | **GSC 週次オペ確立**（インデックス数・4 URL follow-up・CSV エクスポート） | 30m/週 | User       | 高               |
+| ~~P0~~ | ~~`post-publish-index-queue`~~ | ~~新規記事 URL 検査キュー~~ → **✅ PR #57 完了**                          | —      | —          | —                |
+| ~~P1~~ | ~~`indexnow-ping`~~            | ~~IndexNow 連携~~ → **✅ PR #59, #75, #77 完了**                          | —      | —          | —                |
+| **P1** | `gsc-rewrite-queue-v1`         | GSC CSV → `rewrite-queue.csv`（11–30 位）※データ少なければ空キューで OK   | 6h     | Agent+User | 中（将来）       |
+| **P2** | `trouble-cost-kw-20`           | trouble / cost カテゴリ KW 各 10 件追加                                   | 2h     | Agent      | 中               |
 
 **User 必須アクション（Phase V1）**
 
@@ -201,14 +205,21 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | `gsc-rewrite-queue-v1`     | B        | User CSV 依存 |
 | `seasonal-moving-keywords` | C        | Month 3 着手  |
 
-### 本ロードマップから追加推奨 `next`（Phase V1）
+### Phase V1 完了済み（2026-07-28 時点）
 
-| ID                         | priority | label                                       |
-| -------------------------- | -------- | ------------------------------------------- |
-| `robots-txt-sitemap`       | 1        | robots.txt + Sitemap 明示                   |
-| `post-publish-index-queue` | 2        | 新規記事インデックスリクエスト手順 / 自動化 |
-| `gsc-index-weekly-ops`     | —        | User 週次（completed には入れず運用項目）   |
-| `indexnow-ping`            | 3        | IndexNow 公開後 ping                        |
+| ID                            | 完了 PR / 日付   |
+| ----------------------------- | ---------------- |
+| `robots-txt-sitemap`          | #58 / 2026-07-22 |
+| `post-publish-index-queue`    | #57 / 2026-07-22 |
+| `indexnow-ping`               | #59 / 2026-07-22 |
+| `scheduled-indexnow-followup` | #75 / 2026-07-28 |
+| `indexnow-verify-production`  | #77 / 2026-07-28 |
+
+### 運用項目（completed には入れない）
+
+| ID                     | 備考                                          |
+| ---------------------- | --------------------------------------------- |
+| `gsc-index-weekly-ops` | User 週次（インデックス数・CSV エクスポート） |
 
 ※ `nuro-hikari-asp-link` は収益系のため priority とは別トラックで管理。
 
@@ -239,6 +250,7 @@ Month 2 末時点で以下を `docs/operations/gsc-baseline.md` または週次�
 
 ## 10. 変更履歴
 
-| 日付       | 内容                                                             |
-| ---------- | ---------------------------------------------------------------- |
-| 2026-07-22 | 初版。P2 完了後（内部リンク・Hub・KW50）の訪問性特化ロードマップ |
+| 日付       | 内容                                                                         |
+| ---------- | ---------------------------------------------------------------------------- |
+| 2026-07-22 | 初版。P2 完了後（内部リンク・Hub・KW50）の訪問性特化ロードマップ             |
+| 2026-07-28 | Phase V1 技術 SEO 完了反映（robots.txt・IndexNow・GSC キュー）。公開 43 記事 |
