@@ -13,6 +13,41 @@
 
 ---
 
+## 🔴 今すぐ対応: 未インデックス 1 件（2026-07-29 更新）
+
+`data/gsc-index-queue.json` に **`indexed: false` が 1 件** あります。GSC ログイン後、下記 URL を URL 検査してください。
+
+| slug                         | URL                                                          | mergedAt   | indexed      |
+| ---------------------------- | ------------------------------------------------------------ | ---------- | ------------ |
+| **`wifi-speed-slow-kaizen`** | https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen | 2026-07-29 | ☐ **要検査** |
+
+```bash
+cd blog-affiliate-pipeline && npm run gsc:inspection-batch
+# → 上記 1 URL を出力（コピー用）
+```
+
+**完了後**: Agent に「`wifi-speed-slow-kaizen` GSC 検査済み」と連絡 → `indexed: true` 更新 PR を依頼。
+
+---
+
+## ⏱️ ユーザー向け 10 分チェックリスト（URL 検査 1 本）
+
+GSC には **手動ログイン必須**。エージェントは代行しません。
+
+| #   | 手順                                                                                           | 目安  | 完了 |
+| --- | ---------------------------------------------------------------------------------------------- | ----- | ---- |
+| 1   | [Search Console](https://search.google.com/search-console) を開く                              | 1 分  | ☐    |
+| 2   | sim-hikari-guide.com 権限のある Google アカウントでログイン                                    | 1 分  | ☐    |
+| 3   | プロパティ `https://sim-hikari-guide.com` を選択                                               | 30 秒 | ☐    |
+| 4   | 上部 **URL 検査** に `https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen` を貼り付け | 30 秒 | ☐    |
+| 5   | 結果確認: **登録済み** → ✅ / **未登録** → **インデックス登録をリクエスト**                    | 2 分  | ☐    |
+| 6   | 本ページ下部チェックリスト表の `wifi-speed-slow-kaizen` 行に GSC 実施日を記入                  | 1 分  | ☐    |
+| 7   | Agent に「GSC 検査済み（wifi-speed-slow-kaizen）」と連絡                                       | 1 分  | ☐    |
+
+**合計**: 約 7〜10 分（1 URL のみ）
+
+---
+
 ## キューファイル形式
 
 正本: [`blog-affiliate-pipeline/data/gsc-index-queue.json`](https://github.com/felix-jp-studio/blog-affiliate-pipeline/blob/main/data/gsc-index-queue.json)
@@ -96,17 +131,20 @@ GSC には **Google アカウントでの手動ログイン** が必要です。
 
 `data/gsc-index-queue.json` の `entries` と同期して記入。古いエントリは JSON 側の `indexed: true` 更新を正とする。
 
-| slug                           | URL                                                                | mergedAt   | indexed | GSC 実施日 | メモ |
-| ------------------------------ | ------------------------------------------------------------------ | ---------- | ------- | ---------- | ---- |
-| `esim-norikae-sokujitsu`       | https://sim-hikari-guide.com/articles/esim-norikae-sokujitsu       | 2026-07-22 | ✅      | 2026-07-28 |      |
-| `hikari-kaituu-itsu`           | https://sim-hikari-guide.com/articles/hikari-kaituu-itsu           | 2026-07-23 | ✅      | 2026-07-28 |      |
-| `sim-5g-taiou-hikaku`          | https://sim-hikari-guide.com/articles/sim-5g-taiou-hikaku          | 2026-07-24 | ✅      | 2026-07-28 |      |
-| `iphone-sono-mama-sim`         | https://sim-hikari-guide.com/articles/iphone-sono-mama-sim         | 2026-07-25 | ✅      | 2026-07-28 |      |
-| `rakuten-denki-rakuten-mobile` | https://sim-hikari-guide.com/articles/rakuten-denki-rakuten-mobile | 2026-07-26 | ✅      | 2026-07-28 |      |
-| `sim-senior-osusume`           | https://sim-hikari-guide.com/articles/sim-senior-osusume           | 2026-07-27 | ✅      | 2026-07-28 |      |
-| `au-hikari-kaiyaku-houhou`     | https://sim-hikari-guide.com/articles/au-hikari-kaiyaku-houhou     | 2026-07-28 | ✅      | 2026-07-28 |      |
+| slug                           | URL                                                                | mergedAt   | indexed | GSC 実施日 | メモ             |
+| ------------------------------ | ------------------------------------------------------------------ | ---------- | ------- | ---------- | ---------------- |
+| `esim-norikae-sokujitsu`       | https://sim-hikari-guide.com/articles/esim-norikae-sokujitsu       | 2026-07-22 | ✅      | 2026-07-28 |                  |
+| `hikari-kaituu-itsu`           | https://sim-hikari-guide.com/articles/hikari-kaituu-itsu           | 2026-07-23 | ✅      | 2026-07-28 |                  |
+| `sim-5g-taiou-hikaku`          | https://sim-hikari-guide.com/articles/sim-5g-taiou-hikaku          | 2026-07-24 | ✅      | 2026-07-28 |                  |
+| `iphone-sono-mama-sim`         | https://sim-hikari-guide.com/articles/iphone-sono-mama-sim         | 2026-07-25 | ✅      | 2026-07-28 |                  |
+| `rakuten-denki-rakuten-mobile` | https://sim-hikari-guide.com/articles/rakuten-denki-rakuten-mobile | 2026-07-26 | ✅      | 2026-07-28 |                  |
+| `sim-senior-osusume`           | https://sim-hikari-guide.com/articles/sim-senior-osusume           | 2026-07-27 | ✅      | 2026-07-28 |                  |
+| `au-hikari-kaiyaku-houhou`     | https://sim-hikari-guide.com/articles/au-hikari-kaiyaku-houhou     | 2026-07-28 | ✅      | 2026-07-28 |                  |
+| **`wifi-speed-slow-kaizen`**   | https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen       | 2026-07-29 | ☐       |            | **今週の未処理** |
 
-**今週のバッチ（2026-07-28 時点）**: 上記 7 件すべて GSC URL 検査完了（JSON `indexed: true` / `indexedAt: 2026-07-28`）。
+**前週バッチ（2026-07-28 完了）**: 上記 7 件（`esim-norikae-sokujitsu` 〜 `au-hikari-kaiyaku-houhou`）GSC URL 検査完了（JSON `indexed: true` / `indexedAt: 2026-07-28`）。
+
+**今週（2026-07-29）**: `wifi-speed-slow-kaizen` のみ pending（`indexed: false`）。IndexNow は 2026-07-29 インライン送信済み。
 
 ```bash
 cd blog-affiliate-pipeline && npm run gsc:inspection-batch
@@ -136,12 +174,18 @@ Agent に依頼しても可（slug リストを伝える）。
 
 ---
 
-## 週次ルーティン（推奨: 日曜 10 分）
+## 週次ルーティン（推奨: 毎週月曜 10〜15 分）
 
-1. キュー JSON で `indexed: false` を確認
-2. 未処理があれば 5〜10 本 URL 検査
-3. [gsc-baseline.md](./gsc-baseline.md) の週次フォローアップ（インデックス数・表示回数）と合わせて実施
-4. 4 週以上リクエスト済みなのに未インデックスの URL があれば Agent に共有（内部リンク・リライト検討）
+| 順  | タスク                                                           | 担当  | 参照                                                                        |
+| --- | ---------------------------------------------------------------- | ----- | --------------------------------------------------------------------------- |
+| 1   | キュー JSON で `indexed: false` を確認                           | User  | 本ページ上部 🔴 セクション                                                  |
+| 2   | 未処理があれば 5〜10 本 URL 検査                                 | User  | ステップ 2                                                                  |
+| 3   | GSC 週次ベースライン記入（インデックス数・表示・CTR）            | User  | [gsc-baseline.md § Week 4+](./gsc-baseline.md#週次ベースライン-week-4-以降) |
+| 4   | 検索パフォーマンス CSV エクスポート（リライトキュー用）          | User  | gsc-baseline ステップ 4                                                     |
+| 5   | `indexed: true` 更新 PR                                          | Agent | ユーザー確認後                                                              |
+| 6   | 4 週以上リクエスト済みなのに未インデックスの URL を Agent に共有 | User  | 内部リンク・リライト検討                                                    |
+
+**Cadence**: 毎週月曜（または記事マージ直後）。Week 4 起点: **2026-07-29**。
 
 ---
 
