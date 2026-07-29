@@ -105,6 +105,45 @@
       ],
       "urlInspectionIndexed": ["https://sim-hikari-guide.com/"],
       "notes": "初回ベースライン。Pages レポートは「データを処理中」のため URL 検査で代替。トップ登録済み、4 URL リクエスト済み（2026-07-22）。"
+    },
+    {
+      "date": "2026-07-29",
+      "weekLabel": "Week 4",
+      "periodDays": 28,
+      "indexedPages": null,
+      "notIndexedPages": null,
+      "indexRatePercent": null,
+      "impressions": null,
+      "clicks": null,
+      "ctrPercent": null,
+      "avgPosition": null,
+      "publishedArticles": 44,
+      "urlInspectionBatch": {
+        "completedAt": "2026-07-28",
+        "count": 7,
+        "slugs": [
+          "esim-norikae-sokujitsu",
+          "hikari-kaituu-itsu",
+          "sim-5g-taiou-hikaku",
+          "iphone-sono-mama-sim",
+          "rakuten-denki-rakuten-mobile",
+          "sim-senior-osusume",
+          "au-hikari-kaiyaku-houhou"
+        ]
+      },
+      "pendingInspection": [
+        {
+          "slug": "wifi-speed-slow-kaizen",
+          "url": "https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen",
+          "mergedAt": "2026-07-29T02:11:18.841Z"
+        }
+      ],
+      "indexNow": {
+        "status": "ok",
+        "sentAt": "2026-07-29"
+      },
+      "nextAction": "weekly CSV export for rewrite queue",
+      "notes": "7 URL batch inspected 2026-07-28. IndexNow inline OK 2026-07-29. Metrics placeholders — User to fill from GSC dashboard."
     }
   ],
   "weeklyTargets": {
