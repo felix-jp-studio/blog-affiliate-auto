@@ -484,6 +484,12 @@
       "label": "IndexNow インライン送信本番検証",
       "date": "2026-07-29",
       "note": "2026-07-29 インライン送信 OK。gsc-baseline.md / gsc-index-queue.md 記録"
+    },
+    {
+      "id": "structured-data-faq-howto",
+      "label": "FAQ / HowTo JSON-LD（記事タイプ別自動付与）",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #82（FAQPage/HowTo 抽出）・PR #83（取得方法見出し HowTo 修正）。本番4 URL 検証: hikari-provider-chigai / iijmio-hyoban-fee / sim-houjin-osusume（FAQPage）・mnp-reservation-number（FAQPage+HowTo）"
     }
   ],
   "next": [

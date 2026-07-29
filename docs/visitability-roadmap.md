@@ -62,7 +62,7 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | ---------------------------- | --------------------------- | --------------------------------- |
 | `@astrojs/sitemap`           | ✅ 稼働                     | クロール支援                      |
 | Article + Breadcrumb JSON-LD | ✅ 記事ページ               | リッチ結果の一部                  |
-| FAQ / HowTo JSON-LD          | ❌ 未実装                   | FAQ 記事の CTR 機会損失           |
+| FAQ / HowTo JSON-LD          | ✅ 稼働（PR #82/#83）       | FAQ/HowTo 記事のリッチ結果        |
 | `robots.txt`                 | ✅ 稼働（PR #58）           | クローラー信号・Sitemap 明示      |
 | RSS / Atom feed              | ❌ 未実装                   | 更新通知・再クロール弱い          |
 | IndexNow                     | ✅ 稼働（PR #59, #75, #77） | 新規記事のインデックス加速        |
@@ -152,15 +152,15 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 
 **ゴール**: インデックス 40+、月間表示 3,000+、CTR 改善開始。
 
-| 優先   | ID                             | タスク                                                  | 工数 | 担当  | 訪問性インパクト |
-| ------ | ------------------------------ | ------------------------------------------------------- | ---- | ----- | ---------------- |
-| **P0** | `structured-data-faq-howto`    | FAQ / HowTo JSON-LD（記事タイプ別自動付与）             | 4h   | Agent | 高（CTR）        |
-| **P0** | `meta-title-optimization-v1`   | タイトル / description テンプレ改善（数字・年・意図語） | 4h   | Agent | 中〜高           |
-| **P0** | `rewrite-weekly-workflow`      | リライト週 1 本 workflow（rewrite-queue から生成）      | 6h   | Agent | 高               |
-| **P1** | `rss-feed`                     | `/rss.xml` 新着記事フィード                             | 2h   | Agent | 中               |
-| **P1** | `howto-troubleshoot-kw-refill` | howto +20 / troubleshoot +20（枯渇前倒し）              | 3h   | Agent | 中               |
-| **P1** | `cwv-smoke`                    | Lighthouse CI or PageSpeed 週次 smoke（Hub + 記事 1）   | 3h   | Agent | 低〜中           |
-| **P2** | `featured-snippet-targeting`   | 比較表・箇条書きテンプレ強化（スニペット狙い）          | 4h   | Agent | 中               |
+| 優先   | ID                              | タスク                                                   | 工数 | 担当  | 訪問性インパクト |
+| ------ | ------------------------------- | -------------------------------------------------------- | ---- | ----- | ---------------- |
+| ~~P0~~ | ~~`structured-data-faq-howto`~~ | ~~FAQ / HowTo JSON-LD~~ → **✅ PR #82/#83 本番検証済み** | —    | —     | —                |
+| **P0** | `meta-title-optimization-v1`    | タイトル / description テンプレ改善（数字・年・意図語）  | 4h   | Agent | 中〜高           |
+| **P0** | `rewrite-weekly-workflow`       | リライト週 1 本 workflow（rewrite-queue から生成）       | 6h   | Agent | 高               |
+| **P1** | `rss-feed`                      | `/rss.xml` 新着記事フィード                              | 2h   | Agent | 中               |
+| **P1** | `howto-troubleshoot-kw-refill`  | howto +20 / troubleshoot +20（枯渇前倒し）               | 3h   | Agent | 中               |
+| **P1** | `cwv-smoke`                     | Lighthouse CI or PageSpeed 週次 smoke（Hub + 記事 1）    | 3h   | Agent | 低〜中           |
+| **P2** | `featured-snippet-targeting`    | 比較表・箇条書きテンプレ強化（スニペット狙い）           | 4h   | Agent | 中               |
 
 ---
 
