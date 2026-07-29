@@ -1,4 +1,4 @@
-# 収益特化ロードマップ（2026-07-28）
+# 収益特化ロードマップ（2026-07-29）
 
 sim-hikari-guide.com（格安 SIM × 光回線 × お困り系）の **収益最大化** に焦点を当てた実行計画。  
 インフラ・パイプライン整備（P0〜P0.5）は完了済み。本書は **Week 3 以降の収益フェーズ** を正とする。
@@ -8,7 +8,7 @@ sim-hikari-guide.com（格安 SIM × 光回線 × お困り系）の **収益最
 | 正本進捗   | `config/roadmap-progress.json`   |
 | 12ヶ月計画 | `docs/plans/roadmap-20260712.md` |
 | 実装リポ   | `blog-affiliate-pipeline`        |
-| 更新日     | 2026-07-28                       |
+| 更新日     | 2026-07-29                       |
 
 ---
 
@@ -18,12 +18,13 @@ sim-hikari-guide.com（格安 SIM × 光回線 × お困り系）の **収益最
 
 | 指標              | 値                                                     | 備考                                       |
 | ----------------- | ------------------------------------------------------ | ------------------------------------------ |
-| 公開記事数        | **43 本**                                              | seed 35 + 定期公開 8 本（2026-07-28 時点） |
+| 公開記事数        | **44 本**                                              | seed 35 + 定期公開 9 本（2026-07-29 時点） |
 | 記事タイプ内訳    | comparison 34 / howto 5 / troubleshoot 2 / crosssell 2 | 比較記事は依然多め（目標比率 40/25/25/10） |
 | カテゴリ          | sim 26 / hikari 13 / trouble 2 / cost 2                | お困り系・固定費は各 2 本に増加            |
 | 自動公開          | **週 7 本**（月〜土 6 + 日 crosssell 1）               | `articles-auto-merge` で CI 通過後マージ   |
-| KW 在庫（seed）   | 65 件未公開                                            | comparison 8 / howto 33 / troubleshoot 24  |
-| KW 在庫（sunday） | 17 件未公開                                            | crosssell 17                               |
+| KW 在庫（seed）   | 160 件（troubleshoot +10）                             | comparison / howto / troubleshoot          |
+| KW 在庫（sunday） | 28 件（cost +10）                                      | crosssell                                  |
+| KW 合計           | **188 件**（seed 160 + sunday 28）                     | PR #78                                     |
 
 ### ASP・コンバージョン
 
@@ -43,7 +44,7 @@ sim-hikari-guide.com（格安 SIM × 光回線 × お困り系）の **収益最
 | ------------------ | --------------------------------------------------------------------------------------------------- |
 | GA4                | G-DVF88R849B 本番稼働                                                                               |
 | GSC                | 所有権・sitemap 送信済み                                                                            |
-| インデックス率     | **未計測**（GSC ベースライン取得済・Week 4 で follow-up）                                           |
+| インデックス率     | **Week 4 ベースライン記録済**（GSC 8 URL 検査完了・メトリクス 0）                                   |
 | 内部リンク自動化   | **✅ 実装済**（PR #52 新規 + PR #55 backfill 43 本）                                                |
 | GSC リライトキュー | **未実装**                                                                                          |
 | 収益レポート       | **手順確立済**（[`revenue-weekly-template.md`](operations/revenue-weekly-template.md)・日曜 15 分） |
@@ -58,7 +59,7 @@ sim-hikari-guide.com（格安 SIM × 光回線 × お困り系）の **収益最
 
 ### 核心課題
 
-1. **トラフィックゼロ期**: 43 本・公開 3 週目。収益より **インデックス・表示回数** がボトルネック。
+1. **トラフィックゼロ期**: 44 本・公開 3 週目。GSC Week 4 ベースライン記録済（表示 0）。収益より **インデックス・表示回数** がボトルネック。
 2. **ASP 漏れ（一部ブロック）**: NURO 光は A8 **提携申請中**（asp-urls に pending 登録済み・記事は公式 URL）。ahamo/povo も成果なし。**並行可能**: GSC ベースライン・週次 ASP レポート・ahamo/povo 案件調査。
 3. **CVR 記事不足**: howto（MNP 手順等）・troubleshoot が各 1〜2 本のみ。乗り換え直前 KW の取りこぼし。
 4. **比較記事枯渇**: comparison 在庫 **約 8 週**（2 本/週 + PR #56 で +50 件追加済）。8 月中旬枯渇リスクは低減。
@@ -179,3 +180,4 @@ VC: LINEMO                                  VC: 維持
 | 2026-07-21 | NURO 光: A8 提携申請中を反映。asp-urls pending 登録・P0 ブロック・並行タスク明示                             |
 | 2026-07-21 | 週次 ASP 収益レポート手順: `docs/operations/revenue-weekly-template.md` 作成                                 |
 | 2026-07-28 | 公開 43 記事・内部リンク v1/backfill 完了・comparison KW +50 反映。Week 3–4 即時タスクの大半を完了済みに更新 |
+| 2026-07-29 | 公開 44 記事・KW 188 件（trouble/cost +20）・GSC Week 4 ベースライン・8 URL 検査完了を反映                   |
