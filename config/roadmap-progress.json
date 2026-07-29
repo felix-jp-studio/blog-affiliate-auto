@@ -490,6 +490,36 @@
       "label": "FAQ / HowTo JSON-LD（記事タイプ別自動付与）",
       "date": "2026-07-29",
       "note": "blog-affiliate-pipeline PR #82（FAQPage/HowTo 抽出）・PR #83（取得方法見出し HowTo 修正）。本番4 URL 検証: hikari-provider-chigai / iijmio-hyoban-fee / sim-houjin-osusume（FAQPage）・mnp-reservation-number（FAQPage+HowTo）"
+    },
+    {
+      "id": "meta-title-optimization-v1",
+      "label": "タイトル / description テンプレ改善（数字・年・意図語）",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #84。generator meta title/description CTR templates v1"
+    },
+    {
+      "id": "rss-feed",
+      "label": "/rss.xml 新着記事フィード",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #85。Astro RSS feed 本番 /rss.xml"
+    },
+    {
+      "id": "howto-troubleshoot-kw-refill",
+      "label": "howto +20 / troubleshoot +20（枯渇前倒し）",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #86。keywords.seed.csv howto/troubleshoot 各 +20"
+    },
+    {
+      "id": "rewrite-weekly-workflow",
+      "label": "リライト週 1 本 workflow（rewrite-queue から生成）",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #87。rewrite weekly workflow skeleton。運用手順: blog-affiliate-auto PR #53 docs/operations/rewrite-weekly-workflow.md"
+    },
+    {
+      "id": "cwv-smoke",
+      "label": "Lighthouse CI 週次 smoke（Hub + 記事 1）",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #88。weekly Lighthouse CWV smoke workflow"
     }
   ],
   "next": [
