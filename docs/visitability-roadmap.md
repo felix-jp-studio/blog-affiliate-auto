@@ -72,7 +72,7 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | `robots.txt`                 | ✅ 稼働（PR #58）           | クローラー信号・Sitemap 明示  |
 | RSS / Atom feed              | ✅ 稼働（PR #85）           | 更新通知・再クロール          |
 | IndexNow                     | ✅ 稼働（PR #59, #75, #77） | 新規記事のインデックス加速    |
-| 公開後 GSC URL 検査          | ✅ 7+1 本完了（PR #80/#81） | 次バッチは新規公開分          |
+| 公開後 GSC URL 検査          | ✅ 初回 8 本完了（PR #80/#81）・**キュー pending 36**（PR #93 backfill 追加分） | 週次 `gsc:inspection-batch` で消化 |
 | Core Web Vitals 監視         | ✅ 週次 smoke（PR #88）     | Hub + 記事 1 の Lighthouse CI |
 | OGP / canonical              | ✅ 記事・Hub                | SNS・重複 URL 対策済          |
 
@@ -295,3 +295,4 @@ Month 2 末時点で以下を `docs/operations/gsc-baseline.md` または週次�
 | 2026-07-22 | 初版。P2 完了後（内部リンク・Hub・KW50）の訪問性特化ロードマップ                                 |
 | 2026-07-28 | Phase V1 技術 SEO 完了反映（robots.txt・IndexNow・GSC キュー）。公開 43 記事                     |
 | 2026-07-29 | Week 4 同期: GSC 8 URL 検査完了・Week 4 ベースライン・trouble/cost KW +20・公開 44 記事 / KW 188 |
+| 2026-07-29 | PR #89–#93 完了反映（Featured Snippet・更新日・Hub メッシュ・CTA A/B・meta バックフィル）。GSC キュー pending 36 |
