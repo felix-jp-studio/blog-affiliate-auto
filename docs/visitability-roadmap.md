@@ -37,38 +37,44 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 
 ### 完了済み（訪問性に効く施策）
 
-| ID                          | 施策                              | 効果                         |
-| --------------------------- | --------------------------------- | ---------------------------- |
-| ga4-gsc-env                 | GA4 + GSC + sitemap 送信          | 計測・クロール起点           |
-| gsc-indexing-baseline       | ベースライン + URL 検査 4 本      | PDCA 起点                    |
-| internal-linking-v1         | 新規記事の同一カテゴリ 2 本リンク | 回遊・PageRank 分散          |
-| internal-links-backfill     | 既存 34 記事バックフィル          | 既存資産の SEO 底上げ        |
-| hub-cta-enhancement         | /sim /hikari /cost 比較表・CTA    | ハブから記事への導線         |
-| keywords-comparison-refill  | comparison KW +50                 | 供給枯渇防止（約 +25 週）    |
-| publish-schedule-6-per-week | 週 7 本自動公開                   | ロングテール供給エンジン     |
-| robots-txt-sitemap          | robots.txt + Sitemap 明示         | クローラー信号の整備         |
-| indexnow-ping               | IndexNow 公開後 ping              | 新規記事のインデックス加速   |
-| post-publish-index-queue    | GSC インデックスキュー自動追記    | 公開後 URL 検査の起点        |
-| indexnow-verify-production  | IndexNow キー本番検証 + CI        | ping 前のキーファイル保証    |
-| gsc-url-inspection-batch    | GSC URL 検査 7+1 本完了           | キュー pending 0             |
-| gsc-inspection-batch-script | gsc:inspection-batch 運用         | 週次 URL 検査の準備          |
-| gsc-weekly-ops-week4        | Week 4 ベースライン記録           | PDCA 継続                    |
-| trouble-cost-kw-20          | trouble/cost KW 各 10 件追加      | ロングテール幅拡大（188 KW） |
-| indexnow-inline-verified    | IndexNow インライン送信検証       | 新規記事 ping 確認済         |
+| ID                           | 施策                              | 効果                            |
+| ---------------------------- | --------------------------------- | ------------------------------- |
+| ga4-gsc-env                  | GA4 + GSC + sitemap 送信          | 計測・クロール起点              |
+| gsc-indexing-baseline        | ベースライン + URL 検査 4 本      | PDCA 起点                       |
+| internal-linking-v1          | 新規記事の同一カテゴリ 2 本リンク | 回遊・PageRank 分散             |
+| internal-links-backfill      | 既存 34 記事バックフィル          | 既存資産の SEO 底上げ           |
+| hub-cta-enhancement          | /sim /hikari /cost 比較表・CTA    | ハブから記事への導線            |
+| keywords-comparison-refill   | comparison KW +50                 | 供給枯渇防止（約 +25 週）       |
+| publish-schedule-6-per-week  | 週 7 本自動公開                   | ロングテール供給エンジン        |
+| robots-txt-sitemap           | robots.txt + Sitemap 明示         | クローラー信号の整備            |
+| indexnow-ping                | IndexNow 公開後 ping              | 新規記事のインデックス加速      |
+| post-publish-index-queue     | GSC インデックスキュー自動追記    | 公開後 URL 検査の起点           |
+| indexnow-verify-production   | IndexNow キー本番検証 + CI        | ping 前のキーファイル保証       |
+| gsc-url-inspection-batch     | GSC URL 検査 7+1 本完了           | キュー pending 0                |
+| gsc-inspection-batch-script  | gsc:inspection-batch 運用         | 週次 URL 検査の準備             |
+| gsc-weekly-ops-week4         | Week 4 ベースライン記録           | PDCA 継続                       |
+| trouble-cost-kw-20           | trouble/cost KW 各 10 件追加      | ロングテール幅拡大（188 KW）    |
+| indexnow-inline-verified     | IndexNow インライン送信検証       | 新規記事 ping 確認済            |
+| structured-data-faq-howto    | FAQ / HowTo JSON-LD               | FAQ/HowTo リッチ結果（#82/#83） |
+| meta-title-optimization-v1   | meta title/description v1         | CTR 改善（#84）                 |
+| rss-feed                     | /rss.xml RSS                      | 更新通知・再クロール（#85）     |
+| howto-troubleshoot-kw-refill | howto/troubleshoot KW +40         | 供給枯渇前倒し（#86）           |
+| rewrite-weekly-workflow      | リライト週次 workflow skeleton    | GSC リライト PDCA 起点（#87）   |
+| cwv-smoke                    | Lighthouse 週次 smoke             | CWV 退行検知（#88）             |
 
 ### 技術 SEO の現状
 
-| 項目                         | 状態                        | 訪問性への影響                    |
-| ---------------------------- | --------------------------- | --------------------------------- |
-| `@astrojs/sitemap`           | ✅ 稼働                     | クロール支援                      |
-| Article + Breadcrumb JSON-LD | ✅ 記事ページ               | リッチ結果の一部                  |
-| FAQ / HowTo JSON-LD          | ✅ 稼働（PR #82/#83）       | FAQ/HowTo 記事のリッチ結果        |
-| `robots.txt`                 | ✅ 稼働（PR #58）           | クローラー信号・Sitemap 明示      |
-| RSS / Atom feed              | ❌ 未実装                   | 更新通知・再クロール弱い          |
-| IndexNow                     | ✅ 稼働（PR #59, #75, #77） | 新規記事のインデックス加速        |
-| 公開後 GSC URL 検査          | ✅ 7+1 本完了（PR #80/#81） | 次バッチは新規公開分              |
-| Core Web Vitals 監視         | ❌ 未実装                   | 順位要因（現状 Astro 静的で有利） |
-| OGP / canonical              | ✅ 記事・Hub                | SNS・重複 URL 対策済              |
+| 項目                         | 状態                        | 訪問性への影響                |
+| ---------------------------- | --------------------------- | ----------------------------- |
+| `@astrojs/sitemap`           | ✅ 稼働                     | クロール支援                  |
+| Article + Breadcrumb JSON-LD | ✅ 記事ページ               | リッチ結果の一部              |
+| FAQ / HowTo JSON-LD          | ✅ 稼働（PR #82/#83）       | FAQ/HowTo 記事のリッチ結果    |
+| `robots.txt`                 | ✅ 稼働（PR #58）           | クローラー信号・Sitemap 明示  |
+| RSS / Atom feed              | ✅ 稼働（PR #85）           | 更新通知・再クロール          |
+| IndexNow                     | ✅ 稼働（PR #59, #75, #77） | 新規記事のインデックス加速    |
+| 公開後 GSC URL 検査          | ✅ 7+1 本完了（PR #80/#81） | 次バッチは新規公開分          |
+| Core Web Vitals 監視         | ✅ 週次 smoke（PR #88）     | Hub + 記事 1 の Lighthouse CI |
+| OGP / canonical              | ✅ 記事・Hub                | SNS・重複 URL 対策済          |
 
 ### コンテンツ構造
 
@@ -152,15 +158,15 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 
 **ゴール**: インデックス 40+、月間表示 3,000+、CTR 改善開始。
 
-| 優先   | ID                              | タスク                                                   | 工数 | 担当  | 訪問性インパクト |
-| ------ | ------------------------------- | -------------------------------------------------------- | ---- | ----- | ---------------- |
-| ~~P0~~ | ~~`structured-data-faq-howto`~~ | ~~FAQ / HowTo JSON-LD~~ → **✅ PR #82/#83 本番検証済み** | —    | —     | —                |
-| **P0** | `meta-title-optimization-v1`    | タイトル / description テンプレ改善（数字・年・意図語）  | 4h   | Agent | 中〜高           |
-| **P0** | `rewrite-weekly-workflow`       | リライト週 1 本 workflow（rewrite-queue から生成）       | 6h   | Agent | 高               |
-| **P1** | `rss-feed`                      | `/rss.xml` 新着記事フィード                              | 2h   | Agent | 中               |
-| **P1** | `howto-troubleshoot-kw-refill`  | howto +20 / troubleshoot +20（枯渇前倒し）               | 3h   | Agent | 中               |
-| **P1** | `cwv-smoke`                     | Lighthouse CI or PageSpeed 週次 smoke（Hub + 記事 1）    | 3h   | Agent | 低〜中           |
-| **P2** | `featured-snippet-targeting`    | 比較表・箇条書きテンプレ強化（スニペット狙い）           | 4h   | Agent | 中               |
+| 優先   | ID                                 | タスク                                                              | 工数 | 担当  | 訪問性インパクト |
+| ------ | ---------------------------------- | ------------------------------------------------------------------- | ---- | ----- | ---------------- |
+| ~~P0~~ | ~~`structured-data-faq-howto`~~    | ~~FAQ / HowTo JSON-LD~~ → **✅ PR #82/#83 本番検証済み**            | —    | —     | —                |
+| ~~P0~~ | ~~`meta-title-optimization-v1`~~   | ~~タイトル / description テンプレ改善~~ → **✅ PR #84 完了**        | —    | —     | —                |
+| ~~P0~~ | ~~`rewrite-weekly-workflow`~~      | ~~リライト週 1 本 workflow~~ → **✅ PR #87 完了**（運用: auto #53） | —    | —     | —                |
+| ~~P1~~ | ~~`rss-feed`~~                     | ~~`/rss.xml` 新着記事フィード~~ → **✅ PR #85 完了**                | —    | —     | —                |
+| ~~P1~~ | ~~`howto-troubleshoot-kw-refill`~~ | ~~howto +20 / troubleshoot +20~~ → **✅ PR #86 完了**               | —    | —     | —                |
+| ~~P1~~ | ~~`cwv-smoke`~~                    | ~~Lighthouse 週次 smoke~~ → **✅ PR #88 完了**                      | —    | —     | —                |
+| **P2** | `featured-snippet-targeting`       | 比較表・箇条書きテンプレ強化（スニペット狙い）                      | 4h   | Agent | 中               |
 
 ---
 
@@ -209,6 +215,16 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | -------------------------- | -------- | ------------- |
 | `gsc-rewrite-queue-v1`     | B        | User CSV 依存 |
 | `seasonal-moving-keywords` | C        | Month 3 着手  |
+
+### Phase V2 完了済み（2026-07-29 時点）
+
+| ID                             | 完了 PR / 日付          |
+| ------------------------------ | ----------------------- |
+| `meta-title-optimization-v1`   | pipeline #84            |
+| `rss-feed`                     | pipeline #85            |
+| `howto-troubleshoot-kw-refill` | pipeline #86            |
+| `rewrite-weekly-workflow`      | pipeline #87 / auto #53 |
+| `cwv-smoke`                    | pipeline #88            |
 
 ### Phase V1 完了済み（2026-07-29 時点）
 
