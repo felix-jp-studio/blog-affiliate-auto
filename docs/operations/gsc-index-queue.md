@@ -13,20 +13,18 @@
 
 ---
 
-## 🔴 今すぐ対応: 未インデックス 1 件（2026-07-29 更新）
+## ✅ インデックスキュー（2026-07-29 更新）
 
-`data/gsc-index-queue.json` に **`indexed: false` が 1 件** あります。GSC ログイン後、下記 URL を URL 検査してください。
+`data/gsc-index-queue.json` の **`indexed: false` は 0 件**（`wifi-speed-slow-kaizen` は 2026-07-29 GSC URL 検査済み → pipeline で `indexed: true` 更新 PR 予定/済）。
 
-| slug                         | URL                                                          | mergedAt   | indexed      |
-| ---------------------------- | ------------------------------------------------------------ | ---------- | ------------ |
-| **`wifi-speed-slow-kaizen`** | https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen | 2026-07-29 | ☐ **要検査** |
+| slug                         | URL                                                          | mergedAt   | indexed | GSC 実施日 |
+| ---------------------------- | ------------------------------------------------------------ | ---------- | ------- | ---------- |
+| **`wifi-speed-slow-kaizen`** | https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen | 2026-07-29 | ✅      | 2026-07-29 |
 
 ```bash
 cd blog-affiliate-pipeline && npm run gsc:inspection-batch
-# → 上記 1 URL を出力（コピー用）
+# → pending 0 件の場合は出力なし
 ```
-
-**完了後**: Agent に「`wifi-speed-slow-kaizen` GSC 検査済み」と連絡 → `indexed: true` 更新 PR を依頼。
 
 ---
 
@@ -39,10 +37,10 @@ GSC には **手動ログイン必須**。エージェントは代行しませ�
 | 1   | [Search Console](https://search.google.com/search-console) を開く                              | 1 分  | ☐    |
 | 2   | sim-hikari-guide.com 権限のある Google アカウントでログイン                                    | 1 分  | ☐    |
 | 3   | プロパティ `https://sim-hikari-guide.com` を選択                                               | 30 秒 | ☐    |
-| 4   | 上部 **URL 検査** に `https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen` を貼り付け | 30 秒 | ☐    |
+| 4   | 上部 **URL 検査** に `https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen` を貼り付け | 30 秒 | ☑    |
 | 5   | 結果確認: **登録済み** → ✅ / **未登録** → **インデックス登録をリクエスト**                    | 2 分  | ☐    |
-| 6   | 本ページ下部チェックリスト表の `wifi-speed-slow-kaizen` 行に GSC 実施日を記入                  | 1 分  | ☐    |
-| 7   | Agent に「GSC 検査済み（wifi-speed-slow-kaizen）」と連絡                                       | 1 分  | ☐    |
+| 6   | 本ページ下部チェックリスト表の `wifi-speed-slow-kaizen` 行に GSC 実施日を記入                  | 1 分  | ☑    |
+| 7   | Agent に「GSC 検査済み（wifi-speed-slow-kaizen）」と連絡                                       | 1 分  | ☑    |
 
 **合計**: 約 7〜10 分（1 URL のみ）
 
@@ -131,20 +129,20 @@ GSC には **Google アカウントでの手動ログイン** が必要です。
 
 `data/gsc-index-queue.json` の `entries` と同期して記入。古いエントリは JSON 側の `indexed: true` 更新を正とする。
 
-| slug                           | URL                                                                | mergedAt   | indexed | GSC 実施日 | メモ             |
-| ------------------------------ | ------------------------------------------------------------------ | ---------- | ------- | ---------- | ---------------- |
-| `esim-norikae-sokujitsu`       | https://sim-hikari-guide.com/articles/esim-norikae-sokujitsu       | 2026-07-22 | ✅      | 2026-07-28 |                  |
-| `hikari-kaituu-itsu`           | https://sim-hikari-guide.com/articles/hikari-kaituu-itsu           | 2026-07-23 | ✅      | 2026-07-28 |                  |
-| `sim-5g-taiou-hikaku`          | https://sim-hikari-guide.com/articles/sim-5g-taiou-hikaku          | 2026-07-24 | ✅      | 2026-07-28 |                  |
-| `iphone-sono-mama-sim`         | https://sim-hikari-guide.com/articles/iphone-sono-mama-sim         | 2026-07-25 | ✅      | 2026-07-28 |                  |
-| `rakuten-denki-rakuten-mobile` | https://sim-hikari-guide.com/articles/rakuten-denki-rakuten-mobile | 2026-07-26 | ✅      | 2026-07-28 |                  |
-| `sim-senior-osusume`           | https://sim-hikari-guide.com/articles/sim-senior-osusume           | 2026-07-27 | ✅      | 2026-07-28 |                  |
-| `au-hikari-kaiyaku-houhou`     | https://sim-hikari-guide.com/articles/au-hikari-kaiyaku-houhou     | 2026-07-28 | ✅      | 2026-07-28 |                  |
-| **`wifi-speed-slow-kaizen`**   | https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen       | 2026-07-29 | ☐       |            | **今週の未処理** |
+| slug                           | URL                                                                | mergedAt   | indexed | GSC 実施日 | メモ       |
+| ------------------------------ | ------------------------------------------------------------------ | ---------- | ------- | ---------- | ---------- |
+| `esim-norikae-sokujitsu`       | https://sim-hikari-guide.com/articles/esim-norikae-sokujitsu       | 2026-07-22 | ✅      | 2026-07-28 |            |
+| `hikari-kaituu-itsu`           | https://sim-hikari-guide.com/articles/hikari-kaituu-itsu           | 2026-07-23 | ✅      | 2026-07-28 |            |
+| `sim-5g-taiou-hikaku`          | https://sim-hikari-guide.com/articles/sim-5g-taiou-hikaku          | 2026-07-24 | ✅      | 2026-07-28 |            |
+| `iphone-sono-mama-sim`         | https://sim-hikari-guide.com/articles/iphone-sono-mama-sim         | 2026-07-25 | ✅      | 2026-07-28 |            |
+| `rakuten-denki-rakuten-mobile` | https://sim-hikari-guide.com/articles/rakuten-denki-rakuten-mobile | 2026-07-26 | ✅      | 2026-07-28 |            |
+| `sim-senior-osusume`           | https://sim-hikari-guide.com/articles/sim-senior-osusume           | 2026-07-27 | ✅      | 2026-07-28 |            |
+| `au-hikari-kaiyaku-houhou`     | https://sim-hikari-guide.com/articles/au-hikari-kaiyaku-houhou     | 2026-07-28 | ✅      | 2026-07-28 |            |
+| **`wifi-speed-slow-kaizen`**   | https://sim-hikari-guide.com/articles/wifi-speed-slow-kaizen       | 2026-07-29 | ✅      | 2026-07-29 | GSC 検査済 |
 
 **前週バッチ（2026-07-28 完了）**: 上記 7 件（`esim-norikae-sokujitsu` 〜 `au-hikari-kaiyaku-houhou`）GSC URL 検査完了（JSON `indexed: true` / `indexedAt: 2026-07-28`）。
 
-**今週（2026-07-29）**: `wifi-speed-slow-kaizen` のみ pending（`indexed: false`）。IndexNow は 2026-07-29 インライン送信済み。
+**今週（2026-07-29）**: `wifi-speed-slow-kaizen` GSC URL 検査完了（2026-07-29）。IndexNow は 2026-07-29 インライン送信済み。JSON `indexed: true` は pipeline PR で反映。
 
 ```bash
 cd blog-affiliate-pipeline && npm run gsc:inspection-batch
