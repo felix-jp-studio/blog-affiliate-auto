@@ -520,6 +520,36 @@
       "label": "Lighthouse CI 週次 smoke（Hub + 記事 1）",
       "date": "2026-07-29",
       "note": "blog-affiliate-pipeline PR #88。weekly Lighthouse CWV smoke workflow"
+    },
+    {
+      "id": "featured-snippet-targeting",
+      "label": "比較表・箇条書きテンプレ強化（Featured Snippet 向け）",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #89。要点（結論）箇条書き + 比較表キャプション + quality gate"
+    },
+    {
+      "id": "content-freshness-dates",
+      "label": "更新日 dateModified + 記事冒頭「最終更新」",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #90。frontmatter dateModified / JSON-LD / 最終更新表示"
+    },
+    {
+      "id": "hub-internal-link-mesh",
+      "label": "Hub ↔ 記事 ↔ Hub 固定リンクブロック",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #91。/sim /hikari /cost Hub + 記事 Hub 戻りリンク"
+    },
+    {
+      "id": "cta-ab-design",
+      "label": "CTA 配置 A/B デザイン（比較表下 vs 結論前）",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #92。rehype-cta-placement + docs/cta-ab-design.md"
+    },
+    {
+      "id": "meta-title-backfill-v1",
+      "label": "既存44記事 meta title/description v1 バックフィル",
+      "date": "2026-07-29",
+      "note": "blog-affiliate-pipeline PR #93。scripts/backfill-meta-titles.py で title/description 一括更新"
     }
   ],
   "next": [
@@ -545,24 +575,44 @@
       "instructions": "Week 4 ベースライン確立済み。User が GSC → 28 日 CSV エクスポート（`data/gsc-performance-YYYYMMDD.csv`）を Agent に共有後、11–30 位クエリを抽出して data/rewrite-queue.csv を作成。週 1 本リライト PR を scheduled と別 workflow で実行。"
     },
     {
-      "id": "crosssell-asp-expansion",
-      "priority": 3,
-      "label": "crosssell ASP 化調査（電気・クレカ）",
-      "estimate": "2h",
-      "impact": "medium",
-      "owner": "User",
-      "timeline": "Month 2",
-      "instructions": "日曜 crosssell 17 KW（楽天でんき・auでんき 等）向けに A8/VC/もしもで電気・クレカ案件を調査。ASP 化可能なものを asp-urls.json + article-crosssell プロンプトに反映。"
-    },
-    {
       "id": "seasonal-moving-keywords",
-      "priority": 4,
+      "priority": 3,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
       "owner": "Agent",
       "timeline": "Month 3",
       "instructions": "10 月着手。引っ越し 光回線 電気 セット・新生活 通信 等の crosssell/comparison KW を 20 件追加し 11–12 月から先行公開。"
+    },
+    {
+      "id": "win-kw-cluster-expansion",
+      "priority": 4,
+      "label": "GSC 上位クエリから類似 KW クラスタ各3本",
+      "estimate": "8h",
+      "impact": "high",
+      "owner": "Agent",
+      "timeline": "Month 3",
+      "instructions": "GSC ベースライン上位クエリから類似 KW を抽出し keywords.seed.csv にクラスタ追加。comparison/howto テンプレで週次生成。"
+    },
+    {
+      "id": "gsc-api-weekly-report",
+      "priority": 5,
+      "label": "GSC API → 週次 Markdown レポート自動化",
+      "estimate": "8h",
+      "impact": "medium",
+      "owner": "Agent",
+      "timeline": "Month 3",
+      "instructions": "Search Console API で表示/CTR/順位を週次取得し docs/operations/gsc-weekly-*.md を自動生成。gsc-baseline.md 連携。"
+    },
+    {
+      "id": "crosssell-asp-expansion",
+      "priority": 6,
+      "label": "crosssell ASP 化調査（電気・クレカ）",
+      "estimate": "2h",
+      "impact": "medium",
+      "owner": "User",
+      "timeline": "Month 2",
+      "instructions": "日曜 crosssell 17 KW（楽天でんき・auでんき 等）向けに A8/VC/もしもで電気・クレカ案件を調査。ASP 化可能なものを asp-urls.json + article-crosssell プロンプトに反映。"
     }
   ]
 }
