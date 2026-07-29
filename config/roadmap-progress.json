@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-07-29T19:00:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -570,9 +570,10 @@
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
-      "owner": "Agent",
+      "owner": "Agent+User",
       "timeline": "Month 2",
-      "instructions": "Week 4 ベースライン確立済み。User が GSC → 28 日 CSV エクスポート（`data/gsc-performance-YYYYMMDD.csv`）を Agent に共有後、11–30 位クエリを抽出して data/rewrite-queue.csv を作成。週 1 本リライト PR を scheduled と別 workflow で実行。"
+      "blockedBy": "User GSC 28 日 CSV 未共有",
+      "instructions": "Week 4 ベースライン確立済み。User が GSC → 28 日 CSV エクスポート（`data/gsc-performance-YYYYMMDD.csv`）を Agent に共有後、11–30 位クエリを抽出して `blog-affiliate-pipeline/data/rewrite-queue.csv` を作成。`rewrite-weekly.yml` が週 1 本 meta リライト PR を生成（空キューは exit 0）。"
     },
     {
       "id": "seasonal-moving-keywords",
