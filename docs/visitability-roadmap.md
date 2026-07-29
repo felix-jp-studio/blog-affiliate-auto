@@ -166,7 +166,7 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | ~~P1~~ | ~~`rss-feed`~~                     | ~~`/rss.xml` 新着記事フィード~~ → **✅ PR #85 完了**                | —    | —     | —                |
 | ~~P1~~ | ~~`howto-troubleshoot-kw-refill`~~ | ~~howto +20 / troubleshoot +20~~ → **✅ PR #86 完了**               | —    | —     | —                |
 | ~~P1~~ | ~~`cwv-smoke`~~                    | ~~Lighthouse 週次 smoke~~ → **✅ PR #88 完了**                      | —    | —     | —                |
-| **P2** | `featured-snippet-targeting`       | 比較表・箇条書きテンプレ強化（スニペット狙い）                      | 4h   | Agent | 中               |
+| ~~P2~~ | ~~`featured-snippet-targeting`~~   | ~~比較表・箇条書きテンプレ強化~~ → **✅ PR #89 完了**                | —    | —     | —                |
 
 ---
 
@@ -178,9 +178,11 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | ------ | -------------------------- | --------------------------------------------- | ---- | ----- | ---------------- |
 | **P0** | `seasonal-moving-keywords` | 引っ越し・新生活 KW 20 件（11–12 月先行公開） | 6h   | Agent | 高（季節）       |
 | **P0** | `win-kw-cluster-expansion` | GSC 上位クエリから類似 KW 各 3 本クラスタ     | 自動 | Agent | 高               |
-| **P1** | `content-freshness-dates`  | 更新日 `dateModified` + 記事冒頭「最終更新」  | 4h   | Agent | 中（鮮度）       |
-| **P1** | `hub-internal-link-mesh`   | Hub ↔ 記事 ↔ Hub の固定リンクブロック         | 3h   | Agent | 中               |
-| **P2** | `gsc-api-weekly-report`    | GSC API → 週次 Markdown レポート自動化        | 8h   | Agent | 中（PDCA）       |
+| **P1** | `gsc-api-weekly-report`    | GSC API → 週次 Markdown レポート自動化        | 8h   | Agent | 中（PDCA）       |
+| ~~P1~~ | ~~`content-freshness-dates`~~  | ~~更新日 dateModified + 最終更新~~ → **✅ PR #90 完了** | — | — | — |
+| ~~P1~~ | ~~`hub-internal-link-mesh`~~   | ~~Hub ↔ 記事 ↔ Hub 固定リンク~~ → **✅ PR #91 完了**   | — | — | — |
+| ~~P2~~ | ~~`cta-ab-design`~~            | ~~CTA 配置 A/B~~ → **✅ PR #92 完了**                  | — | — | — |
+| ~~P2~~ | ~~`meta-title-backfill-v1`~~   | ~~既存44記事 meta バックフィル~~ → **✅ PR #93 完了**   | — | — | — |
 
 ---
 
@@ -215,6 +217,18 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | -------------------------- | -------- | ------------- |
 | `gsc-rewrite-queue-v1`     | B        | User CSV 依存 |
 | `seasonal-moving-keywords` | C        | Month 3 着手  |
+| `win-kw-cluster-expansion` | C        | Month 3 着手  |
+| `gsc-api-weekly-report`    | B        | Month 3 PDCA  |
+
+### Phase V2/V3 完了済み（2026-07-29 追加分）
+
+| ID                           | 完了 PR / 日付   |
+| ---------------------------- | ---------------- |
+| `featured-snippet-targeting` | pipeline #89     |
+| `content-freshness-dates`    | pipeline #90     |
+| `hub-internal-link-mesh`     | pipeline #91     |
+| `cta-ab-design`              | pipeline #92     |
+| `meta-title-backfill-v1`     | pipeline #93     |
 
 ### Phase V2 完了済み（2026-07-29 時点）
 
