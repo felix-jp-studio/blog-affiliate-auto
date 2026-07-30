@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-07-29T20:10:00+09:00",
+  "updatedAt": "2026-07-30T23:54:28+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -580,6 +580,12 @@
       "label": "CTA 配置 hotfix（affiliate リンク消失修正）",
       "date": "2026-07-29",
       "note": "blog-affiliate-pipeline PR #98。rehype-cta-placement が 28 記事のアフィリエイト CTA を削除していた regression を修正。validate-dist 復旧"
+    },
+    {
+      "id": "vercel-affiliate-cta-validate",
+      "label": "Vercel ビルドでアフィリエイト CTA 維持（validate-dist + table-scroll）",
+      "date": "2026-07-30",
+      "note": "blog-affiliate-pipeline PR #101 squash merge (bcac64c)。root 表の table-scroll、ASP config sync、validate-dist で px.a8.net/valuecommerce 欠落をビルド失敗に。本番 curl: sim-carrier-hikaku / hikari-mansion-osusume / kouji-fuyou-hikari で affiliate=Y"
     }
   ],
   "next": [
