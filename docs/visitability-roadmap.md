@@ -66,6 +66,11 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | ux-a11y-basics               | skip link / focus-visible         | キーボード導線（#109）          |
 | ux-font-self-host            | Noto JP self-host                 | render-blocking 除去（#108）    |
 | ux-mobile-nav                | モバイルハンバーガーナビ          | タッチナビ（#110）              |
+| ux-cls-img-dims              | Hero/Card img 寸法属性            | CLS 抑制（#111）                |
+| ux-css-content-visibility    | content-visibility / reduced-motion | 長文描画・a11y（#112）       |
+| ux-cwv-baseline              | CWV 週次中央値ログ                | tighten 判断材料（#114）        |
+| ux-comments-defer            | コメント IO 遅延初期化            | 記事下 JS コスト削減（#115）    |
+| ux-visual-mobile             | Playwright mobile 390×844         | スマホ回帰（#116）              |
 
 ### 技術 SEO の現状
 
@@ -81,6 +86,8 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | Core Web Vitals 監視         | ✅ 週次 smoke（PR #88）→ モバイル 3 URL + TBT（PR #107）                        | ホーム / Hub / 記事                |
 | フォント                     | ✅ Noto JP self-host（PR #108）                                                 | Google Fonts 依存解消              |
 | モバイルナビ / a11y          | ✅ PR #109/#110                                                                 | skip link・ハンバーガー            |
+| CLS / CSS / コメント遅延     | ✅ PR #111/#112/#115                                                            | img 寸法・content-visibility・IO   |
+| Visual mobile / CWV baseline | ✅ PR #116/#114                                                                 | 390×844 + 週次中央値ログ           |
 | OGP / canonical              | ✅ 記事・Hub                                                                    | SNS・重複 URL 対策済               |
 
 ### コンテンツ構造
