@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-01T21:46:04+09:00",
+  "updatedAt": "2026-08-01T22:35:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -645,7 +645,37 @@
       "id": "ux-mobile-nav",
       "label": "モバイルハンバーガーナビ（details）",
       "date": "2026-08-01",
-      "note": "blog-affiliate-pipeline PR #110（CI/baseline 後マージ予定）。visual baseline dispatch 更新"
+      "note": "blog-affiliate-pipeline PR #110 squash `59cbb7f`"
+    },
+    {
+      "id": "ux-cls-img-dims",
+      "label": "Hero/Card img width/height/sizes（UX-CLS-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #111 squash `cf1afa3`"
+    },
+    {
+      "id": "ux-css-content-visibility",
+      "label": "content-visibility + reduced-motion（UX-CSS-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #112 squash `7d448d2`"
+    },
+    {
+      "id": "ux-cwv-baseline",
+      "label": "CWV 週次モバイル中央値ベースライン（UX-CWV-02）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #114 squash `03c41f6`。docs/operations/cwv-baseline.md"
+    },
+    {
+      "id": "ux-comments-defer",
+      "label": "コメント IntersectionObserver 遅延初期化（UX-JS-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #115 squash `4cb9525`"
+    },
+    {
+      "id": "ux-visual-mobile",
+      "label": "Playwright visual mobile 390×844（UX-VIS-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #116 squash `28a62b3`（#113 は baseline 競合でクローズ）"
     }
   ],
   "next": [

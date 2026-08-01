@@ -37,35 +37,40 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 
 ### 完了済み（訪問性に効く施策）
 
-| ID                           | 施策                              | 効果                            |
-| ---------------------------- | --------------------------------- | ------------------------------- |
-| ga4-gsc-env                  | GA4 + GSC + sitemap 送信          | 計測・クロール起点              |
-| gsc-indexing-baseline        | ベースライン + URL 検査 4 本      | PDCA 起点                       |
-| internal-linking-v1          | 新規記事の同一カテゴリ 2 本リンク | 回遊・PageRank 分散             |
-| internal-links-backfill      | 既存 34 記事バックフィル          | 既存資産の SEO 底上げ           |
-| hub-cta-enhancement          | /sim /hikari /cost 比較表・CTA    | ハブから記事への導線            |
-| keywords-comparison-refill   | comparison KW +50                 | 供給枯渇防止（約 +25 週）       |
-| publish-schedule-6-per-week  | 週 7 本自動公開                   | ロングテール供給エンジン        |
-| robots-txt-sitemap           | robots.txt + Sitemap 明示         | クローラー信号の整備            |
-| indexnow-ping                | IndexNow 公開後 ping              | 新規記事のインデックス加速      |
-| post-publish-index-queue     | GSC インデックスキュー自動追記    | 公開後 URL 検査の起点           |
-| indexnow-verify-production   | IndexNow キー本番検証 + CI        | ping 前のキーファイル保証       |
-| gsc-url-inspection-batch     | GSC URL 検査 7+1 本完了           | キュー pending 0                |
-| gsc-inspection-batch-script  | gsc:inspection-batch 運用         | 週次 URL 検査の準備             |
-| gsc-weekly-ops-week4         | Week 4 ベースライン記録           | PDCA 継続                       |
-| trouble-cost-kw-20           | trouble/cost KW 各 10 件追加      | ロングテール幅拡大（188 KW）    |
-| indexnow-inline-verified     | IndexNow インライン送信検証       | 新規記事 ping 確認済            |
-| structured-data-faq-howto    | FAQ / HowTo JSON-LD               | FAQ/HowTo リッチ結果（#82/#83） |
-| meta-title-optimization-v1   | meta title/description v1         | CTR 改善（#84）                 |
-| rss-feed                     | /rss.xml RSS                      | 更新通知・再クロール（#85）     |
-| howto-troubleshoot-kw-refill | howto/troubleshoot KW +40         | 供給枯渇前倒し（#86）           |
-| rewrite-weekly-workflow      | リライト週次 workflow skeleton    | GSC リライト PDCA 起点（#87）   |
-| cwv-smoke                    | Lighthouse 週次 smoke             | CWV 退行検知（#88）             |
-| ux-ga-defer                  | GA 遅延読み込み                   | TBT/メインスレッド改善（#106）  |
-| ux-cwv-mobile                | CWV smoke モバイル拡張            | 3 URL + TBT（#107）             |
-| ux-a11y-basics               | skip link / focus-visible         | キーボード導線（#109）          |
-| ux-font-self-host            | Noto JP self-host                 | render-blocking 除去（#108）    |
-| ux-mobile-nav                | モバイルハンバーガーナビ          | タッチナビ（#110）              |
+| ID                           | 施策                                | 効果                            |
+| ---------------------------- | ----------------------------------- | ------------------------------- |
+| ga4-gsc-env                  | GA4 + GSC + sitemap 送信            | 計測・クロール起点              |
+| gsc-indexing-baseline        | ベースライン + URL 検査 4 本        | PDCA 起点                       |
+| internal-linking-v1          | 新規記事の同一カテゴリ 2 本リンク   | 回遊・PageRank 分散             |
+| internal-links-backfill      | 既存 34 記事バックフィル            | 既存資産の SEO 底上げ           |
+| hub-cta-enhancement          | /sim /hikari /cost 比較表・CTA      | ハブから記事への導線            |
+| keywords-comparison-refill   | comparison KW +50                   | 供給枯渇防止（約 +25 週）       |
+| publish-schedule-6-per-week  | 週 7 本自動公開                     | ロングテール供給エンジン        |
+| robots-txt-sitemap           | robots.txt + Sitemap 明示           | クローラー信号の整備            |
+| indexnow-ping                | IndexNow 公開後 ping                | 新規記事のインデックス加速      |
+| post-publish-index-queue     | GSC インデックスキュー自動追記      | 公開後 URL 検査の起点           |
+| indexnow-verify-production   | IndexNow キー本番検証 + CI          | ping 前のキーファイル保証       |
+| gsc-url-inspection-batch     | GSC URL 検査 7+1 本完了             | キュー pending 0                |
+| gsc-inspection-batch-script  | gsc:inspection-batch 運用           | 週次 URL 検査の準備             |
+| gsc-weekly-ops-week4         | Week 4 ベースライン記録             | PDCA 継続                       |
+| trouble-cost-kw-20           | trouble/cost KW 各 10 件追加        | ロングテール幅拡大（188 KW）    |
+| indexnow-inline-verified     | IndexNow インライン送信検証         | 新規記事 ping 確認済            |
+| structured-data-faq-howto    | FAQ / HowTo JSON-LD                 | FAQ/HowTo リッチ結果（#82/#83） |
+| meta-title-optimization-v1   | meta title/description v1           | CTR 改善（#84）                 |
+| rss-feed                     | /rss.xml RSS                        | 更新通知・再クロール（#85）     |
+| howto-troubleshoot-kw-refill | howto/troubleshoot KW +40           | 供給枯渇前倒し（#86）           |
+| rewrite-weekly-workflow      | リライト週次 workflow skeleton      | GSC リライト PDCA 起点（#87）   |
+| cwv-smoke                    | Lighthouse 週次 smoke               | CWV 退行検知（#88）             |
+| ux-ga-defer                  | GA 遅延読み込み                     | TBT/メインスレッド改善（#106）  |
+| ux-cwv-mobile                | CWV smoke モバイル拡張              | 3 URL + TBT（#107）             |
+| ux-a11y-basics               | skip link / focus-visible           | キーボード導線（#109）          |
+| ux-font-self-host            | Noto JP self-host                   | render-blocking 除去（#108）    |
+| ux-mobile-nav                | モバイルハンバーガーナビ            | タッチナビ（#110）              |
+| ux-cls-img-dims              | Hero/Card img 寸法属性              | CLS 抑制（#111）                |
+| ux-css-content-visibility    | content-visibility / reduced-motion | 長文描画・a11y（#112）          |
+| ux-cwv-baseline              | CWV 週次中央値ログ                  | tighten 判断材料（#114）        |
+| ux-comments-defer            | コメント IO 遅延初期化              | 記事下 JS コスト削減（#115）    |
+| ux-visual-mobile             | Playwright mobile 390×844           | スマホ回帰（#116）              |
 
 ### 技術 SEO の現状
 
@@ -81,6 +86,8 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | Core Web Vitals 監視         | ✅ 週次 smoke（PR #88）→ モバイル 3 URL + TBT（PR #107）                        | ホーム / Hub / 記事                |
 | フォント                     | ✅ Noto JP self-host（PR #108）                                                 | Google Fonts 依存解消              |
 | モバイルナビ / a11y          | ✅ PR #109/#110                                                                 | skip link・ハンバーガー            |
+| CLS / CSS / コメント遅延     | ✅ PR #111/#112/#115                                                            | img 寸法・content-visibility・IO   |
+| Visual mobile / CWV baseline | ✅ PR #116/#114                                                                 | 390×844 + 週次中央値ログ           |
 | OGP / canonical              | ✅ 記事・Hub                                                                    | SNS・重複 URL 対策済               |
 
 ### コンテンツ構造
