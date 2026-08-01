@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-07-30T23:54:28+09:00",
+  "updatedAt": "2026-08-01T20:07:32+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -586,6 +586,36 @@
       "label": "Vercel ビルドでアフィリエイト CTA 維持（validate-dist + table-scroll）",
       "date": "2026-07-30",
       "note": "blog-affiliate-pipeline PR #101 squash merge (bcac64c)。root 表の table-scroll、ASP config sync、validate-dist で px.a8.net/valuecommerce 欠落をビルド失敗に。本番 curl: sim-carrier-hikaku / hikari-mansion-osusume / kouji-fuyou-hikari で affiliate=Y"
+    },
+    {
+      "id": "hikari-price-scraper-v1",
+      "label": "光回線公式料金スクレイパー v1（HTMLパース・月次Action）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #102 squash merge `99fb555`. snapshot + 429 soft-fail + fixtures"
+    },
+    {
+      "id": "gsc-api-weekly-report",
+      "label": "GSC API → 週次 Markdown レポート自動化（スケルトン）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #103 squash merge `4d7efca`。secrets 未設定時 skip。API 配線は User secrets 後"
+    },
+    {
+      "id": "price-diff-rewrite-hook",
+      "label": "料金スナップショット差分 → rewrite-queue フック",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #104 squash merge `48f79d9`。fixture dry-run 対応"
+    },
+    {
+      "id": "crosssell-asp-expansion-prep",
+      "label": "crosssell ASP 化プレースホルダ（User 調査待ち）",
+      "date": "2026-08-01",
+      "note": "pipeline PR #105 squash merge `4cf1816` + auto ops checklist。trackingUrl なし。本調査は User ブロック継続"
+    },
+    {
+      "id": "howto-ratio-ops-check",
+      "label": "記事タイプ比率 週次オペメモ",
+      "date": "2026-08-01",
+      "note": "docs/operations/howto-ratio-ops-check.md。article-type-ratio.yml 連携"
     }
   ],
   "next": [
@@ -609,11 +639,22 @@
       "owner": "Agent+User",
       "timeline": "Month 2",
       "blockedBy": "User GSC 28 日 CSV 未共有",
-      "instructions": "Week 4 ベースライン確立済み。User が GSC → 28 日 CSV エクスポート（`data/gsc-performance-YYYYMMDD.csv`）を Agent に共有後、11–30 位クエリを抽出して `blog-affiliate-pipeline/data/rewrite-queue.csv` を作成。`rewrite-weekly.yml` が週 1 本 meta リライト PR を生成（空キューは exit 0）。"
+      "instructions": "【ブロック中: User GSC 28日CSV未共有】Week 4 ベースライン確立済み。User が GSC → 28 日 CSV エクスポート（`data/gsc-performance-YYYYMMDD.csv`）を Agent に共有後、11–30 位クエリを抽出して `blog-affiliate-pipeline/data/rewrite-queue.csv` を作成。`rewrite-weekly.yml` が週 1 本 meta リライト PR を生成（空キューは exit 0）。"
+    },
+    {
+      "id": "crosssell-asp-expansion",
+      "priority": 3,
+      "label": "crosssell ASP 化調査（電気・クレカ）",
+      "estimate": "2h",
+      "impact": "medium",
+      "owner": "User",
+      "timeline": "Month 2",
+      "blockedBy": "User ASP 調査結果未共有",
+      "instructions": "【ブロック中: User ASP 調査】実装側プレースホルダ済（pipeline PR #105 / candidates.json）。User が A8/VC/もしもで電気・クレカの trackingUrl を共有後、asp-urls.json 反映 PR。手順: docs/operations/crosssell-asp-expansion-checklist.md"
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 3,
+      "priority": 4,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
@@ -623,7 +664,7 @@
     },
     {
       "id": "win-kw-cluster-expansion",
-      "priority": 4,
+      "priority": 5,
       "label": "GSC 上位クエリから類似 KW クラスタ各3本",
       "estimate": "8h",
       "impact": "high",
@@ -632,24 +673,15 @@
       "instructions": "GSC ベースライン上位クエリから類似 KW を抽出し keywords.seed.csv にクラスタ追加。comparison/howto テンプレで週次生成。"
     },
     {
-      "id": "gsc-api-weekly-report",
-      "priority": 5,
-      "label": "GSC API → 週次 Markdown レポート自動化",
-      "estimate": "8h",
-      "impact": "medium",
-      "owner": "Agent",
-      "timeline": "Month 3",
-      "instructions": "Search Console API で表示/CTR/順位を週次取得し docs/operations/gsc-weekly-*.md を自動生成。gsc-baseline.md 連携。"
-    },
-    {
-      "id": "crosssell-asp-expansion",
+      "id": "gsc-api-weekly-report-wiring",
       "priority": 6,
-      "label": "crosssell ASP 化調査（電気・クレカ）",
-      "estimate": "2h",
+      "label": "GSC API 週次レポートの本番配線（SA/OAuth）",
+      "estimate": "4h",
       "impact": "medium",
-      "owner": "User",
-      "timeline": "Month 2",
-      "instructions": "日曜 crosssell 17 KW（楽天でんき・auでんき 等）向けに A8/VC/もしもで電気・クレカ案件を調査。ASP 化可能なものを asp-urls.json + article-crosssell プロンプトに反映。"
+      "owner": "Agent+User",
+      "timeline": "Month 3",
+      "blockedBy": "User GSC secrets 未設定",
+      "instructions": "【ブロック中: secrets】pipeline PR #103 スケルトン済。User が GSC_SERVICE_ACCOUNT_JSON または OAuth 三点を Actions Secrets に登録後、Search Analytics API 呼び出しを実装。docs/operations/gsc-weekly-report.md"
     }
   ]
 }
