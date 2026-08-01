@@ -61,6 +61,11 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | howto-troubleshoot-kw-refill | howto/troubleshoot KW +40         | 供給枯渇前倒し（#86）           |
 | rewrite-weekly-workflow      | リライト週次 workflow skeleton    | GSC リライト PDCA 起点（#87）   |
 | cwv-smoke                    | Lighthouse 週次 smoke             | CWV 退行検知（#88）             |
+| ux-ga-defer                  | GA 遅延読み込み                   | TBT/メインスレッド改善（#106）  |
+| ux-cwv-mobile                | CWV smoke モバイル拡張            | 3 URL + TBT（#107）             |
+| ux-a11y-basics               | skip link / focus-visible         | キーボード導線（#109）          |
+| ux-font-self-host            | Noto JP self-host                 | render-blocking 除去（#108）    |
+| ux-mobile-nav                | モバイルハンバーガーナビ          | タッチナビ（#110）              |
 
 ### 技術 SEO の現状
 
@@ -73,7 +78,9 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | RSS / Atom feed              | ✅ 稼働（PR #85）                                                               | 更新通知・再クロール               |
 | IndexNow                     | ✅ 稼働（PR #59, #75, #77）                                                     | 新規記事のインデックス加速         |
 | 公開後 GSC URL 検査          | ✅ 初回 8 本完了（PR #80/#81）・**キュー pending 36**（PR #93 backfill 追加分） | 週次 `gsc:inspection-batch` で消化 |
-| Core Web Vitals 監視         | ✅ 週次 smoke（PR #88）                                                         | Hub + 記事 1 の Lighthouse CI      |
+| Core Web Vitals 監視         | ✅ 週次 smoke（PR #88）→ モバイル 3 URL + TBT（PR #107）                        | ホーム / Hub / 記事                |
+| フォント                     | ✅ Noto JP self-host（PR #108）                                                 | Google Fonts 依存解消              |
+| モバイルナビ / a11y          | ✅ PR #109/#110                                                                 | skip link・ハンバーガー            |
 | OGP / canonical              | ✅ 記事・Hub                                                                    | SNS・重複 URL 対策済               |
 
 ### コンテンツ構造

@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-01T20:07:32+09:00",
+  "updatedAt": "2026-08-01T21:46:04+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -616,6 +616,36 @@
       "label": "記事タイプ比率 週次オペメモ",
       "date": "2026-08-01",
       "note": "docs/operations/howto-ratio-ops-check.md。article-type-ratio.yml 連携"
+    },
+    {
+      "id": "ux-ga-defer",
+      "label": "GA 遅延読み込み（requestIdleCallback）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #106。Analytics.astro idle/load defer"
+    },
+    {
+      "id": "ux-cwv-mobile",
+      "label": "CWV smoke モバイル + 3 URL + TBT",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #107。lighthouserc mobile / INP 除外・TBT warn"
+    },
+    {
+      "id": "ux-a11y-basics",
+      "label": "a11y 基礎（skip link / focus-visible / scroll-margin）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #109"
+    },
+    {
+      "id": "ux-font-self-host",
+      "label": "Noto Sans/Serif JP self-host（subset woff2）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #108。Google Fonts render-blocking 除去"
+    },
+    {
+      "id": "ux-mobile-nav",
+      "label": "モバイルハンバーガーナビ（details）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #110（CI/baseline 後マージ予定）。visual baseline dispatch 更新"
     }
   ],
   "next": [
