@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-01T22:35:00+09:00",
+  "updatedAt": "2026-08-01T23:31:35+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -676,6 +676,36 @@
       "label": "Playwright visual mobile 390×844（UX-VIS-01）",
       "date": "2026-08-01",
       "note": "blog-affiliate-pipeline PR #116 squash `28a62b3`（#113 は baseline 競合でクローズ）"
+    },
+    {
+      "id": "ux-token-consistency",
+      "label": "ハードコード色トークン化（UX-TOKEN-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #117 squash `51f75a5`"
+    },
+    {
+      "id": "ux-hub-script-conditional",
+      "label": "Hub フィルタ script 条件付き出力（UX-HUB-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #120 squash `c2c4e03`"
+    },
+    {
+      "id": "ux-type-weights",
+      "label": "font-weight 500/600→400/700（UX-TYPE-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #121 squash `4e0c367`"
+    },
+    {
+      "id": "ux-table-mobile",
+      "label": "比較表ヒント予約・タップ44px（UX-TABLE-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #118 squash `31bca35`（baseline 含む）"
+    },
+    {
+      "id": "ux-cta-visual-unify",
+      "label": "CTA 見た目トークン統一（UX-CTA-VIS-01）",
+      "date": "2026-08-01",
+      "note": "blog-affiliate-pipeline PR #119 squash `556d86c`"
     }
   ],
   "next": [
