@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-01T23:31:35+09:00",
+  "updatedAt": "2026-08-02T15:05:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -706,6 +706,36 @@
       "label": "CTA 見た目トークン統一（UX-CTA-VIS-01）",
       "date": "2026-08-01",
       "note": "blog-affiliate-pipeline PR #119 squash `556d86c`"
+    },
+    {
+      "id": "ux-table-prose-cls-restore",
+      "label": "記事比較表 CLS 対策復元（UX-TABLE-02）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #122 squash `9467053`"
+    },
+    {
+      "id": "ux-font-cache",
+      "label": "フォント長期 Cache-Control（UX-FONT-CACHE）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #123 squash `90408b4`"
+    },
+    {
+      "id": "ux-hub-dark",
+      "label": "Hub グラデダーク対応トークン化（UX-HUB-DARK）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #124 squash `9523221`"
+    },
+    {
+      "id": "ux-print-styles",
+      "label": "印刷スタイル（UX-PRINT-01）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #126 squash `2f6f195`"
+    },
+    {
+      "id": "ux-home-category-accents",
+      "label": "ホームカテゴリ色アクセント（UX-HOME-01）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #125 squash `301e395`"
     }
   ],
   "next": [
