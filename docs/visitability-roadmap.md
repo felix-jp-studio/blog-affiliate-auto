@@ -96,7 +96,7 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 | ---------------- | ----------------------------------------------------------- | ---------------------------------------------------- |
 | 記事タイプ       | comparison 79% / howto 12% / troubleshoot 5% / crosssell 5% | howto/troubleshoot 比率は改善中。目標 40/25/25/10 へ |
 | 週次スケジュール | comp 2 + howto 2 + troubleshoot 2 + crosssell 1             | スケジュールは均衡。**既公開の偏り**は時間で解消     |
-| 内部リンク       | 新規 + 44 本 backfill 済                                    | cost/trouble カテゴリは各 2 本に増加                 |
+| 内部リンク       | v2 横断リンク（SIM↔光 / 障害↔乗り換え）48 本済              | HTML `/sitemap` 追加済。GSC 検査バッチは User 運用中 |
 
 ### 計測（GSC ベースライン 2026-07-22）
 
@@ -310,3 +310,4 @@ Month 2 末時点で以下を `docs/operations/gsc-baseline.md` または週次�
 | 2026-07-28 | Phase V1 技術 SEO 完了反映（robots.txt・IndexNow・GSC キュー）。公開 43 記事                                     |
 | 2026-07-29 | Week 4 同期: GSC 8 URL 検査完了・Week 4 ベースライン・trouble/cost KW +20・公開 44 記事 / KW 188                 |
 | 2026-07-29 | PR #89–#93 完了反映（Featured Snippet・更新日・Hub メッシュ・CTA A/B・meta バックフィル）。GSC キュー pending 36 |
+| 2026-08-02 | Visitability 推奨バッチ: GSC 検査準備 #138 / ratio KW #139 / cost-trouble KW #140 / internal-links v2 #141 / HTML sitemap #142 |
