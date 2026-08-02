@@ -783,7 +783,7 @@
       "id": "ahamo-asp-link",
       "label": "ahamo（モバイル）ASP リンク有効化 + 既存記事反映",
       "date": "2026-08-02",
-      "note": "blog-affiliate-pipeline PR #134。A8 テキストリンク「ahamo」a8mat=4BB6H3+LGDU+4TIO+5YJRM を ahamo active 化。21 記事を {AFFILIATE:ahamo} 化。ahamo-hikari は変更なし。本番デプロイは Vercel rate limit 待ち。"
+      "note": "blog-affiliate-pipeline PR #134 squash `d807b7d`。A8 テキストリンク「ahamo」a8mat=4BB6H3+LGDU+4TIO+5YJRM を ahamo active 化。21 記事を {AFFILIATE:ahamo} 化。ahamo-hikari / NURO は変更なし。本番デプロイは Vercel Hobby build rate limit により未反映の可能性あり。"
     }
   ],
   "next": [
