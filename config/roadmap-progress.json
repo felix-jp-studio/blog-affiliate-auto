@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-02T16:05:00+09:00",
+  "updatedAt": "2026-08-02T16:30:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -760,6 +760,12 @@
       "label": "幅トークン統合（UX-LAYOUT-WIDTH）",
       "date": "2026-08-02",
       "note": "blog-affiliate-pipeline PR #130 squash `b15a7e0`"
+    },
+    {
+      "id": "nuro-hikari-asp-placeholders",
+      "label": "NURO 光 ASP プレースホルダ反映（11 記事・trackingUrl 待ち）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #131 squash `46960fc`。11 記事を {AFFILIATE:nuro-hikari} 化。asp-urls.json は pending（trackingUrl 未設定）"
     }
   ],
   "next": [
@@ -771,8 +777,8 @@
       "impact": "high",
       "owner": "Agent+User",
       "timeline": "Week 4",
-      "blockedBy": "A8 提携審査（申請中）",
-      "instructions": "【ブロック中: A8 提携申請中】承認後、User が A8 マイページ（https://pub.a8.net/）で NURO 光の trackingUrl を取得して Agent に共有。Agent が `blog-affiliate-pipeline/config/asp-urls.json` の status→active、programId/trackingUrl 設定、nuro-hikari 関連記事の {AFFILIATE:nuro-hikari} 反映 PR を作成。validate-articles + E2E affiliate 通過。"
+      "blockedBy": "A8 trackingUrl 未取得（User が pub.a8.net から共有待ち）",
+      "instructions": "【部分完了: 11 記事 {AFFILIATE:nuro-hikari} 済 PR #131】User が A8 マイページ（https://pub.a8.net/）→ 参加中プログラム → NURO 光 → テキストリンク URL を Agent に共有。Agent が asp-urls.json の status→active、programId/trackingUrl 設定 PR を作成・マージ。validate-articles + E2E affiliate 通過で nuro-hikari-asp-link 完了。"
     },
     {
       "id": "gsc-rewrite-queue-v1",
