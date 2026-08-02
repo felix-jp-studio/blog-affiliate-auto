@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-02T15:05:00+09:00",
+  "updatedAt": "2026-08-02T16:05:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -736,6 +736,30 @@
       "label": "ホームカテゴリ色アクセント（UX-HOME-01）",
       "date": "2026-08-02",
       "note": "blog-affiliate-pipeline PR #125 squash `301e395`"
+    },
+    {
+      "id": "ux-font-drop-serif",
+      "label": "Noto Serif JP 削除→システムセリフ（UX-FONT-02）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #127 squash `b5576ff`"
+    },
+    {
+      "id": "ux-cwv-runs",
+      "label": "Lighthouse CI numberOfRuns 3（UX-CWV-RUNS）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #128 squash `a038e8b`"
+    },
+    {
+      "id": "ux-cta-form-align",
+      "label": "フォーム CTA・入力トークン揃え（UX-CTA-FORM / UX-FORM-FIELD）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #129 squash `e2fd857`"
+    },
+    {
+      "id": "ux-layout-width",
+      "label": "幅トークン統合（UX-LAYOUT-WIDTH）",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #130 squash `b15a7e0`"
     }
   ],
   "next": [
