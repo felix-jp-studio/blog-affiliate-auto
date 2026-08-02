@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-02T16:30:00+09:00",
+  "updatedAt": "2026-08-02T16:45:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -766,23 +766,18 @@
       "label": "NURO 光 ASP プレースホルダ反映（11 記事・trackingUrl 待ち）",
       "date": "2026-08-02",
       "note": "blog-affiliate-pipeline PR #131 squash `46960fc`。11 記事を {AFFILIATE:nuro-hikari} 化。asp-urls.json は pending（trackingUrl 未設定）"
+    },
+    {
+      "id": "nuro-hikari-asp-link",
+      "label": "NURO 光 ASP リンク有効化 + 既存記事反映",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #132 squash `7762b08`。A8 テキストリンク「NURO光」a8mat=3T9D5A+2E6V1U+4B4+631SX を active 化。validate-articles + build/dist で px.a8.net 解決を確認"
     }
   ],
   "next": [
     {
-      "id": "nuro-hikari-asp-link",
-      "priority": 1,
-      "label": "NURO 光 ASP リンク有効化 + 既存記事反映",
-      "estimate": "2h",
-      "impact": "high",
-      "owner": "Agent+User",
-      "timeline": "Week 4",
-      "blockedBy": "A8 trackingUrl 未取得（User が pub.a8.net から共有待ち）",
-      "instructions": "【部分完了: 11 記事 {AFFILIATE:nuro-hikari} 済 PR #131】User が A8 マイページ（https://pub.a8.net/）→ 参加中プログラム → NURO 光 → テキストリンク URL を Agent に共有。Agent が asp-urls.json の status→active、programId/trackingUrl 設定 PR を作成・マージ。validate-articles + E2E affiliate 通過で nuro-hikari-asp-link 完了。"
-    },
-    {
       "id": "gsc-rewrite-queue-v1",
-      "priority": 2,
+      "priority": 1,
       "label": "GSC 11–30 位 KW リライトキュー v1",
       "estimate": "6h",
       "impact": "high",
@@ -793,7 +788,7 @@
     },
     {
       "id": "crosssell-asp-expansion",
-      "priority": 3,
+      "priority": 2,
       "label": "crosssell ASP 化調査（電気・クレカ）",
       "estimate": "2h",
       "impact": "medium",
@@ -804,7 +799,7 @@
     },
     {
       "id": "seasonal-moving-keywords",
-      "priority": 4,
+      "priority": 3,
       "label": "引っ越しシーズン KW バッチ（2–3 月向け）",
       "estimate": "6h",
       "impact": "high",
@@ -814,7 +809,7 @@
     },
     {
       "id": "win-kw-cluster-expansion",
-      "priority": 5,
+      "priority": 4,
       "label": "GSC 上位クエリから類似 KW クラスタ各3本",
       "estimate": "8h",
       "impact": "high",
@@ -824,7 +819,7 @@
     },
     {
       "id": "gsc-api-weekly-report-wiring",
-      "priority": 6,
+      "priority": 5,
       "label": "GSC API 週次レポートの本番配線（SA/OAuth）",
       "estimate": "4h",
       "impact": "medium",
