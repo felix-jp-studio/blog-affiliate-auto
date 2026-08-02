@@ -61,7 +61,7 @@ sim-hikari-guide.com（格安 SIM × 光回線 × お困り系）の **収益最
 ### 核心課題
 
 1. **トラフィックゼロ期**: 44 本・公開 3 週目。GSC Week 4 ベースライン記録済（表示 0）。収益より **インデックス・表示回数** がボトルネック。
-2. **ASP 漏れ（一部ブロック）**: NURO 光は A8 **提携申請中**（asp-urls に pending 登録済み・記事は公式 URL）。ahamo/povo も成果なし。**並行可能**: GSC ベースライン・週次 ASP レポート・ahamo/povo 案件調査。
+2. **ASP 残件**: NURO 光・ahamo・ahamo光は A8 **active 済**。残るのは UQ mobile（申請中）と povo（案件なし）。**並行可能**: GSC リライトキュー・crosssell ASP 調査。
 3. **CVR 記事不足**: howto（MNP 手順等）・troubleshoot が各 1〜2 本のみ。乗り換え直前 KW の取りこぼし。
 4. **比較記事枯渇**: comparison 在庫 **約 8 週**（2 本/週 + PR #56 で +50 件追加済）。8 月中旬枯渇リスクは低減。
 
@@ -143,9 +143,9 @@ sim-hikari-guide.com（格安 SIM × 光回線 × お困り系）の **収益最
 
 ```
 現在 ──────────────────────────────────────────► 目標（Month 6）
-A8: 楽天/SB光/au光/WiMAX (+ NURO pending)     A8: +NURO active +ahamo/UQ（案件あれば）
+A8: 楽天/SB光/au光/WiMAX/NURO/ahamo/ahamo光  A8: +UQ（承認後）
 VC: LINEMO                                  VC: 維持
-公式: ahamo/povo/UQ/NURO(現状)              公式→ASP 置換最大化
+公式: povo/UQ(現状)                         公式→ASP 置換最大化
 もしも: Yahoo 等（通信不可）                 crosssell 成果案件
 ```
 
@@ -155,7 +155,7 @@ VC: LINEMO                                  VC: 維持
 
 | ギャップ             | 競合の一般的対応         | 当サイト              | 優先対応           |
 | -------------------- | ------------------------ | --------------------- | ------------------ |
-| NURO 光 ASP          | A8 リンクあり            | 公式 URL（A8 申請中） | **承認後 P0**      |
+| NURO 光 ASP          | A8 リンクあり            | **A8 active 済**      | 完了（PR #132）    |
 | MNP 手順の深さ       | スクショ付き 10 ステップ | テンプレ 2 本         | howto 自動増       |
 | 料金更新日           | 月次更新表記             | 固定 2026/07          | scraper + リライト |
 | セット割シミュレータ | 独自 JS ツール           | 比較表のみ            | Month 3 検討       |
@@ -184,3 +184,4 @@ VC: LINEMO                                  VC: 維持
 | 2026-07-28 | 公開 43 記事・内部リンク v1/backfill 完了・comparison KW +50 反映。Week 3–4 即時タスクの大半を完了済みに更新      |
 | 2026-07-29 | 公開 44 記事・KW 188 件（trouble/cost +20）・GSC Week 4 ベースライン・8 URL 検査完了を反映                        |
 | 2026-07-29 | PR #89–#93 完了反映（Featured Snippet・更新日・Hub メッシュ・CTA A/B・meta バックフィル）。Month 2 重複タスク整理 |
+| 2026-08-02 | NURO 光 / ahamo / ahamo光 を A8 active 化（pipeline PR #132 / #134 / #133）。povo・UQ は pending 継続 |
