@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-02T16:52:00+09:00",
+  "updatedAt": "2026-08-02T17:05:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -777,7 +777,13 @@
       "id": "ahamo-hikari-asp-link",
       "label": "ahamo光 ASP リンク有効化 + 既存記事反映",
       "date": "2026-08-02",
-      "note": "blog-affiliate-pipeline PR #133 squash `44dbb03`。A8 テキストリンク「【ahamo光】」a8mat=436HK6+FSMIQU+5IPO+CX6C6Q を ahamo-hikari active 化。12 記事に {AFFILIATE:ahamo-hikari} 追加。モバイル ahamo は pending のまま"
+      "note": "blog-affiliate-pipeline PR #133 squash `44dbb03`。A8 テキストリンク「【ahamo光】」a8mat=436HK6+FSMIQU+5IPO+CX6C6Q を ahamo-hikari active 化。12 記事に {AFFILIATE:ahamo-hikari} 追加。本番デプロイは Vercel build rate limit により未反映の可能性あり。"
+    },
+    {
+      "id": "ahamo-asp-link",
+      "label": "ahamo（モバイル）ASP リンク有効化 + 既存記事反映",
+      "date": "2026-08-02",
+      "note": "blog-affiliate-pipeline PR #134。A8 テキストリンク「ahamo」a8mat=4BB6H3+LGDU+4TIO+5YJRM を ahamo active 化。21 記事を {AFFILIATE:ahamo} 化。ahamo-hikari は変更なし。本番デプロイは Vercel rate limit 待ち。"
     }
   ],
   "next": [
