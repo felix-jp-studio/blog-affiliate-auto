@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-03T21:30:00+09:00",
+  "updatedAt": "2026-08-03T21:35:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -880,6 +880,30 @@
       "label": "GSC URL検査バッチ3 準備（pending 21中10件）",
       "date": "2026-08-03",
       "note": "blog-affiliate-pipeline PR #145。docs/operations/gsc-inspection-batch-2026-08-03.md。indexed 更新は User 検査後"
+    },
+    {
+      "id": "v-internal-link-v3",
+      "label": "内部リンク v3 ローテーション + force backfill（V-INTERNAL-LINK-V3）",
+      "date": "2026-08-03",
+      "note": "blog-affiliate-pipeline PR #146（stacks #145）。slug ローテーション + 49記事 refresh。orphan 24→2"
+    },
+    {
+      "id": "v-homepage-featured",
+      "label": "トップおすすめ記事セクション（V-HOMEPAGE-FEATURED）",
+      "date": "2026-08-03",
+      "note": "blog-affiliate-pipeline PR #146。Hub mesh 連動 HomeFeaturedArticles"
+    },
+    {
+      "id": "v-about-eeat-organization",
+      "label": "About E-E-A-T + Organization JSON-LD",
+      "date": "2026-08-03",
+      "note": "blog-affiliate-pipeline PR #146。編集方針・更新ポリシー + buildOrganizationJsonLd"
+    },
+    {
+      "id": "v-gsc-index-batch4-prep",
+      "label": "GSC URL検査バッチ4 準備（--offset=10）",
+      "date": "2026-08-03",
+      "note": "blog-affiliate-pipeline PR #146。gsc-inspection-batch-2026-08-03-batch4.md"
     }
   ],
   "next": [
