@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-08T19:55:00+09:00",
+  "updatedAt": "2026-08-08T20:00:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -856,6 +856,12 @@
       "label": "GSC batch4 ops + howto/troubleshoot KW +20（#150）",
       "date": "2026-08-08",
       "note": "blog-affiliate-pipeline PR #150。残り6 URL 検査リスト / keywords 246-265 / weekly log batch links"
+    },
+    {
+      "id": "v-seasonal-moving-kw",
+      "label": "引っ越しシーズン KW +20 + ops note（#151）",
+      "date": "2026-08-08",
+      "note": "blog-affiliate-pipeline PR #151。keywords 266-285 / seasonal-moving-keywords-2026.md"
     }
   ],
   "next": [
@@ -889,7 +895,7 @@
       "impact": "high",
       "owner": "Agent",
       "timeline": "Month 3",
-      "instructions": "pipeline PR #151 で priority 266–285 を seed 追加済（ops note 付き）。11–12 月から週次公開で消化。"
+      "instructions": "✅ seed 追加済（#151）。11–12 月から週次公開で消化。internal-links v4 は pipeline PR 152 予定。"
     },
     {
       "id": "win-kw-cluster-expansion",
