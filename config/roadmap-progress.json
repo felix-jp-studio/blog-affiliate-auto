@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-08T19:45:00+09:00",
+  "updatedAt": "2026-08-08T19:55:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -850,6 +850,12 @@
       "label": "Hub BreadcrumbList JSON-LD + price baseline + onboard hook（#149）",
       "date": "2026-08-08",
       "note": "blog-affiliate-pipeline PR #149。hub 4ページ JSON-LD / hikari-prices-snapshot.prev / post-publish onboard"
+    },
+    {
+      "id": "v-gsc-batch4-kw-refill",
+      "label": "GSC batch4 ops + howto/troubleshoot KW +20（#150）",
+      "date": "2026-08-08",
+      "note": "blog-affiliate-pipeline PR #150。残り6 URL 検査リスト / keywords 246-265 / weekly log batch links"
     }
   ],
   "next": [
@@ -883,7 +889,7 @@
       "impact": "high",
       "owner": "Agent",
       "timeline": "Month 3",
-      "instructions": "10 月着手。引っ越し 光回線 電気 セット・新生活 通信 等の crosssell/comparison KW を 20 件追加し 11–12 月から先行公開。"
+      "instructions": "pipeline PR #151 で priority 266–285 を seed 追加済（ops note 付き）。11–12 月から週次公開で消化。"
     },
     {
       "id": "win-kw-cluster-expansion",
