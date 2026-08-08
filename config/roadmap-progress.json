@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-02T18:24:15+09:00",
+  "updatedAt": "2026-08-08T19:45:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -832,6 +832,24 @@
       "label": "HTMLサイトマップ /sitemap（V-HTML-SITEMAP）",
       "date": "2026-08-02",
       "note": "blog-affiliate-pipeline PR #142 squash `64e775a`。カテゴリ別一覧 + フッターリンク"
+    },
+    {
+      "id": "v-internal-link-v3",
+      "label": "internal-links v3 + 54記事 onboard（#147）",
+      "date": "2026-08-08",
+      "note": "blog-affiliate-pipeline PR #147 マージ済"
+    },
+    {
+      "id": "v-hub-mesh-new5-orphan-fix",
+      "label": "Hub mesh 新5本 + orphan 0件（#148）",
+      "date": "2026-08-08",
+      "note": "blog-affiliate-pipeline PR #148 マージ済"
+    },
+    {
+      "id": "v-hub-breadcrumb-jsonld",
+      "label": "Hub BreadcrumbList JSON-LD + price baseline + onboard hook（#149）",
+      "date": "2026-08-08",
+      "note": "blog-affiliate-pipeline PR #149。hub 4ページ JSON-LD / hikari-prices-snapshot.prev / post-publish onboard"
     }
   ],
   "next": [
