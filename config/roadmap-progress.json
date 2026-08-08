@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-08T20:00:00+09:00",
+  "updatedAt": "2026-08-08T20:05:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -862,6 +862,12 @@
       "label": "引っ越しシーズン KW +20 + ops note（#151）",
       "date": "2026-08-08",
       "note": "blog-affiliate-pipeline PR #151。keywords 266-285 / seasonal-moving-keywords-2026.md"
+    },
+    {
+      "id": "v-internal-links-v4",
+      "label": "internal-links v4 + GSC rewrite import（#152）",
+      "date": "2026-08-08",
+      "note": "blog-affiliate-pipeline PR #152。v4 rotation / trouble↔cost mesh / 54記事 backfill / gsc-import-rewrite-queue.mjs"
     }
   ],
   "next": [
@@ -874,7 +880,7 @@
       "owner": "Agent+User",
       "timeline": "Month 2",
       "blockedBy": "User GSC 28 日 CSV 未共有",
-      "instructions": "【ブロック中: User GSC 28日CSV未共有】Week 4 ベースライン確立済み。User が GSC → 28 日 CSV エクスポート（`data/gsc-performance-YYYYMMDD.csv`）を Agent に共有後、11–30 位クエリを抽出して `blog-affiliate-pipeline/data/rewrite-queue.csv` を作成。`rewrite-weekly.yml` が週 1 本 meta リライト PR を生成（空キューは exit 0）。"
+      "instructions": "【ブロック中: User GSC 28日CSV未共有】import スクリプト準備済（#152: `npm run gsc:import-rewrite-queue -- --csv=data/gsc-performance-YYYYMMDD.csv`）。User CSV 共有後に 11–30 位を `rewrite-queue.csv` へ追記。"
     },
     {
       "id": "crosssell-asp-expansion",
