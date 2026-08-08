@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-08T20:05:00+09:00",
+  "updatedAt": "2026-08-08T20:45:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 1,
   "week": 4,
@@ -911,7 +911,7 @@
       "impact": "high",
       "owner": "Agent",
       "timeline": "Month 3",
-      "instructions": "GSC ベースライン上位クエリから類似 KW を抽出し keywords.seed.csv にクラスタ追加。comparison/howto テンプレで週次生成。"
+      "instructions": "種クラスタ15件追加済（pipeline PR #153: priority 286-300）。GSC CSV 後に TOP10 から追加クラスタ + import。"
     },
     {
       "id": "gsc-api-weekly-report-wiring",
