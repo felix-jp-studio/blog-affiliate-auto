@@ -2,7 +2,7 @@
   "roadmapFile": "docs/plans/roadmap-20260712.md",
   "revenueRoadmapFile": "docs/revenue-roadmap.md",
   "visitabilityRoadmapFile": "docs/visitability-roadmap.md",
-  "updatedAt": "2026-08-09T13:55:00+09:00",
+  "updatedAt": "2026-08-09T14:00:00+09:00",
   "phase": "Visitability Phase 1",
   "month": 2,
   "week": 6,
@@ -964,6 +964,24 @@
       "label": "Cycle7 howto x2 trouble x1 + KW380 + GSC inspect（#167）",
       "date": "2026-08-09",
       "note": "70記事。gsc-inspect-daily workflow 追加"
+    },
+    {
+      "id": "v-cycle8-trouble-x3",
+      "label": "Cycle8 trouble x3 + KW390（#168）",
+      "date": "2026-08-09",
+      "note": "73記事"
+    },
+    {
+      "id": "v-cycle9-howto-x3",
+      "label": "Cycle9 howto x3 + KW400（#169）",
+      "date": "2026-08-09",
+      "note": "76記事。rewrite-queue 7/8 done"
+    },
+    {
+      "id": "v-cycle10-trouble-x3",
+      "label": "Cycle10 trouble x3 + KW410 + rewrite-queue 完了（#170）",
+      "date": "2026-08-09",
+      "note": "79記事。rewrite-queue 8/8 done"
     }
   ],
   "next": [
