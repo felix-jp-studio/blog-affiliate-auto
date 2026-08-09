@@ -1006,6 +1006,18 @@
       "label": "Cycle14 trouble x3 + KW450（#175）",
       "date": "2026-08-09",
       "note": "91記事。速度/開通トラブル"
+    },
+    {
+      "id": "v-cycle15-howto-x3",
+      "label": "Cycle15 howto x3 + KW460（#177）",
+      "date": "2026-08-09",
+      "note": "94記事。eSIM/解約"
+    },
+    {
+      "id": "v-cycle16-trouble-x3",
+      "label": "Cycle16 trouble x3 + KW470（#178）",
+      "date": "2026-08-09",
+      "note": "97記事"
     }
   ],
   "next": [
