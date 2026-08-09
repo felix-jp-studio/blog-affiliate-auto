@@ -982,6 +982,18 @@
       "label": "Cycle10 trouble x3 + KW410 + rewrite-queue 完了（#170）",
       "date": "2026-08-09",
       "note": "79記事。rewrite-queue 8/8 done"
+    },
+    {
+      "id": "v-cycle11-howto-x3",
+      "label": "Cycle11 howto x3 + KW420（#172）",
+      "date": "2026-08-09",
+      "note": "82記事。eSIM/NURO解約"
+    },
+    {
+      "id": "v-cycle12-trouble-x3",
+      "label": "Cycle12 trouble x3 + KW430（#173）",
+      "date": "2026-08-09",
+      "note": "85記事。開通できない系"
     }
   ],
   "next": [
