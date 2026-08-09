@@ -273,7 +273,7 @@ sim-hikari-guide.com の **検索流入・インデックス・回遊** に焦�
 
 | ID                     | 備考                                                             |
 | ---------------------- | ---------------------------------------------------------------- |
-| `gsc-index-weekly-ops` | User 週次（インデックス数・CSV エクスポート）— Week 4 初回記録済 |
+| `gsc-index-weekly-ops` | User 週次（インデックス数・CSV エクスポート）— Week 6 ログ追加（pipeline #154） |
 
 ※ `nuro-hikari-asp-link` は収益系のため priority とは別トラックで管理。
 
