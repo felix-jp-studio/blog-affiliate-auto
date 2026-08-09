@@ -1030,6 +1030,24 @@
       "label": "Cycle18 trouble x3 + KW490（#180）",
       "date": "2026-08-09",
       "note": "103記事"
+    },
+    {
+      "id": "v-cycle19-ratio",
+      "label": "Cycle19 comparison x2 + crosssell + homepage featured（#182）",
+      "date": "2026-08-09",
+      "note": "106記事。win-KW cluster 開始"
+    },
+    {
+      "id": "v-quota-restore-comparison",
+      "label": "週次クォータ comparison 2 復旧（#183）",
+      "date": "2026-08-09",
+      "note": "howto/trouble 目標達成後の均衡化"
+    },
+    {
+      "id": "v-cycle20-ratio",
+      "label": "Cycle20 comparison x2 + crosssell + KW510（#184）",
+      "date": "2026-08-09",
+      "note": "109記事"
     }
   ],
   "next": [
