@@ -1060,6 +1060,18 @@
       "label": "Cycle22 comparison x2 + crosssell + KW530（#187）",
       "date": "2026-08-09",
       "note": "115記事"
+    },
+    {
+      "id": "v-cycle23-ratio",
+      "label": "Cycle23 comparison x2 + crosssell + KW540（#189）",
+      "date": "2026-08-09",
+      "note": "118記事"
+    },
+    {
+      "id": "v-cycle24-ratio",
+      "label": "Cycle24 comparison x2 + crosssell + KW550 + 比率目標達成（#190）",
+      "date": "2026-08-09",
+      "note": "121記事。全タイプ gap 1pt 以内"
     }
   ],
   "next": [
